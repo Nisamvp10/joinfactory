@@ -88,7 +88,8 @@
                         <div class="row d-flex align-items-stretch">
                         
                             <?php 
-                            foreach($subImageGallery as $gallery) { ?>
+                            foreach(($subImageGallery ?? []) as $gallery) {
+                                if(!empty($gallery['image'])) { ?>
                             <div class="col-lg-4">
                                 <div class="sidebar-cta-box  wow fadeInUp" data-wow-delay="0.25s">
                                     <!-- Sidebar CTA Image Start -->
@@ -100,7 +101,7 @@
                                 </div>
                 
                             </div>
-                            <?php } ?>
+                            <?php } } ?>
                     
                         </div>
                 
