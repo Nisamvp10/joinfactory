@@ -209,7 +209,8 @@ class ServiceController extends Controller {
                 }
 
                 if(!empty($variantFiles)) {
-                    foreach ($variantFiles[$i] as $file) {
+                    // Undefined array key 2
+                    foreach (($variantFiles[$i] ?? []) as $file) {
                      
                         if ($file->isValid() && !$file->hasMoved()) {
 
