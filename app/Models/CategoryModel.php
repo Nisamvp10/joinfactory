@@ -6,11 +6,7 @@ use CodeIgniter\Model;
 
 class CategoryModel extends Model{
     protected $table = 'categories';
-<<<<<<< HEAD
     protected $allowedFields = ['category','slug','image','description','parent_id','level','sort_order','is_active'];
-=======
-    protected $allowedFields = ['category','slug','parent_id','level','sort_order','is_active'];
->>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
     protected $primaryKey = 'id';
 
     function getdata($search=false,$filter=false) {

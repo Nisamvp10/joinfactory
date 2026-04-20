@@ -45,11 +45,8 @@
 <!-- productModal -->
 
  <?= view('modal/mainCategoryModal');?>
-<<<<<<< HEAD
 <?= view('modal/uploadCategoryImgModal');?>
 
-=======
->>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
  <!-- Cose Modal -->
 <?= $this->endSection(); ?>
 <?= $this->section('scripts') ?>

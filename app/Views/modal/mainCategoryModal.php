@@ -31,7 +31,6 @@
                           <?php endforeach ?>
                       </select>
               </div>
-<<<<<<< HEAD
               <div class="mb-4">
                     <label for="categoryName" class="block text-sm font-medium text-gray-700 mb-1">Category Description</label>
                     <textarea id="category_description" name="category_description" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter category name" required></textarea>
@@ -51,10 +50,6 @@
                             <input type="file" name="file" id="imageInput" class="hidden " accept="image/*">
                     </div>
                 </div>
-=======
->>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
-
-                <div class="flex justify-end space-x-4 pt-6 gap-3 border-t border-gray-200">
                     <button type="button" data-close="categoryModal" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors !rounded-md">Cancel</button>
                     <button type="submit" id="submitBtn" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors !rounded-md">Save</button>
                 </div>

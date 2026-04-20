@@ -93,13 +93,9 @@ class ServiceModel extends Model {
                 s.id, s.slug, s.title, s.short_note, s.image,
                 s.sub_category,
                 pc.category as parent_category,
-<<<<<<< HEAD
                 sc.category as sub_category_title,
                 sc.description as category_description,
                 sc.image as category_image,
-=======
-                sc.category as sub_category_title
->>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
             ')
             ->join('categories as pc', 'pc.id = s.category_id', 'left')
             ->join('categories as sc', 'sc.id = s.sub_category', 'left');
