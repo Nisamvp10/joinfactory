@@ -9,8 +9,11 @@ function openModal(e = false) {
     $('#edit_id').val('');
     modal.querySelector('#category').value = '';
     modal.querySelector('#parent_id').value = '';
+<<<<<<< HEAD
     modal.querySelector('#category_description').value = '';
     modal.querySelector('#selected_image').value = '';
+=======
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
     $('.is-invalid').removeClass('is-invalid');
     $('.invalid-feedback').empty();
     if (id) {
@@ -22,12 +25,15 @@ function openModal(e = false) {
                     modal.querySelector('#edit_id').value = `${id}`;
                     modal.querySelector('#parent_id').value = banner.parent_id;
                     modal.querySelector('#category').value = banner.category;
+<<<<<<< HEAD
                     modal.querySelector('#category_description').value = banner.description;
                     if (banner.image) {
                         $('#selectedPreview').removeClass('hidden');
                         modal.querySelector('#previewImg').src = banner.image ? App.getSiteurl() + banner.image : App.getSiteurl() + 'uploads/slider/default.jpg';
                     }
 
+=======
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
 
                 }
             });
@@ -154,10 +160,13 @@ function nextPage(totalPages) {
 
 
 $('#categoryForm').on('submit', function (e) {
+<<<<<<< HEAD
     const previewImg = $('#previewImg');
     e.preventDefault();
     const formData = new FormData(this);
 
+=======
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
     let webForm = $('#categoryForm');
     let modal = $('#categoryModal');
     e.preventDefault();
@@ -169,9 +178,13 @@ $('#categoryForm').on('submit', function (e) {
     $.ajax({
         url: App.cust() + 'save',
         method: 'POST',
+<<<<<<< HEAD
         data: formData,
         contentType: false,
         processData: false,
+=======
+        data: $(this).serialize(),
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
         dataType: 'json',
         success: function (response) {
             if (response.success) {
@@ -190,16 +203,28 @@ $('#categoryForm').on('submit', function (e) {
                 }
             }
         }, error: function () {
+<<<<<<< HEAD
             toastr.error('An error occurred while saving ');
         },
         complete: function () {
             // Re-enable submit button
             $('#submitBtn').prop('disabled', false).text('Save ');
+=======
+            toastr.error('An error occurred while saving Branch');
+        },
+        complete: function () {
+            // Re-enable submit button
+            $('#submitBtn').prop('disabled', false).text('Save Branch');
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
         }
     })
 })
 function deleteItem(e) {
+<<<<<<< HEAD
     if (confirm('are you sure ! You want to delete the Item')) {
+=======
+    if (confirm('are you sure ! You want to delete the branch')) {
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
         $(e).prop('disabled', true).html(
             '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Deleting...'
         );

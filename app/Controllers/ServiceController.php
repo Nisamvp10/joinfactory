@@ -51,10 +51,15 @@ class ServiceController extends Controller {
                     // Create subcategory node once
                     if (!isset($servicesData[$subCateId])) {
                         $servicesData[$subCateId] = [
+<<<<<<< HEAD
                             'sub_category_id'       => $subCateId,
                             'sub_category_title'    => $service->sub_category_title,
                             'category_description'  => $service->category_description,
                             'category_image'        => $service->category_image,
+=======
+                            'sub_category_id'    => $subCateId,
+                            'sub_category_title' => $service->sub_category_title,
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
                             'items'              => []
                         ];
                     }

@@ -3,6 +3,7 @@ namespace App\Controllers\admin;
 
 use CodeIgniter\Controller;
 use App\Models\CategoryModel;
+<<<<<<< HEAD
 use App\Controllers\UploadImages;
 
 class CategoryController extends Controller{
@@ -12,6 +13,14 @@ class CategoryController extends Controller{
     function __construct(){
          $this->categoryModel = new CategoryModel();
          $this->imgUploader = new UploadImages();
+=======
+
+class CategoryController extends Controller{
+    protected $categoryModel;
+
+    function __construct(){
+         $this->categoryModel = new CategoryModel();
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
     }
 
     function index(){
@@ -47,6 +56,7 @@ class CategoryController extends Controller{
         $category = $this->request->getPost('category');
         $id = decryptor($this->request->getPost('itmId'));
         $parentId = $this->request->getPost('parent_id');
+<<<<<<< HEAD
         $category_description = $this->request->getPost('category_description');
         $file = $this->request->getFile('file');
         $selectedImage = $this->request->getPost('selected_image');
@@ -59,6 +69,9 @@ class CategoryController extends Controller{
             // Keep old image if no new upload
             $imagePath = $selectedImage;
         }
+=======
+
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
         $level = 1;
         if ($parentId) {
             $parent = $this->categoryModel->find($parentId);
@@ -68,8 +81,11 @@ class CategoryController extends Controller{
         $data = [
             'category' => $category,
             'parent_id' => $parentId ?: null,
+<<<<<<< HEAD
             'image' => str_replace(base_url(), '', $imagePath),
             'description' => $category_description,
+=======
+>>>>>>> e91aff2ee02fae778eaa2a9e06e68630f9207e8e
             'slug' => slugify( $category),
             'level' => $level
         ];
