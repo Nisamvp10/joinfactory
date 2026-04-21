@@ -3317,7 +3317,7 @@ header.main-header .header-sticky.active {
 
 .page-single-category-list ul li {
 	border-bottom: 1px solid var(--divider-color);
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	/* margin-bottom: 20px; */
 }
 

@@ -164,7 +164,7 @@
                                         <div class="service-content">
                                             <div class="service-content-title ">
                                                 <h2>
-                                                    <a href="javascript:void(0)"   class="service-link"  data-index="<?= $index ?>">
+                                                    <a href="<?=base_url('service-details/'.$service['category_slug'])?>"   class="service-link"  data-index="<?= $index ?>">
                                                         <?= esc($service['sub_category_title']); ?>
                                                     </a>
                                                 </h2>
@@ -173,7 +173,7 @@
                                         </div>
 
                                         <div class="service-image">
-                                            <a href="<?= base_url('service-details/'.$item['slug']); ?>" data-cursor-text="View">
+                                            <a href="<?= base_url('service-details/'.$service['category_slug'])?>" data-cursor-text="View">
                                                 <figure class="image-anime">
                                                     <img src="<?= validImg($img); ?>" alt="">
                                                 </figure>
@@ -254,6 +254,7 @@ $(document).on('click', '.service-link', function () {
     if (items.length > 0) {
 
         items.forEach(function(item){
+            console.log(item);
 
             let image = item.image ? item.image : 'no-image.png';
 
@@ -263,7 +264,7 @@ $(document).on('click', '.service-link', function () {
 
                         <div class="service-content-title">
                             <h2>
-                                <a href="${BASE_URL}service-details/${item.slug}">
+                                <a href="${BASE_URL}service-details/${item.category_slug}">
                                     ${item.title}
                                 </a>
                             </h5>

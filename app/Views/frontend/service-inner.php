@@ -1,6 +1,63 @@
 <?= view('frontend/inc/header') ?>
 
+<style>
+    .page-single-sidebar {
+    position: sticky;
+    top: 100px;
+}
 
+.service-sidebar {
+    background: #f8f9fa;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.list-group-item {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom:0px!important;
+}
+
+.list-group-item.active {
+    background-color: #f1f1f1;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+}
+.page-single-category-list ul li:last-child{
+     padding: 10px;
+}
+.list-group-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    height: 100%;
+    transition: 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: #666;
+}
+</style>
 
 	<div class="page-header bg-section dark-section">
 		<div class="container">
@@ -36,17 +93,23 @@
                         <!-- Page Single Category List Start -->
                         <div class="page-single-category-list wow fadeInUp">
                             <h3>CONTENT </h3>
-                            <ul>
-                                <?php
-                                if(!empty($titleBar)){
+                             <ul class="list-group p-0 " id="serviceList">
+                        <?php
+                       if(!empty($titleBar)){
                                     foreach($titleBar as $index => $otherService){
-                                    ?>
-                                     <li><a href="#ser<?=$index?>"><?=$otherService['serviceTitle'];?></a></li>
-                                    <?php
-                                    }
-                                }?>
-                              
-                            </ul>
+                                ?>
+                                <li class="list-group-item list-group-item<?= $index ?> active">
+                                    <a  href="#ser<?=$index?>"
+                                   class="service-link "
+                                   data-index="<?= $index ?>">
+                                 <?=$otherService['serviceTitle'];?>
+                                </a>
+                            </li>
+                        <?php };
+                        } ?>
+                    </ul>
+
+                         
                         </div>
                         <!-- Page Single Category List End -->
                         
@@ -58,61 +121,64 @@
 
 
                 <div class="col-lg-8">
-                    <?php
-                    if(!empty($services)) {
-                        foreach($services as $index => $service) {
+                   <?php
+                        if (!empty($services)) {
+                            foreach ($services as $index => $service) {
+
+                                $variants = $service['variants'];
                         ?>
-                          <div id="ser<?=$index;?>" class="case-study-single-content">
-                   
-                           <!-- Page Single FAQs start -->
-                           <div class="page-single-faqs">
-                            <!-- Section Title Start -->
-                            <div class="section-title">
-                                <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque"><?=$service['serviceTitle']?></h2>
+                        <div id="ser<?=$index;?>" class="case-study-single-content">
+
+                            <!-- Main Category Title -->
+                            <div class="section-title pt-3">
+                                <h3 class="wow fadeInUp"><?=$service['mainTitle'] ?? ''?></h3>
                             </div>
-                            <!-- Section Title End -->
-                            
-                            <!-- FAQ Accordion Start -->
-                            <div class="faq-accordion" id="accordion"><?=$service['description']?></div>
-                            <!-- FAQ Accordion End -->
-                        </div>
 
-
-                    
-                        <!-- Page Single FAQs End -->
-                         <?php
-                         $subImageGallery = $service['subImages'];
-                         if(!empty($subImageGallery)) {?>
-
-                         <div class="mt-3 mb-3"> 
-                        <div class="row d-flex align-items-stretch">
-                        
                             <?php 
-                            foreach(($subImageGallery ?? []) as $gallery) {
-                                if(!empty($gallery['image'])) { ?>
-                            <div class="col-lg-4">
-                                <div class="sidebar-cta-box  wow fadeInUp" data-wow-delay="0.25s">
-                                    <!-- Sidebar CTA Image Start -->
-                                    <div class="sidebar-cta-image h-100">
-                                        <figure>
-                                            <img src="<?= validImg($gallery['image']) ?>" alt="">
-                                        </figure>
+                            $i=0;
+                            foreach ($variants as   $variant) { ?>
+
+                                <!-- Variant Section -->
+                                <div class="page-single-faqs" id="ser<?=$i;?>">
+
+                                    <div class="section-title">
+                                        <h2 class="wow fadeInUp"><?=$variant['serviceTitle']?></h2>
+                                    </div>
+
+                                    <div class="faq-accordion">
+                                        <?=$variant['description']?>
+                                    </div>
+
+                                </div>
+
+                                <?php if (!empty($variant['subImages'])) { ?>
+                                <div class="mt-3 mb-3">
+                                    <div class="row d-flex align-items-stretch">
+
+                                        <?php foreach ($variant['subImages'] as $gallery) {
+                                            if (!empty($gallery['image'])) { ?>
+                                                <div class="col-lg-4">
+                                                    <div class="sidebar-cta-box wow fadeInUp">
+                                                        <div class="sidebar-cta-image h-100">
+                                                            <figure>
+                                                                <img src="<?= validImg($gallery['image']) ?>" alt="">
+                                                            </figure>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        <?php } } ?>
+
                                     </div>
                                 </div>
-                
-                            </div>
-                            <?php } } ?>
-                    
+                                <?php } ?>
+
+                            <?php $i++; } ?>
+
                         </div>
-                
-                        </div>
-                        <?php } ?>
-                        
-                    </div>
                         <?php
+                            }
                         }
-                    }
-                    ?>
+                        ?>
                    
                 </div>
 
@@ -122,5 +188,35 @@
 <?= view('frontend/inc/footerLink') ?>
     
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const sections = document.querySelectorAll(".case-study-single-content");
+    const navItems = document.querySelectorAll("#serviceList .list-group-item");
+
+    window.addEventListener("scroll", function () {
+
+        let currentIndex = 0;
+
+        sections.forEach((section, index) => {
+            const top = section.offsetTop - 150;
+
+            if (window.scrollY >= top) {
+                currentIndex = index;
+            }
+        });
+
+        // remove all active
+        navItems.forEach(item => item.classList.remove("active"));
+
+        // add active to current
+        if (navItems[currentIndex]) {
+            navItems[currentIndex].classList.add("active");
+        }
+
+    });
+
+});
+</script>
 
 </html>

@@ -96,6 +96,7 @@ class ServiceModel extends Model {
                 sc.category as sub_category_title,
                 sc.description as category_description,
                 sc.image as category_image,
+                sc.slug as category_slug
             ')
             ->join('categories as pc', 'pc.id = s.category_id', 'left')
             ->join('categories as sc', 'sc.id = s.sub_category', 'left');
@@ -128,6 +129,27 @@ class ServiceModel extends Model {
     }
 
     public function serviceDetails($serviceId = false,$search='',$condition=false) {
+         $builder = $this->db->table('services as s')
+            ->select('s.id,s.slug,s.title,s.variant_title,s.short_note,s.image,s.description,s.category_id,
+           v.id as varintId,
+            v.service_id as variantServiceId,v.title as varinttitle,v.short_note as variantdesc,v.image as varintImg,s.icon,
+            si.image as subImg')
+            ->join('variants as v','s.id = v.service_id','left')
+            ->join('service_sub_image as si','v.id = si.service_id','left')
+            ->where('s.status',1)
+            ->orderBy('s.id','DESC');
+            if($serviceId){
+                $builder->where(['s.sub_category' => $serviceId]);
+            }
+            if($search) {
+                $builder->like($orderBy);
+            }
+            if($condition) {
+                $builder->where($condition);
+            }
+            return $builder->get()->getResult();
+    }
+        public function serviceDetails2($serviceId = false,$search='',$condition=false) {
          $builder = $this->db->table('services as s')
             ->select('s.id,s.slug,s.title,s.variant_title,s.short_note,s.image,s.description,s.category_id,
            v.id as varintId,

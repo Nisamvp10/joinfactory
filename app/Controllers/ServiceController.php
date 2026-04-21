@@ -50,12 +50,13 @@ class ServiceController extends Controller {
                     $subCateId = $service->sub_category;
                     // Create subcategory node once
                     if (!isset($servicesData[$subCateId])) {
-                        $servicesData[$subCateId] = [
-                            'sub_category_id'       => $subCateId,
-                            'sub_category_title'    => $service->sub_category_title,
-                            'category_description'  => $service->category_description,
-                            'category_image'        => $service->category_image,
-          ];
+                            $servicesData[$subCateId] = [
+                                'sub_category_id'       => $subCateId,
+                                'sub_category_title'    => $service->sub_category_title,
+                                'category_description'  => $service->category_description,
+                                'category_image'        => $service->category_image,
+                                'category_slug'         => $service->category_slug
+                            ];
                     }
                     // Push services under subcategory
                     $servicesData[$subCateId]['items'][] = [
@@ -63,37 +64,49 @@ class ServiceController extends Controller {
                         'title' => $service->title,
                         'note'  => $service->short_note,
                         'image' => $service->image,
+                        'category_slug' => $service->category_slug
                     ];
                 }
                 $routeView = 'frontend/services';
             } else {
                 $services = $this->serviceModel->where('slug', $slug)->get()->getRow();
                 if(!empty($services)) {
-                    $getSericeDetails = $this->serviceModel->serviceDetails($services->id);
+                    $getSericeDetails = $this->serviceModel->serviceDetails2($services->id);
                     $page = $getSericeDetails[0]->title;
-                //echo $this->serviceModel->getLastQuery();
-                if(!empty($getSericeDetails)){
-                    foreach ($getSericeDetails as $serviseitems) {
-                        $variantId = $serviseitems->varintId;
-                        if(!isset($titleBar[$variantId])) {
-                            $titleBar[$variantId] = [
-                                'serviceTitle' => $serviseitems->varinttitle,
-                            ];
+                   // echo $this->serviceModel->getLastQuery(); exit();
+                    if(!empty($getSericeDetails)){
+                        foreach ($getSericeDetails as $serviseitems) {
+                            $variantId = $serviseitems->varintId;
+                            $serviceId = $serviseitems->id;
+
+                            if(!isset($titleBar[$variantId])) {
+                                $titleBar[$variantId] = [
+                                    'serviceTitle' => $serviseitems->varinttitle,
+                                ];
+                            }
+                            if (!isset($servicesData[$serviceId])) {
+                                    $servicesData[$serviceId] = [
+                                        'mainTitle' => $serviseitems->title,
+                                        'serviceId' => $serviceId,
+                                        'variants' => []
+                                    ];
+                                }
+                            if (!isset($servicesData[$serviceId]['variants'][$variantId])) {
+                                    $servicesData[$serviceId]['variants'][$variantId] = [
+                                    'serviceTitle' => $serviseitems->varinttitle,
+                                    'description'  => $serviseitems->variantdesc,
+                                    'banner' => $serviseitems->image,
+                                    'subImages' => []
+                                
+                                ];
+                            }
+                           if (!empty($serviseitems->subImg)) {
+                                $servicesData[$serviceId]['variants'][$variantId]['subImages'][] = [
+                                    'image' => $serviseitems->subImg,
+                                ];
+                            }
                         }
-                        if(!isset($servicesData[$variantId])) {
-                            $servicesData[$variantId] = [
-                                'serviceTitle' => $serviseitems->varinttitle,
-                                'description'  => $serviseitems->variantdesc,
-                                 'banner' => $serviseitems->image,
-                                 'subImages' => []
-                              
-                            ];
-                        }
-                         $servicesData[$variantId]['subImages'][] = [
-                            'image' => $serviseitems->subImg,
-                         ];
                     }
-                }
                 }
               
                 $routeView = 'frontend/service-inner';
@@ -103,47 +116,72 @@ class ServiceController extends Controller {
         }
         $services = array_values($servicesData);
         $titleBar = array_values($titleBar);
-       
-        //echo $routeView; exit();
         return view($routeView,compact('services','page','titleBar'));
 
     }
 
     function singleDetails($slug) {
         $page = "Services";
+        $subTitle = '';
         $servicesData = [];
         $titleBar = [];
-        $services = $this->serviceModel->where('slug', $slug)->get()->getRow();
-        $category = $this->categoryModel->where('id', $services->category_id)->get()->getRow();
-        $getSericeDetails = $this->serviceModel->serviceDetails($services->id);
-        //echo $this->serviceModel->getLastQuery();
-        if(!empty($getSericeDetails)){
-             $page = $getSericeDetails[0]->title;
-             $subTitle = '<a href="'.base_url().'services/'.$category->slug.'">'.$category->category.'</a> > '.$getSericeDetails[0]->title;
-            foreach ($getSericeDetails as $serviseitems) {
-                $variantId = $serviseitems->varintId;
-                if(!isset($titleBar[$variantId])) {
-                    $titleBar[$variantId] = [
-                        'serviceTitle' => $serviseitems->varinttitle,
-                    ];
+        //first select category name and parent_id = 7 name knee also select 
+
+        $builder = $this->categoryModel->builder('categories s');
+
+        $category = $builder
+            ->select('s.id, s.category, s.parent_id,pc.category as maincategory,pc.slug')
+            ->join('categories pc', 'pc.id = s.parent_id', 'left')
+            ->where('s.slug', $slug)->get()->getRow();
+        $services = $this->serviceModel->where('sub_category', $category->id)->get()->getResult();
+        $getSericeDetails = $this->serviceModel->serviceDetails($category->id);
+        if (!empty($getSericeDetails)) {
+
+                $page = $getSericeDetails[0]->title;
+                $subTitle = '<a href="'.base_url().'services/'.$category->slug.'">'.$category->maincategory.'</a> > '.$category->category;
+
+                foreach ($getSericeDetails as $serviseitems) {
+
+                    $variantId = $serviseitems->varintId;
+                    $serviceId = $serviseitems->id;
+
+                    if (!isset($titleBar[$serviceId])) {
+                        $titleBar[$serviceId] = [
+                            'serviceTitle' => $serviseitems->title,
+                        ];
+                    }
+
+                    if (!isset($servicesData[$serviceId])) {
+                        $servicesData[$serviceId] = [
+                            'mainTitle' => $serviseitems->title,
+                            'serviceId' => $serviceId,
+                            'variants' => []
+                        ];
+                    }
+
+                    if (!isset($servicesData[$serviceId]['variants'][$variantId])) {
+                        $servicesData[$serviceId]['variants'][$variantId] = [
+                            'serviceId' => $serviceId,
+                            'serviceTitle' => $serviseitems->varinttitle,
+                            'description' => $serviseitems->variantdesc,
+                            'banner' => $serviseitems->image,
+                            'subImages' => [],
+                        ];
+                    }
+
+                    if (!empty($serviseitems->subImg)) {
+                        $servicesData[$serviceId]['variants'][$variantId]['subImages'][] = [
+                            'image' => $serviseitems->subImg,
+                        ];
+                    }
                 }
-                if(!isset($servicesData[$variantId])) {
-                    $servicesData[$variantId] = [
-                        'serviceTitle' => $serviseitems->varinttitle,
-                        'description'  => $serviseitems->variantdesc,
-                        'banner' => $serviseitems->image,
-                        'subImages' => []
-                    
-                    ];
-                }
-                $servicesData[$variantId]['subImages'][] = [
-                    'image' => $serviseitems->subImg,
-                ];
             }
-        }
+
+      
         $routeView = 'frontend/service-inner';
         $services = array_values($servicesData);
         $titleBar = array_values($titleBar);
+       
         return view($routeView,compact('services','page','titleBar','subTitle'));
     }
 }
