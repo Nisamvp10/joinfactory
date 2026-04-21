@@ -8,12 +8,12 @@
 				<div class="col-lg-12">
 					<!-- Page Header Box Start -->
 					<div class="page-header-box">
-						<h1 class="text-anime-style-3" data-cursor="-opaque"><?=($page ? $page : '');?>
+						<h1 class="text-anime-style-3" data-cursor="-opaque"><?=($page ?? '');?>
                          </h1>
 						<nav class="wow fadeInUp">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">home</a></li>
-								<li class="breadcrumb-item active" aria-current="page"><?=($subTitle ? $subTitle : '');?></li>
+								<li class="breadcrumb-item active" aria-current="page"><?=($subTitle ?? '');?></li>
                      
 
 							</ol>
