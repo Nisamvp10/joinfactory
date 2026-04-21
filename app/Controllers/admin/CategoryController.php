@@ -68,11 +68,15 @@ class CategoryController extends Controller{
         $data = [
             'category' => $category,
             'parent_id' => $parentId ?: null,
-            'image' => str_replace(base_url(), '', $imagePath),
+           // 'image' => str_replace(base_url(), '', $imagePath),
             'description' => $category_description,
             'slug' => slugify( $category),
             'level' => $level
         ];
+
+        if(!empty($imagePath)) {
+            $data['image'] =  str_replace(base_url(), '', $imagePath);
+        }
         
         if($id)
         {

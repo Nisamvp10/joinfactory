@@ -114,10 +114,12 @@ class ServiceController extends Controller {
         $servicesData = [];
         $titleBar = [];
         $services = $this->serviceModel->where('slug', $slug)->get()->getRow();
+        $category = $this->categoryModel->where('id', $services->category_id)->get()->getRow();
         $getSericeDetails = $this->serviceModel->serviceDetails($services->id);
         //echo $this->serviceModel->getLastQuery();
         if(!empty($getSericeDetails)){
              $page = $getSericeDetails[0]->title;
+             $subTitle = '<a href="'.base_url().'services/'.$category->slug.'">'.$category->category.'</a> > '.$getSericeDetails[0]->title;
             foreach ($getSericeDetails as $serviseitems) {
                 $variantId = $serviseitems->varintId;
                 if(!isset($titleBar[$variantId])) {
@@ -142,6 +144,6 @@ class ServiceController extends Controller {
         $routeView = 'frontend/service-inner';
         $services = array_values($servicesData);
         $titleBar = array_values($titleBar);
-        return view($routeView,compact('services','page','titleBar'));
+        return view($routeView,compact('services','page','titleBar','subTitle'));
     }
 }

@@ -11,6 +11,7 @@ function openModal(e = false) {
     modal.querySelector('#parent_id').value = '';
     modal.querySelector('#category_description').value = '';
     modal.querySelector('#selected_image').value = '';
+    modal.querySelector('#previewImg').src = '';
     $('.is-invalid').removeClass('is-invalid');
     $('.invalid-feedback').empty();
     if (id) {
