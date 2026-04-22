@@ -169,16 +169,18 @@
                                                     </a>
                                                 </h2>
                                             </div>
-                                            <p><?= $service['category_description']; ?></p>
-                                        </div>
-
-                                        <div class="service-image">
+                                                <div class="service-image mb-2">
                                             <a href="<?= base_url('service-details/'.$service['category_slug'])?>" data-cursor-text="View">
                                                 <figure class="image-anime">
                                                     <img src="<?= validImg($img); ?>" alt="">
                                                 </figure>
                                             </a>
                                         </div>
+
+                                            <p><?= $service['category_description']; ?></p>
+                                        </div>
+
+                                    
                                     </div>
                         </div>
                     <?php 
@@ -231,16 +233,18 @@ $(document).on('click', '.service-link', function () {
                                                     </a>
                                                 </h2>
                                             </div>
-                                            <p>${service.category_description}</p>
-                                        </div>
-
-                                        <div class="service-image">
+                                              <div class="service-image mb-2">
                                             <a href="${BASE_URL}service-details/${service['category_slug']}" data-cursor-text="View">
                                                 <figure class="image-anime">
                                                     <img src="${image}" alt="">
                                                 </figure>
                                             </a>
                                         </div>
+
+                                            <p>${service.category_description}</p>
+                                        </div>
+
+                                      
                                     </div>
                         </div>
             `;
@@ -266,13 +270,14 @@ $(document).on('click', '.service-link', function () {
                                     ${item.title}
                                 </a>
                             </h5>
-                            <p>${item.note ?? ''}</p>
+                            
                         </div>
 
                         <div class="service-image">
                            <img src="${image}" 
-                                 style="width:100%; height:200px; object-fit:cover;">
+                                 style="width:100%; object-fit:cover;">
                         </div>
+                        <p>${item.note ?? ''}</p>
 
                     </div>
                 </div>
@@ -325,7 +330,6 @@ $(document).on('click', '.service-link', function () {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    height: 100%;
     transition: 0.3s;
 }
 
