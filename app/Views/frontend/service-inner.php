@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentIndex = 0;
 
         sections.forEach((section, index) => {
-            const top = section.offsetTop - 150;
+            const top = section.offsetTop - 200;
 
             if (window.scrollY >= top) {
                 currentIndex = index;

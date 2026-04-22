@@ -164,7 +164,7 @@
                                         <div class="service-content">
                                             <div class="service-content-title ">
                                                 <h2>
-                                                    <a href="<?=base_url('service-details/'.$service['category_slug'])?>"   class="service-link"  data-index="<?= $index ?>">
+                                                    <a href="<?=base_url('service-details/'.$service['category_slug'])?>"   class="service-link__"  data-index="<?= $index ?>">
                                                         <?= esc($service['sub_category_title']); ?>
                                                     </a>
                                                 </h2>
@@ -199,13 +199,11 @@
 <?= view('frontend/inc/footerLink') ?>
 
 
-<!-- ✅ BASE URL -->
 <script>
 const BASE_URL = "<?= base_url(); ?>";
 const servicesData = <?= json_encode($services); ?>;
 </script>
 
-<!-- ✅ JAVASCRIPT -->
 <script>
 $(document).on('click', '.service-link', function () {
 
@@ -228,7 +226,7 @@ $(document).on('click', '.service-link', function () {
                                         <div class="service-content">
                                             <div class="service-content-title">
                                                 <h2>
-                                                    <a href="javascript:void(0)"   class="service-link"  data-index="${count}">
+                                                    <a href="${BASE_URL}service-details/${service['category_slug']}"   >
                                                         ${service.sub_category_title}
                                                     </a>
                                                 </h2>
@@ -237,7 +235,7 @@ $(document).on('click', '.service-link', function () {
                                         </div>
 
                                         <div class="service-image">
-                                            <a href="<?= base_url('service-details/'.$item['slug']); ?>" data-cursor-text="View">
+                                            <a href="${BASE_URL}service-details/${service['category_slug']}" data-cursor-text="View">
                                                 <figure class="image-anime">
                                                     <img src="${image}" alt="">
                                                 </figure>
