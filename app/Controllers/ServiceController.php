@@ -121,7 +121,7 @@ class ServiceController extends Controller {
     }
 
     function singleDetails($slug) {
-        $page = "Services";
+        $page = "";
         $subTitle = '';
         $servicesData = [];
         $titleBar = [];
@@ -135,6 +135,7 @@ class ServiceController extends Controller {
             ->where('s.slug', $slug)->get()->getRow();
         $services = $this->serviceModel->where('sub_category', $category->id)->get()->getResult();
         $getSericeDetails = $this->serviceModel->serviceDetails($category->id);
+        //echo   $this->serviceModel->getLastQuery(); 
         if (!empty($getSericeDetails)) {
 
                 $page = $category->category;// $getSericeDetails[0]->title;
@@ -158,7 +159,7 @@ class ServiceController extends Controller {
                             'variants' => []
                         ];
                     }
-
+                    
                     if (!isset($servicesData[$serviceId]['variants'][$variantId])) {
                         $servicesData[$serviceId]['variants'][$variantId] = [
                             'serviceId' => $serviceId,
@@ -181,7 +182,6 @@ class ServiceController extends Controller {
         $routeView = 'frontend/service-inner';
         $services = array_values($servicesData);
         $titleBar = array_values($titleBar);
-       
         return view($routeView,compact('services','page','titleBar','subTitle'));
     }
 }
