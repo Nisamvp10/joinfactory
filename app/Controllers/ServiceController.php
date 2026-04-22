@@ -137,7 +137,7 @@ class ServiceController extends Controller {
         $getSericeDetails = $this->serviceModel->serviceDetails($category->id);
         if (!empty($getSericeDetails)) {
 
-                $page = $getSericeDetails[0]->title;
+                $page = $category->category;// $getSericeDetails[0]->title;
                 $subTitle = '<a href="'.base_url().'services/'.$category->slug.'">'.$category->maincategory.'</a> > '.$category->category;
 
                 foreach ($getSericeDetails as $serviseitems) {
