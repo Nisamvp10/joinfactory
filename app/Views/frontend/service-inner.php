@@ -149,7 +149,7 @@
                                         <?=$variant['description']?>
                                     </div>
 
-                                </div>
+                                </div> 
 
                                 <?php if (!empty($variant['subImages'])) { ?>
                                 <div class="mt-3 mb-3">
