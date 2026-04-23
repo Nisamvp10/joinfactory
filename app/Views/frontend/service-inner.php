@@ -61,6 +61,9 @@
     font-size: 17px;
     text-align: justify;
 }
+.section-title h3 {
+    font-weight: 600!important;
+}
 </style>
 
 	<div class="page-header bg-section dark-section">
