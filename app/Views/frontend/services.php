@@ -272,7 +272,7 @@ $(document).on('click', '.service-link', function () {
                             
                         </div>
 
-                        <div class="service-image">
+                        <div class="service-image mb-3">
                            <img src="${image}" 
                                  style="width:100%; object-fit:cover;">
                         </div>
