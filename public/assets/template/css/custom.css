@@ -3407,7 +3407,7 @@ header.main-header .header-sticky.active {
 	width: 100%;
 	object-fit: contain;
 	transition: all 0.4s ease-in-out;
-	height: 250px;
+	/* height: 250px; */
 }
 
 .sidebar-cta-box:hover .sidebar-cta-image figure img {

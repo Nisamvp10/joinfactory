@@ -157,11 +157,11 @@
 
                                         <?php foreach ($variant['subImages'] as $gallery) {
                                             if (!empty($gallery['image'])) { ?>
-                                                <div class="col-lg-4">
+                                                <div class="col-lg-12">
                                                     <div class="sidebar-cta-box wow fadeInUp">
-                                                        <div class="sidebar-cta-image h-100">
+                                                        <div class="sidebar-cta-image">
                                                             <figure>
-                                                                <img src="<?= validImg($gallery['image']) ?>" alt="">
+                                                                <img src="<?= validImg($gallery['image']) ?>" alt="" width="100%">
                                                             </figure>
                                                         </div>
                                                     </div>
