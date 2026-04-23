@@ -132,7 +132,7 @@ class ServiceController extends Controller {
         $category = $builder
             ->select('s.id, s.category, s.parent_id,pc.category as maincategory,pc.slug')
             ->join('categories pc', 'pc.id = s.parent_id', 'left')
-            ->where(['s.slug'=>$slug,'s.isactive'=>1])->get()->getRow();
+            ->where(['s.slug'=>$slug,'s.is_active'=>1])->get()->getRow();
         $services = $this->serviceModel->where('sub_category', $category->id)->get()->getResult();
         $getSericeDetails = $this->serviceModel->serviceDetails($category->id);
         //echo   $this->serviceModel->getLastQuery(); 
