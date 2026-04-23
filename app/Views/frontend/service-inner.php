@@ -139,7 +139,7 @@
                             foreach ($variants as   $variant) { ?>
 
                                 <!-- Variant Section -->
-                                <div class="page-single-faqs" id="ser<?=$i;?>">
+                                <div class="page-single-faqs" id="ser__<?=$i;?>">
 
                                     <div class="section-title">
                                         <h2 class="wow fadeInUp"><?=$variant['serviceTitle']?></h2>
