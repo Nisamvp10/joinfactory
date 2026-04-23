@@ -143,7 +143,7 @@
                             foreach ($variants as   $variant) { ?>
 
                                 <!-- Variant Section -->
-                                <div class="page-single-faqs" id="ser__<?=$i;?>">
+                                <div class="page-single-faqs mb-3" id="ser__<?=$i;?>">
 
                                     <div class="section-title">
                                         <h2 class="wow fadeInUp" style="font-size: 20px;font-weight: 400;"><?=$variant['serviceTitle']?></h2>
@@ -174,11 +174,18 @@
 
                                     </div>
                                 </div>
+                               
                                 <?php } ?>
+                                
 
                             <?php $i++; } ?>
 
                         </div>
+                        <!-- remove the last border -->
+                        <?php if($i != count($service)){ ?>
+                         <br>
+                        <div style="border-bottom: #7a0821 2px solid;"></div>
+                        <?php } ?>
                         <?php
                             }
                         }
