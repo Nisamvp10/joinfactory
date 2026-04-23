@@ -57,6 +57,10 @@
     font-size: 14px;
     color: #666;
 }
+.faq-accordion p{
+    font-size: 17px;
+    text-align: justify;
+}
 </style>
 
 	<div class="page-header bg-section dark-section">
@@ -130,7 +134,7 @@
                         <div id="ser<?=$index;?>" class="case-study-single-content">
 
                             <!-- Main Category Title -->
-                            <div class="section-title pt-3">
+                            <div class="section-title pt-4">
                                 <h3 class="wow fadeInUp"><?=$service['mainTitle'] ?? ''?></h3>
                             </div>
 
@@ -142,7 +146,7 @@
                                 <div class="page-single-faqs" id="ser__<?=$i;?>">
 
                                     <div class="section-title">
-                                        <h2 class="wow fadeInUp"><?=$variant['serviceTitle']?></h2>
+                                        <h2 class="wow fadeInUp" style="font-size: 20px;font-weight: 400;"><?=$variant['serviceTitle']?></h2>
                                     </div>
 
                                     <div class="faq-accordion">
