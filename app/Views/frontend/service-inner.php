@@ -120,7 +120,7 @@
                 </div>
 
 
-                <div class="col-lg-8">
+                <div class="col-lg-8" style="    background: #fff;    padding: 0px 30px 15px 30px;    border-radius: 30px;">
                    <?php
                         if (!empty($services)) {
                             foreach ($services as $index => $service) {
