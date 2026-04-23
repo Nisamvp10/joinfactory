@@ -184,7 +184,7 @@
                         <!-- remove the last border -->
                         <?php if($i != count($service)){ ?>
                          <br>
-                        <div style="border-bottom: #7a0821 2px solid;"></div>
+                        <div style="border-bottom: #7a0821 2px solid; margin-bottom: 20px;opacity: 0.5;"></div>
                         <?php } ?>
                         <?php
                             }
