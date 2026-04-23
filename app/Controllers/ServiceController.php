@@ -182,6 +182,7 @@ class ServiceController extends Controller {
         $routeView = 'frontend/service-inner';
         $services = array_values($servicesData);
         $titleBar = array_values($titleBar);
+        print_r($services);
         return view($routeView,compact('services','page','titleBar','subTitle'));
     }
 }
