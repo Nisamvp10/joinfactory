@@ -256,12 +256,11 @@ $(document).on('click', '.service-link', function () {
     if (items.length > 0) {
 
         items.forEach(function(item){
-            console.log(item);
 
             let image = item.image ? item.image : 'no-image.png';
 
             html += `
-                <div class="col-lg-4 col-md-6 mb-3">
+                <div class="col-lg-4 col-md-6 ">
                     <div class="service-item">
 
                         <div class="service-content-title">
