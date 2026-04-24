@@ -7014,3 +7014,135 @@ header.main-header .header-sticky.active {
 
 	height: 60px;
 }
+
+.footer-widget-wrapper .footer-widget-items .widget-head {
+	margin-bottom: 30px;
+}
+
+.footer-widget-wrapper .footer-widget-items .gt-list-area li:hover {
+	margin-left: 5px;
+}
+
+.footer-widget-wrapper .footer-widget-items .gt-list-area li:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.footer-widget-wrapper .footer-widget-items .gt-list-area li {
+	transition: all 0.4s ease-in-out;
+}
+
+.footer-menu li {
+	color: #fff;
+}
+
+.footer-widget-wrapper .footer-widget-items .widget-head h3 {
+	font-size: 20px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.footer-widget-wrapper .footer-widget-items .gt-list-area li a {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-bottom {
+	border-top: 1px solid rgba(61, 72, 87, 0.6);
+	margin-top: 25px;
+	padding: 25px 0;
+}
+
+.footer-bottom .footer-bottom-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* .footer-bottom-wrapper {
+	padding-left: 60px !important;
+	padding-right: 60px !important;
+} */
+
+.footer-bottom .footer-bottom-wrapper p {
+	color: rgba(255, 255, 255, 0.75);
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.footer-bottom .footer-bottom-wrapper .footer-list {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.footer-bottom .footer-bottom-wrapper .footer-list li {
+	font-size: 16px;
+	font-weight: 500;
+	font-family: "Inter", sans-serif;
+}
+
+.footer-bottom .footer-bottom-wrapper .footer-list li a {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+footer ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.footer-widget-wrapper .footer-widget-items .footer-content p {
+	color: #F2F5F7;
+	font-size: 16px;
+	line-height: 162.5%;
+}
+
+.footer-widget-wrapper .footer-widget-items .contact-list li:nth-child(1) {
+	/* padding-left: 0px; */
+}
+
+.footer-widget-wrapper .footer-widget-items .contact-list li:hover {
+	color: var(--theme);
+}
+
+.footer-widget-wrapper .footer-widget-items .contact-list li:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.footer-widget-wrapper .footer-widget-items .contact-list li {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 162.5%;
+	font-family: "Inter", sans-serif;
+	transition: all 0.4s ease-in-out;
+	display: inline;
+	border-right: 2px solid #931113;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.footer-widget-wrapper .footer-widget-items .contact-list-address li {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 162.5%;
+	font-family: "Inter", sans-serif;
+	transition: all 0.4s ease-in-out;
+	display: inline;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.footer-widget-wrapper .footer-widget-items .gt-list-area li:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.footer-widget-wrapper .footer-widget-items .gt-list-area li {
+	transition: all 0.4s ease-in-out;
+}
+
+.footer-menu li img {
+	padding-right: 10px;
+	width: 34px;
+}
