@@ -108,7 +108,7 @@
                                             </ul>
                                             <ul class="contact-list-address">
                                                 <li>
-                                                     drsudhanofficial@gmail.com | info@joinfactory.org
+                                                     info@joinfactory.org
                                                 </li>
                                             </ul>
                                         </div>
