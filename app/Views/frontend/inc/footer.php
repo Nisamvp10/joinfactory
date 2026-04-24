@@ -13,7 +13,7 @@
                                             </div>
                                             <div class="footer-content">
                                                 <p>
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                                    Associate Prof. Dr. Ram Sudhan Subramaniyan is a specialist in Sports surgeries and joint reconstruction with a special interest in "joint preservation" of the Hip, shoulder, and knee
                                                 </p>
                                                <div class="footer-social-links">
                                                     <ul>
@@ -62,11 +62,7 @@
                                                 <h3>Services</h3>
                                             </div>
                                             <ul class="gt-list-area">
-                                                <li>
-                                                    <a href="programmes.html">
-                                                        Diploma Courses
-                                                    </a>
-                                                </li>
+                                                
                                                  <?php
                                                     if(services()){
                                                         foreach(services() as $navService) {
@@ -106,14 +102,13 @@
                                             </div>
                                             <ul class="contact-list footer-address">
                                                <li>
-                                                    Ma Care Polyclinic & Diagnostic Centre 
-High school Junction, Valapad, Thrissur, Kerala 680567
+                                                   9/38, Pulinchode, PO, Potta - Moonupeedika Rd, near pulinchode bus stop, Pullur, Irinjalakuda, Kerala 680683
                                                </li>
                                                
                                             </ul>
                                             <ul class="contact-list-address">
                                                 <li>
-                                                    M / drsudhanofficial.com | info@joinfactory.org
+                                                     drsudhanofficial@gmail.com | info@joinfactory.org
                                                 </li>
                                             </ul>
                                         </div>
