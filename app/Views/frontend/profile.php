@@ -25,8 +25,9 @@
 
 
 
-    <div class="page-team-single">
+    <div class="page-team-single main-section p-0">
         <div class="container">
+            <div class="inner-section bg-light-gray">
             <div class="row">
                 <div class="col-lg-12">
                     <!-- Page Team Single Box Start -->
@@ -96,6 +97,7 @@
                         </div>
                      </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>

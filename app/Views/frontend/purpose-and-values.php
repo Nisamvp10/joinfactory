@@ -25,8 +25,9 @@
 
 
 
-    <div class="page-team-single">
+    <div class="page-team-single p-0 main-section">
         <div class="container">
+            <div class="inner-section bg-light-gray">
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <!-- Our Approach Content Start -->
@@ -91,6 +92,7 @@
                     <!-- Our Approach Content End -->
                 </div>
                
+            </div>
             </div>
         </div>
     </div>

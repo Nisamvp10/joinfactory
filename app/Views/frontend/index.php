@@ -70,11 +70,29 @@
         </div>        
     </div>
     <!-- Hero Section End -->
+  
+        
+  <!-- <section class="main-section">
+        <div class="container">
+                <div class="inner-section" style="background-color: #fff;">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Welcome to Our clinic</h3>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">The Leading Orthopedic & Joint
+                                Replacement Specialist
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <!-- About Us Section Start -->
-    <div class="about-us">
+    <div class="main-section ">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="inner-section align-items-center p-lg-5 p-md-2 bg-white">
+                <div class="row">
                 <div class="col-lg-5">
                     <!-- About Us Images Start -->
                     <div class="about-us-images">
@@ -143,6 +161,7 @@
                         <!-- About Us Body End -->
                     </div>
                     <!-- Hero Content Box End -->
+                </div>
                 </div>
             </div>
         </div>
@@ -231,9 +250,10 @@ if (!empty($srevices)) {
     <!-- Our Services Section End -->
 
     <!-- What We Do section Start -->
-    <div class="what-we-do">
+    <div class="main-section">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="inner-section align-items-center p-lg-5 p-md-2 bg-white rounded-section p-2">
+                <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <!-- What We Image Start -->
                     <div class="what-we-image-1">
@@ -291,6 +311,7 @@ if (!empty($srevices)) {
                 </div>
             </div>
         </div>
+        </div>
     </div>
     <!-- What We Do section End -->
 
@@ -298,7 +319,7 @@ if (!empty($srevices)) {
     <!-- Case Study Section Start -->
     <div class="case-study bg-section">
         <div class="container">
-            <div class="row">
+            <div class="row p-lg-5 p-md-2 flex align-items-center">
                 <div class="col-lg-4">
                     <!-- Case Study Content Start -->
                     <div class="case-study-content">
@@ -460,9 +481,10 @@ if (!empty($srevices)) {
   
 
     <!-- Our Testimonials Section Start -->
-    <div class="our-testimonials bg-section dark-section mt-5">
+    <div class="main-section">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="inner-section align-items-center bg-primary p-lg-5 p-md-2 rounded-section our-testimonials dark-section">
+                <div class="row">
                 <div class="col-lg-6">
                     <div class="our-testimonial-image">
                         <figure class="image-anime reveal">
@@ -537,11 +559,13 @@ if (!empty($srevices)) {
             </div>
         </div>
     </div>
+    </div>
     <!-- Our Testimonials Section End -->
 
     <!-- Our Appointment Section Start -->
-    <div class="our-results bg-section p-5 mt-5">
+    <div class="our-results main-section p-0">
         <div class="container">
+            <div class="inner-section bg-sec bg-secondary p-lg-5 p-md-2 rounded-section ">
 
           <div class="row section-row align-items-center">
                 <div class="col-lg-12">
@@ -553,23 +577,19 @@ if (!empty($srevices)) {
                     <!-- Section Title End -->
                 </div>
             </div>
-                    
-            
-            
-            
-                                <div class="testimonial-slider gallery-items page-gallery-box">
-                        <div class="swiper">
-                            <div class="swiper-wrapper" data-cursor-text="Drag">
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="photo-gallery wow fadeInUp">
-                        <a href="https://jointfactory.org/2026/public/assets/template/images/case-study-image-2.jpg" data-cursor-text="View">
+            <div class="testimonial-slider gallery-items page-gallery-box">
+                <div class="swiper">
+                    <div class="swiper-wrapper" data-cursor-text="Drag">
+                        <!-- Testimonial Slide Start -->
+                        <div class="swiper-slide">
+                            <div class="photo-gallery wow fadeInUp">
+                                <a href="https://jointfactory.org/2026/public/assets/template/images/case-study-image-2.jpg" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="https://jointfactory.org/2026/public/assets/template/images/case-study-image-2.jpg" alt="">
                             </figure>
                         </a>
                     </div> 
-                                </div>
+            </div>
                                 <!-- Testimonial Slide End -->
 
                                 <!-- Testimonial Slide Start -->
@@ -639,21 +659,16 @@ if (!empty($srevices)) {
 
             
             
-          
-
+            </div>
         </div>
     </div>
     <!-- Our Appointment Section End -->
 
     <!-- Our Result Section Start -->
-    <div class="our-results">
-        <div class="container">
-           
-
-            <div class="row">
-               
-                
-                <div class="col-lg-12">
+     <section class="main-section counter-section">
+            <div class="container">
+                <div class="rounded-section bg-white inner-section">
+                    <div class="col-lg-12">
                     <!-- Facts Counter Box Start -->
                     <div class="facts-counter-box">
                         <!-- Facts Counter Item Start -->
@@ -706,9 +721,9 @@ if (!empty($srevices)) {
                     </div>
                     <!-- Facts Counter Box End -->
                 </div>
-            </div>
         </div>
     </div>
+    </section>
     <!-- Our Result Section End -->
 
     <!-- Footer Main Start -->

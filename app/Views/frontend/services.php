@@ -105,8 +105,9 @@
 </div>
     <!-- Page Services End -->
   
-    <div class="page-services">
+    <div class="page-services__ main-section">
     <div class="container">
+        <div class="inner-section bg-light-gray">
         <div class="row">
 
             <!-- LEFT SIDEBAR -->
@@ -196,6 +197,7 @@
 
         </div>
     </div>
+                </div>
 </div>
 
 <?= view('frontend/inc/footerLink') ?>

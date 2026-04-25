@@ -30,8 +30,9 @@
 
 
     <!-- Page Contact Us Start -->
-    <div class="page-contact-us">
+    <div class="page-contact-us p-0 main-section">
         <div class="container">
+            <div class="inner-section bg-light-gray">
             <div class="row section-row align-items-center">
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
@@ -99,13 +100,14 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
     <!-- Page Contact Us End -->
 
     <!-- Contact Form Start -->
-    <div class="conatct-us-form">
+    <div class="conatct-us-form p-0 main-section">
         <div class="container">
-
+            <div class="inner-section bg-white">
             <div class="row">
                 <div class="col-lg-6">
             <div class="row no-gutters">
@@ -182,7 +184,7 @@
 
         </div>
     </div>
-
+    </div>
 
         </div>
     </div>

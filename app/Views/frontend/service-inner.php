@@ -29,13 +29,14 @@
 
 
 
-    <div class="page-case-study-single py-5">
+    <div class="page-case-study-single p-0 main-section">
     <div class="container">
-        <div class="row g-4">
+        <div class="inner-section bg-light-gray">
+            <div class="row g-4">
 
             <!-- Sidebar -->
             <div class="col-lg-4">
-                <div class="page-single-sidebar position-sticky row" style="top: 100px;">
+                <div class="page-single-sidebar position-sticky" style="top: 0;">
 
                    <div class="page-single-category-list wow fadeInUp p-0">
                             <h3>CONTENT </h3>
@@ -116,7 +117,8 @@
 
                 </div>
             </div>
-
+                                                
+        </div>
         </div>
     </div>
 </div>        

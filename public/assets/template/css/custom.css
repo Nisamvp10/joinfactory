@@ -106,7 +106,7 @@ body {
 }
 
 .container {
-	max-width: 1800px;
+	max-width: 1830px;
 }
 
 .me-lg-0 {
@@ -127,6 +127,43 @@ body {
 .image-anime {
 	position: relative;
 	overflow: hidden;
+}
+
+.section-division {
+	margin: 15px !important;
+}
+
+.rounded-section {
+	border-radius: 20px;
+}
+
+.bg-secondary {
+	background-color: var(--secondary-color) !important;
+}
+
+.bg-primary {
+	background-color: var(--primary-color) !important;
+}
+
+.main-section {
+	width: 100%;
+	margin: 15px 0;
+	padding: 0;
+}
+
+.inner-section {
+	padding: 50px;
+	border-radius: 20px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.counter-section .inner-section {
+	padding: 100px 25px;
+}
+
+.bg-light-gray {
+	background-color: #f1f1f1;
 }
 
 .image-anime:after {
@@ -363,7 +400,7 @@ body {
 }
 
 .section-row {
-	margin-bottom: 80px;
+	margin-bottom: 35px;
 }
 
 .section-row .section-title {
@@ -496,7 +533,7 @@ header.main-header .header-sticky {
 	position: relative;
 	top: 0;
 	z-index: 100;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	margin-top: 15px;
 }
 
@@ -1225,7 +1262,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .about-us {
-	padding: 100px 0;
+	padding: 15px 0;
 }
 
 .about-us-images {
@@ -1510,7 +1547,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .what-we-do {
-	padding: 100px 0;
+	padding: 15px 0;
 }
 
 .what-we-image-1 {
@@ -1671,7 +1708,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .case-study {
-	padding: 100px 0 70px;
+	/* padding: 100px 0 70px; */
 }
 
 .case-study-content {
@@ -1969,7 +2006,6 @@ header.main-header .header-sticky.active {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	padding: 100px 0;
 }
 
 .our-testimonial-image {
@@ -2007,7 +2043,7 @@ header.main-header .header-sticky.active {
 }
 
 .testimonial-slider {
-	margin-top: 60px;
+	margin-top: 10px;
 }
 
 .testimonial-slider .swiper-wrapper {
@@ -3268,7 +3304,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .page-services {
-	padding: 100px 0 70px;
+	padding: 15px 0 70px;
 }
 
 .page-services .service-item {
@@ -3931,7 +3967,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .page-case-study-single {
-	padding: 100px 0;
+	padding: 15px 0;
 }
 
 .case-study-detail-list {
@@ -4830,8 +4866,7 @@ header.main-header .header-sticky.active {
 
 	.bg-section {
 		width: calc(100% - 35px);
-		margin-left: 15px;
-		margin-right: 15px;
+		margin: 15px;
 		max-width: 100%;
 	}
 
@@ -6755,9 +6790,10 @@ header.main-header .header-sticky.active {
 }
 
 .DeskFixed .mob {
-	background: #ff0000;
+	background: #7a0821;
 	position: relative;
 	animation: pulse 1500ms infinite;
+	border: 2px #760921 solid;
 }
 
 .DeskFixed a {
