@@ -62,7 +62,7 @@
 
             <!-- Content -->
             <div class="col-lg-8">
-                <div class="bg-white p-3 p-lg-5 rounded-4 shadow-sm row">
+                <div class="bg-white p-3 p-lg-5 rounded-4 shadow-sm ">
 
                     <?php if (!empty($services)) {
                         foreach ($services as $index => $service) {
