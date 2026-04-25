@@ -1,69 +1,7 @@
 <?= view('frontend/inc/header') ?>
 
 <style>
-    .page-single-sidebar {
-    position: sticky;
-    top: 100px;
-}
 
-.service-sidebar {
-    background: #f8f9fa;
-    padding: 0px;
-    border-radius: 10px;
-}
-
-.list-group-item {
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin-bottom:0px!important;
-}
-
-.list-group-item.active {
-    background-color: #f1f1f1;
-    color: #fff;
-    padding: 10px;
-    margin: 0;
-}
-.page-single-category-list ul li:last-child{
-     padding: 10px;
-}
-.list-group-item a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    padding: 10px;
-}
-
-.service-item {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    height: 100%;
-    transition: 0.3s;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-}
-
-.service-item h5 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.service-item p {
-    font-size: 14px;
-    color: #666;
-}
-.faq-accordion p{
-    font-size: 17px;
-    text-align: justify;
-}
-.section-title h3 {
-    font-weight: 600!important;
-}
 </style>
 
 	<div class="page-header bg-section dark-section">
@@ -91,114 +29,97 @@
 
 
 
-    <div class="page-case-study-single">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <!-- Page Single Sidebar Start -->
-                    <div class="page-single-sidebar">
-                        <!-- Page Single Category List Start -->
-                        <div class="page-single-category-list wow fadeInUp">
+    <div class="page-case-study-single py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="page-single-sidebar position-sticky row" style="top: 100px;">
+
+                   <div class="page-single-category-list wow fadeInUp p-0">
                             <h3>CONTENT </h3>
-                             <ul class="list-group p-0 " id="serviceList">
-                        <?php
-                       if(!empty($titleBar)){
-                                    foreach($titleBar as $index => $otherService){
-                                ?>
-                                <li class="list-group-item list-group-item<?= $index ?> active">
-                                    <a  href="#ser<?=$index?>"
-                                   class="service-link "
-                                   data-index="<?= $index ?>">
-                                 <?=$otherService['serviceTitle'];?>
-                                </a>
-                            </li>
-                        <?php };
-                        } ?>
-                    </ul>
 
-                         
-                        </div>
-                        <!-- Page Single Category List End -->
-                        
-                     
-                        <!-- Sidebar CTA Box End -->
+                        <ul class="list-group p-0" id="serviceList">
+                            <?php if(!empty($titleBar)){
+                                foreach($titleBar as $index => $otherService){ ?>
+                                    
+                                    <li class="list-group-item  list-group-item<?= $index ?> ">
+                                        <a href="#ser<?=$index?>"
+                                           class="service-link d-block py-2 text-decoration-none"
+                                           data-index="<?= $index ?>">
+                                            <?=$otherService['serviceTitle'];?>
+                                        </a>
+                                    </li>
+
+                            <?php }} ?>
+                        </ul>
+
                     </div>
-                    <!-- Page Single Sidebar End -->
+
                 </div>
+            </div>
+
+            <!-- Content -->
+            <div class="col-lg-8">
+                <div class="bg-white p-3 p-lg-5 rounded-4 shadow-sm row">
+
+                    <?php if (!empty($services)) {
+                        foreach ($services as $index => $service) {
+
+                            $variants = $service['variants'];
+                    ?>
+
+                     <div id="ser<?=$index;?>" class="case-study-single-content mb-5">
+
+                         <!-- Main Category Title -->
+                        <div class="section-title pt-4">
+                            <h3 class="wow fadeInUp"><?=$service['mainTitle'] ?? ''?></h3>
+                        </div>
 
 
-                <div class="col-lg-8" style="    background: #fff;    padding: 0px 30px 15px 30px;    border-radius: 30px;">
-                   <?php
-                        if (!empty($services)) {
-                            foreach ($services as $index => $service) {
+                        <?php foreach ($variants as $i => $variant) { ?>
 
-                                $variants = $service['variants'];
-                        ?>
-                        <div id="ser<?=$index;?>" class="case-study-single-content">
+                            <div class="mb-4">
 
-                            <!-- Main Category Title -->
-                            <div class="section-title pt-4">
-                                <h3 class="wow fadeInUp"><?=$service['mainTitle'] ?? ''?></h3>
-                            </div>
+                                <div class="section-title">
+                                    <h2 class="wow fadeInUp" style="font-size: 20px;font-weight: 400;"><?=$variant['serviceTitle']?></h2>
+                                </div>
 
-                            <?php 
-                            $i=0;
-                            foreach ($variants as   $variant) { ?>
+                                <div class="mb-3">
+                                    <?=$variant['description']?>
+                                </div>
 
-                                <!-- Variant Section -->
-                                <div class="page-single-faqs mb-3" id="ser__<?=$i;?>">
-
-                                    <div class="section-title">
-                                        <h2 class="wow fadeInUp" style="font-size: 20px;font-weight: 400;"><?=$variant['serviceTitle']?></h2>
-                                    </div>
-
-                                    <div class="faq-accordion">
-                                        <?=$variant['description']?>
-                                    </div>
-
-                                </div> 
-
+                                <!-- Images -->
                                 <?php if (!empty($variant['subImages'])) { ?>
-                                <div class="mt-3 mb-3">
-                                    <div class="row d-flex align-items-stretch">
-
+                                    <div class="row g-3">
                                         <?php foreach ($variant['subImages'] as $gallery) {
                                             if (!empty($gallery['image'])) { ?>
-                                                <div class="col-lg-12">
-                                                    <div class="sidebar-cta-box wow fadeInUp">
-                                                        <div class="sidebar-cta-image">
-                                                            <figure>
-                                                                <img src="<?= validImg($gallery['image']) ?>" alt="" width="100%">
-                                                            </figure>
-                                                        </div>
-                                                    </div>
+                                                <div class="col-12">
+                                                    <img src="<?= validImg($gallery['image']) ?>" 
+                                                         class="img-fluid rounded-3 shadow-sm w-100">
                                                 </div>
-                                        <?php } } ?>
-
+                                        <?php }} ?>
                                     </div>
-                                </div>
-                               
                                 <?php } ?>
-                                
 
-                            <?php $i++; } ?>
+                            </div>
 
-                        </div>
-                        <!-- remove the last border -->
-                        <?php if($i != count($service)){ ?>
-                         <br>
-                        <div style="border-bottom: #7a0821 2px solid; margin-bottom: 20px;opacity: 0.5;"></div>
                         <?php } ?>
-                        <?php
-                            }
-                        }
-                        ?>
-                   
-                </div>
 
+                        <!-- Divider -->
+                        <hr class="my-5">
+
+                    </div>
+
+                    <?php } } ?>
+
+                </div>
             </div>
+
         </div>
-    </div>              
+    </div>
+</div>        
 <?= view('frontend/inc/footerLink') ?>
     
 </body>

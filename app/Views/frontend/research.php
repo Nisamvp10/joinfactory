@@ -40,14 +40,14 @@
                         <!-- Page Single Category List Start -->
                         <div class="page-single-category-list wow fadeInUp">
                             <h3>Research Topics </h3>
-                            <ul>
+                             <ul class="list-group p-0" id="serviceList">
 
-                                <li><a href="#">The Risk Of Online Self-diagnosis</a></li>
+                                <li class="list-group-item"><a href="#">The Risk Of Online Self-diagnosis</a></li>
 
-                                <li><a href="#">Collaboration</a></li>
-                                <li><a href="#">Evaluation</a></li>
-                                <li><a href="#">Program Eligibility & Duration</a></li>
-                                <li><a href="#">PLC Reconstruction</a></li>
+                                <li class="list-group-item"><a href="#">Collaboration</a></li>
+                                <li class="list-group-item"><a href="#">Evaluation</a></li>
+                                <li class="list-group-item"><a href="#">Program Eligibility & Duration</a></li>
+                                <li class="list-group-item"><a href="#">PLC Reconstruction</a></li>
                              
 
                             </ul>

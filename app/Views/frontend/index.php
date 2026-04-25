@@ -22,7 +22,7 @@
 
                         <div class="container">
                                     <div class="row">
-                                        <div class="col-lg-6 offset-lg-3 text-center">
+                                        <div class="col-lg-6 offset-lg-1 text-left">
                                             <!-- Hero Content Start -->
                                             <div class="hero-content  ">
                                                 <!-- Section Title Start -->
@@ -37,8 +37,7 @@
                                                 <div class="hero-body sktext  wow fadeInUp" data-wow-delay="0.4s">
                                                     <!-- Hero Button Start -->
                                                     <div class="hero-btn">
-                                                        <a href="#" class="btn-default btn-highlighted">Second
-Opinion</a>                                
+                                                        <a href="#" class="btn-default btn-highlighted">Second Opinion</a>                                
                                                     </div>
                                                     <!-- Hero Button End -->
                         

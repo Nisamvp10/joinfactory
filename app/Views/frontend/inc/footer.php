@@ -1,5 +1,5 @@
 
-<footer class="footer-section container ">
+<footer class="footer-section container p-0">
                     <div class="footer-area main-footer bg-section dark-section">
                         <div class="container-fluid">
                             <div class="footer-widget-wrapper">
