@@ -185,8 +185,9 @@
           <?php
 $indx = 0;
 
-if (!empty($srevices)) {
-    foreach ($srevices as $service) {
+if (!empty(services())) {
+    foreach (services() as $service) {
+        print_r($service);
 
         // OPEN ROW
         if ($indx % 5 == 0) {
@@ -200,19 +201,16 @@ if (!empty($srevices)) {
                 <div class="service-content">
                     <div class="service-content-title">
                         <h2>
-                            <a href="#"><?= esc($service->parent_category); ?></a>
+                            <a href="<?=base_url('services/'.$service['slug']);?>"><?= esc($service['category']); ?></a>
                         </h2>
-                        <a href="<?= base_url('service-details/'.$service->slug)?>" class="btn-default skbb">
-                          
-                        </a>
                     </div>
-                    <p><?= esc($service->title); ?></p>
+                    <a href="<?=base_url('services/'.$service['slug'])?>" class="btn-default skbb"></a>
                 </div>
 
                 <div class="service-image">
-                    <a href="<?= base_url('service-details/'.$service->slug)?>" data-cursor-text="View">
+                    <a href="<?=base_url('services/'.$service['slug'])?>" data-cursor-text="View">
                         <figure class="image-anime">
-                            <img src="<?= validImg($service->image) ?>" alt="">
+                            <img src="<?= validImg($service['image']) ?>" alt="">
                         </figure>
                     </a>
                 </div>
