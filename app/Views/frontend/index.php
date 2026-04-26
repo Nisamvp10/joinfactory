@@ -202,8 +202,8 @@ if (!empty(services())) {
                         <h2>
                             <a href="<?=base_url('services/'.$service['slug']);?>"><?= esc($service['category']); ?></a>
                         </h2>
+                        <a href="<?=base_url('services/'.$service['slug'])?>" class="btn-default skbb"></a>
                     </div>
-                    <a href="<?=base_url('services/'.$service['slug'])?>" class="btn-default skbb"></a>
                 </div>
 
                 <div class="service-image">
