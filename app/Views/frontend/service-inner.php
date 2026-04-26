@@ -36,7 +36,7 @@
 
             <!-- Sidebar -->
             <div class="col-lg-4">
-                <div class="page-single-sidebar position-sticky row" style="top: 0;">
+                <div class="page-single-sidebar position-sticky row" >
 
                    <div class="page-single-category-list wow fadeInUp p-0">
                             <h3>CONTENT </h3>
