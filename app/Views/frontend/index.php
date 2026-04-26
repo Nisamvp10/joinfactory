@@ -187,7 +187,6 @@ $indx = 0;
 
 if (!empty(services())) {
     foreach (services() as $service) {
-        print_r($service);
 
         // OPEN ROW
         if ($indx % 5 == 0) {
