@@ -113,7 +113,7 @@
 
                         <!-- About Image 2 Start -->
                         <div class="about-img-2">
-                            <figure class="image-anime reveal p-3">
+                            <figure class="image-anime reveal">
                                 <img src="<?= base_url('public/assets/template/') ?>images/about-img-2.jpg" alt="">
                             </figure>
                         </div>
