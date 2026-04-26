@@ -29,8 +29,9 @@
 
 
     <!-- Page Contact Us Start -->
-    <div class="page-gallery">
+    <div class="page-gallery__ main-section">
         <div class="container">
+            <div class="inner-section bg-light-gray">
             <!-- gallery section start -->
             <div class="row gallery-items page-gallery-box">
                 <?php
@@ -56,6 +57,7 @@
               
             </div>
             <!-- gallery section end -->
+             </div>
         </div>
     </div>
 

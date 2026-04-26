@@ -32,8 +32,9 @@
 
 
     <!-- Page Contact Us Start -->
-    <div class="page-contact-us">
+    <div class="page-contact-us__ main-section">
         <div class="container">
+            <div class="inner-section bg-light-gray">
             <div class="row">
                 <div class="col-lg-4">
                     <!-- Contact Us Content Start -->
@@ -103,12 +104,13 @@
                     <!-- Contact Info List End -->
                 </div>
             </div>
+            </div>
         </div>
     </div>
     <!-- Page Contact Us End -->
 
     <!-- Contact Form Start -->
-    <div class="conatct-us-form">
+    <div class="conatct-us-form section-division p-0">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-6">

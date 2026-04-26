@@ -29,8 +29,9 @@
 
 
     <!-- Page Contact Us Start -->
-    <div class="page-team-single">
+    <div class="page-team-single__ main-section">
         <div class="container">
+            <div class="inner-section bg-light-gray">
             <div class="row">
 
 
@@ -281,6 +282,7 @@ can raise men to the divine…
                     </div>
                     <!-- Page Team Single Box End -->
                 </div>
+            </div>
             </div>
         </div>
     </div>

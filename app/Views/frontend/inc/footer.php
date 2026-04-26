@@ -1,14 +1,14 @@
 
 <footer class="footer-section container p-0">
                     <div class="footer-area main-footer bg-section dark-section">
-                        <div class="container-fluid">
+                        <div class="container-fluid p-0">
                             <div class="footer-widget-wrapper">
                                 <div class="row justify-content-between">
                                     <div class="col-xl-3 col-lg-5 col-md-6 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                                         <div class="footer-widget-items">
                                             <div class="widget-head">
                                                 <a href="index.html" class="footer-logo">
-                                                    <img src="<?=base_url('public/assets/template/images/footlogo.jpeg')?>" alt="img">
+                                                    <img src="<?=base_url('public/assets/template/images/footer-logo.png')?>" alt="img">
                                                 </a>
                                             </div>
                                             <div class="footer-content">
@@ -108,7 +108,7 @@
                                             </ul>
                                             <ul class="contact-list-address">
                                                 <li>
-                                                     info@joinfactory.org
+                                                    info@joinfactory.org
                                                 </li>
                                             </ul>
                                         </div>
@@ -119,7 +119,7 @@
                         <div class="footer-bottom">
                             <div class="container-fluid">
                                 <div class="footer-bottom-wrapper">
-                                    <p class="wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                                    <p class="wow fadeInUp mb-0" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                                         © 2025 <b>Jointfactory</b> All rights reserved.
                                     </p>
 
