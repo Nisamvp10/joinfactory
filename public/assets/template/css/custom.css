@@ -152,7 +152,8 @@ body {
 }
 
 .inner-section {
-	padding: 50px;
+	/* padding: 50px; */
+	padding: 0;
 	border-radius: 20px;
 	width: 100%;
 }
@@ -162,7 +163,8 @@ body {
 }
 
 .bg-light-gray {
-	background-color: #f1f1f1;
+	/* background-color: #f1f1f1; */
+	background-color: #dddad3;
 }
 
 .image-anime:after {
@@ -6792,7 +6794,7 @@ header.main-header .header-sticky.active {
 }
 
 .DeskFixed .mob {
-	background: #7a0821;
+	background: #dd162d;
 	position: relative;
 	animation: pulse 1500ms infinite;
 	border: 2px #760921 solid;

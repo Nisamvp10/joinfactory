@@ -160,8 +160,8 @@
                             $items = $service['items'] ?? [];
                            $img = $service['category_image'];
                     ?>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="service-item wow fadeInUp">
+                        <div class="col-lg-4 col-md-6 pb-0">
+                                <div class="service-item wow fadeInUp mb-0">
                                         <div class="service-content">
                                             <div class="service-content-title ">
                                                 <h2>
