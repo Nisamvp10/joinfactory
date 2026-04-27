@@ -150,8 +150,9 @@
 
 
 
-    <div class="page-service-single">
+    <div class="page-service-single main-section">
         <div class="container">
+            <div class="inner-section">
             <div class="row section-row align-items-center">
                 <div class="col-lg-12">
                     <!-- Section Title Start -->
@@ -215,6 +216,7 @@
                     </div>
                     <!-- Service Single Content End -->
                 </div>
+            </div>
             </div>
         </div>
     </div>

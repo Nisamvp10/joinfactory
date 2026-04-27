@@ -3334,7 +3334,7 @@ header.main-header .header-sticky.active {
 .page-single-sidebar {
 	position: sticky;
 	top: 20px;
-	margin-right: 20px;
+	margin-right: 0px;
 	margin-left: 0;
 }
 
@@ -5575,7 +5575,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.page-single-category-list {
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 	}
 
 	.page-single-category-list h3 {
@@ -6719,7 +6719,14 @@ header.main-header .header-sticky.active {
 }
 
 .DeskFixed .Whatapp {
-	background: #619c32;
+	background: #ffffff;
+	border: 2px #47c756 solid;
+}
+
+.DeskFixed .Whatapp {
+	padding: 7px;
+	width: 100%;
+
 }
 
 .FixedCntct li a {
@@ -6794,7 +6801,7 @@ header.main-header .header-sticky.active {
 }
 
 .DeskFixed .mob {
-	background: #dd162d;
+	background: #fff;
 	position: relative;
 	animation: pulse 1500ms infinite;
 	border: 2px #760921 solid;
@@ -7062,7 +7069,7 @@ header.main-header .header-sticky.active {
 /* side bar */
 .page-single-sidebar {
 	position: sticky;
-	top: 100px;
+	top: 80px;
 }
 
 .service-sidebar {

@@ -111,7 +111,7 @@
         <div class="row">
 
             <!-- LEFT SIDEBAR -->
-            <div class="col-lg-3">
+            <div class="col-lg-3 pe-lg-3">
                 <div class="service-sidebar page-single-category-list">
 
                     <h3 class="service-link"  data-index="all">CHAPTERS</h3>
@@ -146,7 +146,7 @@
             <!-- RIGHT CONTENT -->
             <div class="col-lg-9">
 
-                <div id="serviceContent" class="row">
+                <div id="serviceContent" class="row d-flex">
 
                     <?php 
 
@@ -160,7 +160,8 @@
                             $items = $service['items'] ?? [];
                            $img = $service['category_image'];
                     ?>
-                        <div class="col-lg-4 col-md-6 pb-0">
+                    <!-- loop last row mb-0 -->
+                        <div class="col-lg-4 col-md-6 col-md-6 mb-lg-0 mb-md-4 d-flex  pb-0 <?php if($index == count($services) - 1) { echo 'mb-sm-0 ps-lg-0'; } else { echo 'mb-sm-3 ps-lg-1'; } ?>">
                                 <div class="service-item wow fadeInUp mb-0">
                                         <div class="service-content">
                                             <div class="service-content-title ">

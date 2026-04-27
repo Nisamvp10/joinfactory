@@ -35,7 +35,7 @@
             <div class="row g-4">
 
             <!-- Sidebar -->
-            <div class="col-lg-4">
+            <div class="col-lg-4 pe-lg-1">
                 <div class="page-single-sidebar position-sticky row" >
 
                    <div class="page-single-category-list wow fadeInUp p-0">
