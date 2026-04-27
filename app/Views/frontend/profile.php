@@ -37,7 +37,7 @@
                             <!-- Team Member Image Start -->
                             <div class="team-member-image">
                                 <figure class="image-anime reveal">
-                                    <img src="<?=base_url('public/assets/template/images/dr1.jpg') ?>" alt="">
+                                    <img src="<?=base_url('public/assets/template/images/dr1.webp') ?>" alt="">
                                 </figure>
                             </div>
                             <!-- Team Member Image End -->
