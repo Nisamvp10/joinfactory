@@ -1461,7 +1461,7 @@ header.main-header .header-sticky.active {
 .service-item {
 	background-color: var(--white-color);
 	border-radius: 30px;
-	height: calc(100% - 30px);
+	/* height: calc(100% - 30px); */
 	margin-bottom: 30px;
 	padding: 40px;
 }
