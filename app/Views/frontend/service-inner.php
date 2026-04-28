@@ -35,7 +35,7 @@
             <div class="row g-4">
 
             <!-- Sidebar -->
-            <div class="col-lg-4 pe-lg-1">
+            <div class="col-lg-3 pe-lg-1">
                 <div class="page-single-sidebar position-sticky row" >
 
                    <div class="page-single-category-list wow fadeInUp p-0">
@@ -62,7 +62,7 @@
             </div>
 
             <!-- Content -->
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <div class="bg-white p-3 p-lg-5 rounded-4 shadow-sm ">
 
                     <?php if (!empty($services)) {

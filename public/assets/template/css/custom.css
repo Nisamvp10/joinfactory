@@ -3350,7 +3350,7 @@ header.main-header .header-sticky.active {
 	color: var(--white-color);
 	text-transform: uppercase;
 	background: var(--primary-color);
-	padding: 20px 30px;
+	padding: 20px 15px;
 }
 
 .page-single-category-list ul {

@@ -188,7 +188,7 @@ if (!empty(services())) {
 
         // OPEN ROW
         if ($indx % 5 == 0) {
-            echo '<div class="row row-cols-1 row-cols-md-3 row-cols-lg-5">';
+            echo '<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">';
         }
         ?>
 
