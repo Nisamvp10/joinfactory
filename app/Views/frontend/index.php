@@ -128,8 +128,7 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">Dr. Ram Sudhan Subramaniyan</h3> 
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">EXPERT ARTHROSCOPIST AND JOINT SURGEON & SPECIALIST JOINTS &  KEY HOLE SURGEON
-                             </h2>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">SPECIALIST JOINTS &  KEY HOLE SURGEON</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">
                                 Associate Prof. Dr. Ram Sudhan Subramaniyan is a specialist in Sports surgeries and joint reconstruction with a special interest in "joint preservation" of the Hip, shoulder, and knee. He is a pioneer in Hip arthroscopy and preservation in Kerala. He is a notable alumnus of Annamalai University and graduated with a medical degree from Rajah Muthiah Medical College and Hospital (now, Government Medical College, Cuddalore, state of Tamil Nadu), class of 2004. He pursued his postgraduation in orthopaedic surgery from Government Medical College, Kozhikode under Kerala University of Health Sciences (KUHS) and DNB Orthopaedics in Medical Trust Hospital, Ernakulam (State of Kerala) from the National Board.
                             </p>
