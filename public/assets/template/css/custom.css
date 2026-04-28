@@ -1282,11 +1282,12 @@ header.main-header .header-sticky.active {
 .about-img-1 {
 	position: relative;
 	padding-left: 240px;
+	display: none;
 }
 
 .about-img-2 {
-	max-width: 63%;
-	margin-top: -445px;
+	max-width: 100%;
+	margin-top: 0;
 }
 
 .about-img-2 figure,
@@ -1312,7 +1313,7 @@ header.main-header .header-sticky.active {
 
 .about-img-2 figure img,
 .about-img-1 figure img {
-	aspect-ratio: 1 / 1.257;
+	/* aspect-ratio: 1 / 1.257; */
 }
 
 .company-experience-circle {
@@ -4886,8 +4887,8 @@ header.main-header .header-sticky.active {
 
 @media only screen and (max-width: 1650px) {
 	.about-img-2 {
-		max-width: 63%;
-		margin-top: -370px;
+		max-width: 100%;
+		margin-top: 0;
 	}
 
 }
@@ -5011,7 +5012,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.section-title h2 {
-		font-size: 38px;
+		font-size: 25px;
 	}
 
 	.section-title p {
@@ -6033,6 +6034,24 @@ header.main-header .header-sticky.active {
 }
 
 @media only screen and (max-width: 767px) {
+	.cutLogo {
+		width: 80px;
+		position: absolute;
+		top: -12px;
+		height: 10em;
+		left: 0px;
+	}
+
+	.mainLogo {
+		margin-left: 75px;
+	}
+
+	.responsive-menu,
+	.navbar-toggle {
+		display: block;
+		padding-right: 10px;
+	}
+
 
 	.readmore-btn {
 		width: 44px;
