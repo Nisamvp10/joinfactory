@@ -92,7 +92,7 @@
     <div class="main-section ">
         <div class="container">
             <div class="inner-section align-items-center p-lg-5 p-md-2 bg-white">
-                <div class="row">
+                <div class="row d-flex align-items-center">
                 <div class="col-lg-5">
                     <!-- About Us Images Start -->
                     <div class="about-us-images">

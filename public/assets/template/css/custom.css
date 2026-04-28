@@ -4884,6 +4884,14 @@ header.main-header .header-sticky.active {
 	}
 }
 
+@media only screen and (max-width: 1650px) {
+	.about-img-2 {
+		max-width: 63%;
+		margin-top: -370px;
+	}
+
+}
+
 @media only screen and (max-width: 1560px) {
 
 	.bg-section {
@@ -4892,12 +4900,21 @@ header.main-header .header-sticky.active {
 		margin-right: 15px;
 	}
 
+	.about-img-1 {
+		display: none;
+	}
+
 	.hero.hero-bg-image.hero-slider-layout .hero-pagination {
 		padding-left: calc(((100vw - 1300px) / 2));
 	}
 
 	.main-footer {
 		margin-bottom: 15px;
+	}
+
+	.about-img-2 {
+		max-width: 100%;
+		margin-top: 0;
 	}
 }
 
@@ -5348,7 +5365,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.main-footer {
-		padding: 40px 0 0;
+		padding: 15px;
 		margin-bottom: 0px;
 	}
 
@@ -6072,11 +6089,16 @@ header.main-header .header-sticky.active {
 
 	.about-img-1 {
 		padding-left: 145px;
+		display: none
 	}
 
 	.about-img-2 {
-		max-width: 200px;
-		margin-top: -150px;
+		max-width: 100%;
+		margin-top: 0;
+	}
+
+	.about-us-content {
+		padding: 15px;
 	}
 
 	.company-experience-circle img {
