@@ -1505,7 +1505,7 @@ header.main-header .header-sticky.active {
 
 .service-image img {
 	width: 100%;
-	aspect-ratio: 1 / 0.667;
+	/* aspect-ratio: 1 / 0.667; */
 	object-fit: cover;
 	border-radius: 30px;
 	transition: all 0.5s ease-out;
