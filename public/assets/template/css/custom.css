@@ -1524,6 +1524,10 @@ header.main-header .header-sticky.active {
 	margin: 0;
 }
 
+blockquote.wow.fadeInUp p {
+	margin-bottom: 0px;
+}
+
 .section-footer-text p span {
 	font-family: var(--accent-font);
 	color: var(--white-color);

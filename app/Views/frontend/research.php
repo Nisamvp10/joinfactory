@@ -83,9 +83,9 @@
                                 <div class="post-entry">
                   
                                     <blockquote class="wow fadeInUp" data-wow-delay="0.4s">
-                                        <p>Don’t only practice your art</p>
-                                        <p>But force your way into its secrets<p>
-                                        <p>For it and knowledge </p>
+                                        <p>Don’t only practice your art,</p>
+                                        <p>But force your way into its secrets;<p>
+                                        <p>For it and knowledge - </p>
                                         <p>can raise men to the divine…</p>
                                     </blockquote>
         
