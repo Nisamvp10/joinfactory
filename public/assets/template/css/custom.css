@@ -1522,11 +1522,11 @@ header.main-header .header-sticky.active {
 
 .section-footer-text p {
 	margin: 0;
-	text-align: center;
 }
 
 blockquote.wow.fadeInUp p {
 	margin-bottom: 0px;
+	text-align: center;
 }
 
 .section-footer-text p span {
