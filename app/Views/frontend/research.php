@@ -40,17 +40,14 @@
                     <div class="page-single-sidebar">
                         <!-- Page Single Category List Start -->
                         <div class="page-single-category-list wow fadeInUp">
-                            <h3>Research Topics </h3>
+                            <h3>Contents </h3>
                              <ul class="list-group p-0" id="serviceList">
 
-                                <li class="list-group-item"><a href="#">The Risk Of Online Self-diagnosis</a></li>
-
-                                <li class="list-group-item"><a href="#">Collaboration</a></li>
-                                <li class="list-group-item"><a href="#">Evaluation</a></li>
-                                <li class="list-group-item"><a href="#">Program Eligibility & Duration</a></li>
-                                <li class="list-group-item"><a href="#">PLC Reconstruction</a></li>
-                             
-
+                                <li class="list-group-item "><a href="#" data-sec="introduction_and_overview">introduction and overview </a></li>
+                                <li class="list-group-item "><a href="#" data-sec="tenets">Tenets</a></li>
+                                <li class="list-group-item "><a href="#" data-sec="collaboration">Collaboration</a></li>
+                                <li class="list-group-item "><a href="#" data-sec="evaluation">Evaluation</a></li>
+                                <li class="list-group-item "><a href="#" data-sec="program_eigibility_duration">Program Eligibility & Duration</a></li>
                             </ul>
                         </div>
                         <!-- Page Single Category List End -->
@@ -62,119 +59,57 @@
                 </div>
 
 
-                <div class="col-lg-8">
+                <div class="col-lg-8 ps-lg-0">
                     <!-- Page Team Single Box Start -->
-				    <div class="page-team-single-box">
+				    <div class="page-team-single-box p-lg-5 p-md-2 bg-white rounded-section">
                      
                         <!-- Team Member About Start -->
-                        <div class="team-member-about">
+                        <div class="team-member-about case-study-single-content">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-3" data-cursor="-opaque">Research</h2>
+                                <h3 class="text-anime-style-3" data-cursor="-opaque">Introduction</h2>
                                 <p class="wow fadeInUp" data-wow-delay="0.2s">
                                     Research is the documented intellect of human evolution and the keystone of rational life that expands the boundaries of human understanding and belief. Research, teaching, service and growth complement one another. Therefore, we envision to provide the best quality of life to the people without pain and suffering by revolutionizing the treatments and techniques in musculoskeletal disorders through research that shall empower mankind across and beyond the limits of theoretical perception.
-
-
                                 </p>
                             </div>
-
                             <div class="post-contentsk">
                                 <!-- Post Entry Start -->
                                 <div class="post-entry">
-                  
                                     <blockquote class="wow fadeInUp" data-wow-delay="0.4s">
                                         <p>Don’t only practice your art,</p>
                                         <p>But force your way into its secrets;<p>
                                         <p>For it and knowledge - </p>
                                         <p>can raise men to the divine…</p>
                                     </blockquote>
-        
-                             
-        
-
-
                                 </div>
                                 <!-- Post Entry End -->
-        
-                               
                             </div>
         
                             <!-- Section Title End -->
-                             
-                      
                             <!-- Team Member List End -->
                         </div> 
                         <!-- Team Member About End -->
 
                      <!-- Team Member About Start -->
-                     <div class="team-member-about">
+                     <div class="team-member-about case-study-single-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h2 class="text-anime-style-3 mb-2" data-cursor="-opaque">Education And Research Internship Program:
-                            </h2>
-                            <h4 class="text-anime-style-3 " data-cursor="-opaque">Overview:
-
-                            </h4>
+                            <h2 class="text-anime-style-3 mb-2" data-cursor="-opaque">Education And Research Internship Program:</h2>
+                            <h4 class="text-anime-style-3 " data-cursor="-opaque">Overview:</h4>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">
                                 The challenging endeavour of the academy is to promote research and education in the field of orthopaedics, sports medicine and musculoskeletal disorders thereby providing the path to exhibit innovation irrespective of the global strata of any kind. An active research agenda educates and stimulates teaching, offering the latest information and the newest insights directly to the table. Collaborating with faculty on research initiatives equips students with the distinctive viewpoint and analytical abilities required to resolve the challenges of the future. Thus, we are firm and steadfast to pronounce that the program is the best of the brains we offer.
-
-
                             </p>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">
-                              
                                 This clinical research internship program provides exposure to clinical and in-vitro research in medicine predominantly in the orthopaedic discipline. Interns will be engaged and tutored under a senior researcher, through the process of clinical research from conceptualizing a research study to manuscript writing and submission in a high impact peer reviewed journal. In addition, interns will be participating in journal clubs, CME programs and society meetings of the ortho clubs under Kerala & Tamil Nadu orthopaedic association to get a wide range of knowledge in the musculoskeletal forum.
-
-
-
                             </p>
-                            <h4 class="text-anime-style-3 mt-3" data-cursor="-opaque">The Risk Of Online Self-diagnosis Or Treatment:
-
-
-                            </h4>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">
-                              
-                                The risks of using online health resources include
-
-
-
-                            </p>
+                         
                         </div>
                         <!-- Section Title End -->
                          
                         <!-- Team Member List Start -->
-                        <div class="team-member-list wow fadeInUp" data-wow-delay="0.4s">
-                            <ul>
-                                <li>
-                                    Increased anxiety and fear. The term cyberchondria can be defined as someone experiencing a high amount of health anxiety from searching symptoms on the internet.
-
-                                </li>
-                                <li>
-                                    Self-misdiagnosis is also a danger, especially if doing so means not seeking treatment. For example, if a person confidently self-diagnoses their stomach pains as the stomach flu, they may hesitate to believe their doctor’s diagnosis of appendicitis. Misdiagnoses can even be very serious if it results in failure to detect a possible heart attack, stroke, seizure or tumour.
-
-                                </li>
-                                <li>
-                                    It’s possible that the search results could offer accurate answers about the cause of the person’s symptoms. Or the search might erroneously suggest they’re well on their way to an early death.
-
-                                </li>
-                                <li>Try giving Google a set of symptoms, like shortness of breath, light-headedness, dizziness, increased heart rate, and tingling in hands and legs. (This is what you will likely experience if you engage in hyperventilating for two minutes.) You will get a variety of results from Google from those symptoms.
-                                </li>
-                            </ul>
+                       <div class="section-title pt-3 case-study-single-content">
+                                <h3 class="text-anime-style-3" data-cursor="-opaque">Tenets:</h2>
                         </div>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">
-                              
-                            The reality is that online self-diagnosis cannot be prevented. But those consulting Dr. Google should be aware of the potential risks, confirm information found online with a health-care provider and ask health-care providers for credible online sources of information about their diagnoses.
-
-
-
-
-                        </p>
-
-                        <h4 class="text-anime-style-3  mb-3" data-cursor="-opaque">
-                            Tenets:
-
-
-                        </h4>
-
                         <div class="team-member-list wow fadeInUp" data-wow-delay="0.4s">
                             <ul>
                                 <li>
@@ -196,12 +131,10 @@
                                 </li>
                             </ul>
                         </div>
-                        <h4 class="text-anime-style-3  mt-3 mb-3" data-cursor="-opaque">
-                            Collaboration:
-
-
-
-                        </h4>
+                            <div class="section-title pt-3 case-study-single-content">
+                                <h3 class="text-anime-style-3" data-cursor="-opaque">Collaboration:</h2>
+                        </div>
+                       
 
                         <p class="wow fadeInUp" data-wow-delay="0.2s">
                               
@@ -211,15 +144,11 @@
 
 
                         </p>
-
-                        <h4 class="text-anime-style-3  mt-3 mb-3" data-cursor="-opaque">
-                            Evaluation:
-
-
-
-
-                        </h4>
-
+                        <div class="section-title pt-3 case-study-single-content">
+                                <h3 class="text-anime-style-3" data-cursor="-opaque">Evaluation:</h2>
+                        </div>
+                       
+                       
                         <p class="wow fadeInUp" data-wow-delay="0.2s">
                               
                             Attendance as per the department schedule is mandatory. Active participation in regular meetings and maintaining a logbook prescribed for the complete tenure, is essential. Interns are expected to present their ideas on ongoing research projects and required to submit a final review of every manuscript or paper or poster in which they are involved. The certificates for the internship program will only be provided after individual evaluation of the candidate after fulfillment of the obligatory norms.
@@ -229,15 +158,12 @@
 
                         </p>
 
+                        <div class="section-title pt-3 case-study-single-content">
+                                <h3 class="text-anime-style-3" data-cursor="-opaque">   Program Eligibility & Duration:</h2>
+                        </div>
+                        
 
-                        <h4 class="text-anime-style-3  mt-3 mb-3" data-cursor="-opaque">
-                            Program Eligibility & Duration:
-
-
-
-
-
-                        </h4>
+                    
 
                         <p class="wow fadeInUp" data-wow-delay="0.2s">
                             Eligibility requirement for the ORTHOPAEDIC CLINICAL RESEARCH INTERNSHIP/FELLOWSHIP program is postgraduation in life sciences, paramedical sciences and mathematics, 6-month internship and 2-year fellowship programs are available and are recruited every year on the month of January and July. Short duration clerkship considerations are available throughout the academic year and are considered on individual basis after interview. If interested please email Dr. Ram Sudhan Subramaniyan at sudhansubramaniam@gmail.com with the required documents given below.
@@ -271,7 +197,7 @@
                             </ul>
                         </div>
 
-                        <a  href="<?=base_url('public/assets/template/images/orthopedic-clinical-research-application-form.pdf')?>" target="_blank" class="btn-default mt-5">Download</a>
+                        <a  href="<?=base_url('public/assets/template/images/orthopedic-clinical-research-application-form.pdf')?>" target="_blank" class="btn-default mt-5">Download Application</a>
                         <!-- Team Member List End -->
                     </div> 
                     <!-- Team Member About End -->
@@ -291,5 +217,34 @@
 <?= view('frontend/inc/footerLink') ?>
     
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
 
+    const sections = document.querySelectorAll(".case-study-single-content");
+    const navItems = document.querySelectorAll("#serviceList .list-group-item");
+
+    window.addEventListener("scroll", function () {
+
+        let currentIndex = 0;
+
+        sections.forEach((section, index) => {
+            const top = section.offsetTop - 200;
+
+            if (window.scrollY >= top) {
+                currentIndex = index;
+            }
+        });
+
+        // remove all active
+        navItems.forEach(item => item.classList.remove("active"));
+
+        // add active to current
+        if (navItems[currentIndex]) {
+            navItems[currentIndex].classList.add("active");
+        }
+
+    });
+
+});
+</script>
 </html>

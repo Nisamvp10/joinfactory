@@ -137,7 +137,7 @@ class ServiceModel extends Model {
             ->join('variants as v','s.id = v.service_id','left')
             ->join('service_sub_image as si','v.id = si.service_id','left')
             ->where('s.status',1)
-            ->orderBy('s.id','DESC');
+            ->orderBy('s.id','ASC');
             if($serviceId){
                 $builder->where(['s.sub_category' => $serviceId]);
             }
