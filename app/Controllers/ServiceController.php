@@ -134,8 +134,8 @@ class ServiceController extends Controller {
             ->join('categories pc', 'pc.id = s.parent_id', 'left')
             ->where(['s.slug'=>$slug,'s.is_active'=>1])->get()->getRow();
         $services = $this->serviceModel->where('sub_category', $category->id)->get()->getResult();
-        $getSericeDetails = $this->serviceModel->serviceDetails($category->id);
-        //echo   $this->serviceModel->getLastQuery(); 
+        $getSericeDetails = $this->serviceModel->serviceDetails($category->id,'','','s.maincate_order ASC');
+       // echo   $this->serviceModel->getLastQuery(); 
         if (!empty($getSericeDetails)) {
 
                 $page = $category->category;// $getSericeDetails[0]->title;

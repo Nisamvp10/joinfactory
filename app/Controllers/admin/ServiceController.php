@@ -60,6 +60,7 @@ class ServiceController extends Controller {
         $points = $this->request->getPost('points');
         $remark = $this->request->getPost('remark');
         $subcategory = $this->request->getPost('subcategory');
+        $mainCateno  = $this->request->getPost('mainCateno');
         // foreach($points as $i => $point) {
         //     if(empty($point)) {
         //         $pointsErrors["points.$i"] = "Point is required.";
@@ -256,9 +257,11 @@ class ServiceController extends Controller {
             'short_note'    => $this->request->getPost('note'),
             'category_id'   => $this->request->getPost('category'),
             'sub_category'   => $subcategory,
+            'maincate_order' => $mainCateno,
             'point_title'   => $this->request->getPost('pointtitle'),
             'variant_title'   => 'DR',//$this->request->getPost('variant_main_title'),
         ];
+
         if(!empty($imagePath)) {
             $data['image'] = $imagePath;
         }
@@ -461,6 +464,7 @@ class ServiceController extends Controller {
                     'variant_title' => $row['variant_title'],
                     'point_title'   => $row['point_title'],
                     'icon'          => $row['icon'],
+                    'maincate_order' => $row['maincate_order'],
                     'highlights'    => [],
                     'gallery'       => [],
                     'variants'      => []

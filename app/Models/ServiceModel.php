@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 class ServiceModel extends Model {
     protected $table = 'services';
 
-    protected $allowedFields = ['id','title','point_title','variant_title','short_note','slug','description','category_id','sub_category','image','icon','status','created_at','created_by','updated_at','updated_by'];
+    protected $allowedFields = ['id','title','point_title','variant_title','short_note','maincate_order','slug','description','category_id','sub_category','image','icon','status','created_at','created_by','updated_at','updated_by'];
     protected $primaryKey = 'id';
 
     protected $beforeInsert = ['generateSlug'];
@@ -44,7 +44,7 @@ class ServiceModel extends Model {
 
     public function getData($id = false,$search='',$orderBy ='',$condition=false) {
         $builder = $this->db->table('services as s')
-            ->select('s.id,s.slug,s.title,s.point_title,s.variant_title,s.short_note,s.image,s.description,s.category_id,s.sub_category,sh.points,sh.id as pointId,sg.image_url,sg.id as imgId,v.id as varintId,
+            ->select('s.id,s.slug,s.title,s.maincate_order,s.point_title,s.variant_title,s.short_note,s.image,s.description,s.category_id,s.sub_category,sh.points,sh.id as pointId,sg.image_url,sg.id as imgId,v.id as varintId,
           v.title as varinttitle,v.short_note as variantdesc,v.image as varintImg,s.icon,sh.remarks,
           si.id as subimgId,si.image subImage'
           )
@@ -128,16 +128,16 @@ class ServiceModel extends Model {
             ->getResult();
     }
 
-    public function serviceDetails($serviceId = false,$search='',$condition=false) {
+    public function serviceDetails($serviceId = false,$search='',$condition=false,$orderBy=false) {
          $builder = $this->db->table('services as s')
-            ->select('s.id,s.slug,s.title,s.variant_title,s.short_note,s.image,s.description,s.category_id,
+            ->select('s.id,s.slug,s.title,s.maincate_order,s.variant_title,s.short_note,s.image,s.description,s.category_id,
            v.id as varintId,
             v.service_id as variantServiceId,v.title as varinttitle,v.short_note as variantdesc,v.image as varintImg,s.icon,
             si.image as subImg')
             ->join('variants as v','s.id = v.service_id','left')
             ->join('service_sub_image as si','v.id = si.service_id','left')
-            ->where('s.status',1)
-            ->orderBy('s.id','ASC');
+            ->where('s.status',1);
+           
             if($serviceId){
                 $builder->where(['s.sub_category' => $serviceId]);
             }
@@ -146,6 +146,11 @@ class ServiceModel extends Model {
             }
             if($condition) {
                 $builder->where($condition);
+            }
+            if($orderBy){
+                $builder->orderBy($orderBy);
+            }else{
+                $builder->orderBy('s.id','ASC');
             }
             return $builder->get()->getResult();
     }

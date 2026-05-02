@@ -28,6 +28,7 @@ function openModal(id = false) {
     //webForm.querySelector('#description').value = '';
     webForm.querySelector('#variant_main_title').value = '';
     webForm.querySelector('#pointtitle').value = '';
+    webForm.querySelector('#mainCateno').value = '';
     tinymce.get('description').setContent('');
     $('#selectedPreview').addClass('hidden');
     webForm.querySelector('#previewImg').src = '';
@@ -57,6 +58,7 @@ function openModal(id = false) {
                     webForm.querySelector('#edit_id').value = result[0].careerId;
                     webForm.querySelector('#variant_main_title').value = result[0].variant_title;
                     webForm.querySelector('#pointtitle').value = result[0].point_title;
+                    webForm.querySelector('#mainCateno').value = result[0].maincate_order;
                     let subCategoryId = result[0].subcategoryId ?? '';
                     // set category & trigger change
                     $('#category').val(result[0].type ?? '').trigger('change', [subCategoryId]);

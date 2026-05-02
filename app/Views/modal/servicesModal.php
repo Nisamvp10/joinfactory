@@ -53,6 +53,7 @@
                             </div>
                         </div>
 
+
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">News Title *</label>
                             <div class="relative">
@@ -61,6 +62,15 @@
                                 <div class="invalid-feedback" id="title_error"></div>
                             </div>
                         </div>
+                        <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Mian Cate order No</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 mt-2 items-center pointer-events-none"><i class="bi bi-no text-xl text-gray-400"></i></div>
+                                <input type="text" name="mainCateno"  id="mainCateno" class="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Order Number">
+                                <div class="invalid-feedback" id="mainCateno_error"></div>
+                            </div>
+                        </div>
+
                           <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Category *</label>
                             <div class="relative">
