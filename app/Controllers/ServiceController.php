@@ -135,7 +135,7 @@ class ServiceController extends Controller {
             ->where(['s.slug'=>$slug,'s.is_active'=>1])->get()->getRow();
         $services = $this->serviceModel->where('sub_category', $category->id)->get()->getResult();
         $getSericeDetails = $this->serviceModel->serviceDetails($category->id,'','','s.maincate_order ASC');
-       // echo   $this->serviceModel->getLastQuery(); 
+        echo   $this->serviceModel->getLastQuery(); 
         if (!empty($getSericeDetails)) {
 
                 $page = $category->category;// $getSericeDetails[0]->title;
