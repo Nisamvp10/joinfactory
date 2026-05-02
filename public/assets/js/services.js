@@ -555,7 +555,7 @@ $('#serviceForm').on('submit', function (e) {
 })
 
 loadServices();
-
+serviceData = [];
 function loadServices(search = '') {
     $.ajax({
         url: App.cust() + 'data',
@@ -564,7 +564,8 @@ function loadServices(search = '') {
         dataType: 'json',
         success: function (res) {
             if (res.success) {
-                renderfun(res);
+                serviceData = res;
+                renderfun();
             } else {
                 html = `<div class="text-center py-8">
                     <h3 class="text-lg font-medium text-gray-700">No Data found</h3>
@@ -581,7 +582,7 @@ let allData = [];
 function renderfun(response) {
     let html = '';
     allData = response;
-    if (response.result.length === 0) {
+    if (serviceData.result.length === 0) {
         html += `<div class="text-center py-8">
                     <h3 class="text-lg font-medium text-gray-700">No Data found</h3>
                     <p class="text-gray-500 mt-1">${(results.message ? results.message : 'Try adjusting your search')}</p>
@@ -590,7 +591,7 @@ function renderfun(response) {
     } else {
         let start = (currentPage - 1) * rowsPerPage;
         let end = start + rowsPerPage;
-        let paginatedData = allData.result.slice(start, end);
+        let paginatedData = serviceData.result.slice(start, end);
         html += `
         <div class="overflow-x-auto w-full">
             <table class="min-w-full border border-gray-200 divide-y divide-gray-200 text-sm">
@@ -625,7 +626,7 @@ function renderfun(response) {
         html += `</tbody>
         </table></div>`;
 
-        let totalPages = Math.ceil(response.result.length / rowsPerPage);
+        let totalPages = Math.ceil(serviceData.result.length / rowsPerPage);
         html += `
             <div class="flex justify-between items-center mt-4">
                 <div>
@@ -648,6 +649,28 @@ function renderfun(response) {
     }
     $('#servicesTable').html(html);
 }
+
+// Change rows per page
+function changeRowsPerPage(value) {
+    rowsPerPage = parseInt(value);
+    currentPage = 1;
+    renderfun(serviceData);
+}
+
+// Pagination functions
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderfun(serviceData);
+    }
+}
+function nextPage(totalPages) {
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderfun(serviceData);
+    }
+}
+
 function deleteItem(e) {
     let id = $(e).data('id');
     if (confirm('are you sure You want to Delete This')) {
