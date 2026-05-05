@@ -90,7 +90,7 @@ class ServiceModel extends Model {
     {
         $builder =  $this->db->table('services as s')
             ->select('
-                s.id, s.slug, s.title, s.short_note, s.image,
+                s.id, s.slug, s.title, s.short_note, s.image,sc.sort_order as oId,sc.category as sc,
                 s.sub_category,
                 pc.category as parent_category,
                 sc.category as sub_category_title,
@@ -104,7 +104,7 @@ class ServiceModel extends Model {
                 $builder->where('s.category_id', $categoryId);
             }
             $builder->where('s.status', 1)
-            ->orderBy('s.id','DESC');
+            ->orderBy('sc.sort_order','ASC');
             if($limit){
                 $builder->limit($limit);
             }
