@@ -44,6 +44,7 @@
                              <ul class="list-group p-0" id="serviceList">
 
                                 <li class="list-group-item "><a href="#" data-sec="introduction_and_overview">introduction and overview </a></li>
+                                <li class="list-group-item " ><a href="#" data-sec="research_internship_program">Education And Research Internship Program</a></li>
                                 <li class="list-group-item "><a href="#" data-sec="tenets">Tenets</a></li>
                                 <li class="list-group-item "><a href="#" data-sec="collaboration">Collaboration</a></li>
                                 <li class="list-group-item "><a href="#" data-sec="evaluation">Evaluation</a></li>
@@ -91,11 +92,11 @@
                         <!-- Team Member About End -->
 
                      <!-- Team Member About Start -->
-                     <div class="team-member-about case-study-single-content">
+                     <div class="team-member-about research_internship_program">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                              <div class="section-title pt-3 case-study-single-content">
-                                <h3 class="text-anime-style-3" data-cursor="-opaque">Education And Research Internship Program:</h2>
+                              <div class="section-title pt-3 ">
+                                <h3 class="text-anime-style-3 " data-cursor="-opaque">Education And Research Internship Program:</h2>
                         </div>
 
                           
