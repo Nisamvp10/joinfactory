@@ -94,7 +94,11 @@
                      <div class="team-member-about case-study-single-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h2 class="text-anime-style-3 mb-2" data-cursor="-opaque">Education And Research Internship Program:</h2>
+                              <div class="section-title pt-3 case-study-single-content">
+                                <h3 class="text-anime-style-3" data-cursor="-opaque">Education And Research Internship Program:</h2>
+                        </div>
+
+                          
                             <h4 class="text-anime-style-3 " data-cursor="-opaque">Overview:</h4>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">
                                 The challenging endeavour of the academy is to promote research and education in the field of orthopaedics, sports medicine and musculoskeletal disorders thereby providing the path to exhibit innovation irrespective of the global strata of any kind. An active research agenda educates and stimulates teaching, offering the latest information and the newest insights directly to the table. Collaborating with faculty on research initiatives equips students with the distinctive viewpoint and analytical abilities required to resolve the challenges of the future. Thus, we are firm and steadfast to pronounce that the program is the best of the brains we offer.
