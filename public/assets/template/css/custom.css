@@ -4868,6 +4868,71 @@ blockquote.wow.fadeInUp p {
 	margin-bottom: 20px;
 }
 
+
+
+.cta-card {
+	position: fixed;
+	right: 20px;
+	bottom: 50px;
+	background: white;
+	padding: 18px 20px;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	max-width: 280px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	z-index: 999;
+}
+
+.cta-cont {
+	width: 330px;
+}
+
+.cta-sideimg {
+	width: 110px;
+	position: fixed;
+	right: 30px;
+	bottom: 50px;
+}
+
+.cta-sideimg img {
+	width: 100%;
+}
+
+.cta-cont h6 {
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "Cinzel", serif !important;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+	margin-bottom: 8px;
+	width: 150px;
+	color: #000;
+}
+
+.book-btn {
+	/* background: #FF8000;
+	border: 1px solid #FF8000; */
+	border: 1px solid #7a0821;
+	color: #7a0821;
+	padding: 6px 14px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 12px;
+	font-family: "Gothic A1", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	transition: ease-in-out 0.4s;
+}
+
+.book-btn:hover {
+	background: #000;
+	color: #fff;
+	border: 1px solid #000;
+}
+
 /************************************/
 /***      33. Responsive css      ***/
 /************************************/
@@ -6753,7 +6818,7 @@ blockquote.wow.fadeInUp p {
 .DeskFixed {
 	position: fixed;
 	right: 25px;
-	bottom: 170px;
+	bottom: 250px;
 	z-index: 99;
 	margin: -5px 0;
 	display: block;

@@ -139,3 +139,18 @@
                 </footer>
 
  
+
+                <div class="cta-card">
+                    <div class="cta-cont">
+                        <div>
+                            <h6>Book Your Appointment Now</h6>
+                            <a href="tel: (+91) 812 939 4980" class="book-btn">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="cta-sideimg">
+                        <img src="<?=base_url("public/assets/template/images/cta-sideimg.png")?>" alt="Doctor" class="doctor-img">
+                    </div>
+                </div>
+
+
+                
