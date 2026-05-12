@@ -124,8 +124,11 @@
                                 <li class="nav-item"><a class="nav-link" href="<?=base_url() ?>">Home </a>
                                     <li class="nav-item submenu"><a class="nav-link" href="#">About</a>
                                         <ul>                                        
-                                            <li class="nav-item "><a class="nav-link" href="<?=base_url('profile') ?>">Doctor's Profile</a></li>
+                                            <li class="nav-item submenu"><a class="nav-link" href="<?=base_url('profile') ?>">surgeon Profile</a></li>
                                             <li class="nav-item "><a class="nav-link" href="<?=base_url('purpose-and-values')?>">Purpose and Values</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">The journey of excellence</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Infographics</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Publication & presentation</a></li>
 
                                         </ul>
                                     
@@ -167,14 +170,14 @@
                                     </li> 
                                     
                                     <li class="nav-item"><a class="nav-link" href="<?=base_url('research')?>">Research</a>
-                                        <!--<ul>                                        -->
-                                        <!--    <li class="nav-item"><a class="nav-link" href="#">Demo</a></li>-->
-                                        <!--    <li class="nav-item"><a class="nav-link" href="#">Demo</a></li>-->
-
-                                        <!--</ul>-->
+                                        <ul>                                        
+                                            <li class="nav-item"><a class="nav-link" href="#"> Research and Career opportunities</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#"> Our research team</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#"> Our research protocol</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#"> primary area of research</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#"> latest research</a></li>
+                                        </ul>
                                     </li>                         
-
-                                    
                                     <li class="nav-item"><a class="nav-link" href="<?=base_url('gallery')?>">Gallery
                                     </a></li>                         
                                     <li class="nav-item submenu"><a class="nav-link" href="#">Patient Library</a>
