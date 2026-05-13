@@ -123,13 +123,23 @@
                             <?php
                             foreach($services as $index => $service) {
                                 ?>
-                                <li class="list-group-item list-group-item<?= $index ?> ">
-                                    <a href="javascript:void(0);" 
+                                <!-- <li class="list-group-item list-group-item<?= $index ?> ">
+                                    <a href="<?= base_url('service-details/'.$item['slug']); ?>" 
                                    class="service-link "
                                    data-index="<?= $index ?>">
                                     <?= esc($service['sub_category_title']); ?>
                                 </a>
+                            </li> -->
+
+                            <li class="list-group-item">
+                                    <a href="<?= base_url('service-details/'.$service['category_slug']); ?>" 
+                                   class="service-link_ "
+                                  >
+                                    <?= esc($service['sub_category_title']); ?>
+                                </a>
                             </li>
+
+                            
                         <?php };
                         } ?>
                     </ul>
