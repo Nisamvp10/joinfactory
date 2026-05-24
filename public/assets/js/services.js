@@ -559,6 +559,7 @@ $('#serviceForm').on('submit', function (e) {
 loadServices();
 serviceData = [];
 function loadServices(search = '') {
+     search = $('#searchProductInput').val();
     $.ajax({
         url: App.cust() + 'data',
         method: 'POST',
@@ -672,6 +673,7 @@ function nextPage(totalPages) {
         renderfun(serviceData);
     }
 }
+ $(document).on('keyup change','#searchProductInput',loadServices);
 
 function deleteItem(e) {
     let id = $(e).data('id');

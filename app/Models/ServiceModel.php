@@ -58,7 +58,7 @@ class ServiceModel extends Model {
                 $builder->where(['s.id' => $id]);
             }
             if($search) {
-                $builder->like($orderBy);
+                $builder->like('s.title',$search);
             }
             if($condition) {
                 $builder->where($condition);

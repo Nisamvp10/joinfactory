@@ -389,7 +389,7 @@ class ServiceController extends Controller {
         }
         $status = false;
         $search = $this->request->getPost('search');
-        $data = $this->serviceModel->getData($search);
+        $data = $this->serviceModel->getData('',$search);
         $dataPoints= [];
         if($data) {
             foreach($data as $news) {
