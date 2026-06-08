@@ -7585,4 +7585,24 @@ footer ul {
 	padding-right: 10px;
 	width: 34px;
 }
+/* Main responsive */
+@media (max-width: 768px) {
+	.section-title {
+        margin-bottom: 10px;
+    }
 
+	.section-title h3 {
+    font-size: 20px;
+	}
+}
+@media (max-width: 550px) {
+	.section-title h3::before {
+        width: 20px;
+        height: 20px;
+		display: none;
+    }
+
+	.section-title h3 {
+        padding-left: 0;
+    }
+}
