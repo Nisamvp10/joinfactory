@@ -7383,15 +7383,30 @@ blockquote.wow.fadeInUp p {
 		font-weight: 500;
 	}
 
+	.timeline-row .left-con{
+		position: absolute;
+		top: -50px;
+		left: 0;
+		right: 0;
+	}
         /* Responsive */
         @media(max-width:768px){
+			.timeline-wrapper {
+				max-width: 100%;
+				margin: 0 auto;
+				position: relative;
+				padding: 20px 20px;
+			}
+
 
             .timeline-wrapper::before{
+				top: 50px;
                 left:30px;
             }
 
             .timeline-row{
-                grid-template-columns:80px 1fr;
+                grid-template-columns:40px 1fr;
+				margin-bottom: 0;
             }
 
             .left-card,
@@ -7400,6 +7415,7 @@ blockquote.wow.fadeInUp p {
                 margin-top:0;
                 margin-bottom:40px;
             }
+			
 
             .timeline-row.center{
                  grid-column:1;
@@ -7410,15 +7426,31 @@ blockquote.wow.fadeInUp p {
             .right-card .card::before{
                 display:none;
             }
+			.timeline-row .left-con {
+				position: absolute;
+				top: 0;
+				left: -15px;
+				right: inherit;
+			}
+			.timeline-row .icon {
+				width: 50px;
+				height: 50px;
+			}
+			.center.right-con {
+				left: -10px;
+				top: 0;
+				align-items: baseline;
+			}
+			.left-card .card .year {
+				border-radius: 20px 20px 0 0 !important;
+			}
+			
+
+
         }
 
 
-.timeline-row .left-con{
-	position: absolute;
-	top: -50px;
-	left: 0;
-	right: 0;
-}
+
 /* journey */
 
 .footer-widget-wrapper .footer-widget-items .widget-head {
