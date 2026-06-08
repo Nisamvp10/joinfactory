@@ -33,5 +33,9 @@ class AboutController extends BaseController
         return view('frontend/our-clinics',compact('page'));
 
     }
+    public function journey(){
+        $page = "The Journey of Excellence";
+        return view('frontend/journey',compact('page'));
+    }
 }
 
