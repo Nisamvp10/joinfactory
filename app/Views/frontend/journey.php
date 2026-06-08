@@ -228,7 +228,7 @@
                  <img src="<?= base_url('public/assets/template/images/rmmc.webp') ?>">
 
                 <div class="card-content"> 
-                    <h3 class="text-uppercase">MBBS</h3>
+                    <h3 class="text-uppercase">MBBS</h3> 
                     <p>
                        Undergraduate medical training at Govt Medical College (RMMCH/ Annamali University)with comprehensive exposure to clinical medicine, surgery, and patient care fundamentals,
                     </p>
