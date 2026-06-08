@@ -230,7 +230,7 @@
                 <div class="card-content"> 
                     <h3 class="text-uppercase">MBBS</h3>
                     <p>
-                        Undergraduate medical training with comprehensive exposure to clinical medicine, surgery, and patient care fundamentals.
+                       Undergraduate medical training at Govt Medical College (RMMCH/ Annamali University)with comprehensive exposure to clinical medicine, surgery, and patient care fundamentals,
                     </p>
                 </div>
             </div>

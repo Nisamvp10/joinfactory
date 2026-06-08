@@ -1,0 +1,711 @@
+INFO - 2026-05-24 05:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-24 05:18:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8 in D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`...', 0)
+#1 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`...')
+#2 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`...')
+#3 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`...', Array, false)
+#4 D:\xamp\htdocs\dr\app\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\dr\app\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'p')
+#6 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+#7 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+#8 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\dr\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-05-24 05:18:40 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 2 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'p')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:18:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 4 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'p')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:18:40 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 5 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'p')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-24 05:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-24 05:18:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8 in D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`...', 0)
+#1 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`...')
+#2 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`...')
+#3 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`...', Array, false)
+#4 D:\xamp\htdocs\dr\app\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\dr\app\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pc')
+#6 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+#7 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+#8 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\dr\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-05-24 05:18:41 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 2 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pc')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:18:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 4 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pc')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:18:41 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 5 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pc')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-24 05:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-24 05:18:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8 in D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`...', 0)
+#1 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`...')
+#2 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`...')
+#3 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`...', Array, false)
+#4 D:\xamp\htdocs\dr\app\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\dr\app\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+#6 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+#7 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+#8 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\dr\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-05-24 05:18:41 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 2 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:18:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 4 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:18:41 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 5 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-24 05:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-24 05:18:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8 in D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`...', 0)
+#1 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`...')
+#2 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`...')
+#3 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`...', Array, false)
+#4 D:\xamp\htdocs\dr\app\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\dr\app\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+#6 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+#7 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+#8 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\dr\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-05-24 05:18:44 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 2 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:18:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 4 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:18:44 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%' ESCAPE '!' 
+ORDER BY `s`.`id` DESC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND    LIKE \'%%\' ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND    LIKE :: ESCAPE \'!\' 
+ORDER BY `s`.`id` DESC', [...], false)
+ 5 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-24 05:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-24 05:19:35 --> mysqli_sql_exception: Unknown column 'pc' in 'where clause' in D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`...', 0)
+#1 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`...')
+#2 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`...')
+#3 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`...', Array, false)
+#4 D:\xamp\htdocs\dr\app\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\dr\app\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pc')
+#6 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+#7 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+#8 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\dr\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-05-24 05:19:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pc' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND  `pc` LIKE :pc: ESCAPE \'!\'
+ORDER BY `s`.`id` DESC', [...], false)
+ 2 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pc')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:19:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pc' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pc` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pc` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND  `pc` LIKE :pc: ESCAPE \'!\'
+ORDER BY `s`.`id` DESC', [...], false)
+ 4 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pc')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:19:35 --> [Caused by] mysqli_sql_exception: Unknown column 'pc' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pc` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pc` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pc` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND  `pc` LIKE :pc: ESCAPE \'!\'
+ORDER BY `s`.`id` DESC', [...], false)
+ 5 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pc')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-24 05:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-24 05:19:36 --> mysqli_sql_exception: Unknown column 'pcl' in 'where clause' in D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`...', 0)
+#1 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`...')
+#2 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`...')
+#3 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`...', Array, false)
+#4 D:\xamp\htdocs\dr\app\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamp\htdocs\dr\app\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+#6 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+#7 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+#8 D:\xamp\htdocs\dr\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamp\htdocs\dr\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2026-05-24 05:19:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pcl' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND  `pcl` LIKE :pcl: ESCAPE \'!\'
+ORDER BY `s`.`id` DESC', [...], false)
+ 2 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:19:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pcl' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pcl` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pcl` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND  `pcl` LIKE :pcl: ESCAPE \'!\'
+ORDER BY `s`.`id` DESC', [...], false)
+ 4 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2026-05-24 05:19:36 --> [Caused by] mysqli_sql_exception: Unknown column 'pcl' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pcl` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pcl` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = 1
+AND  `pcl` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `s`.`id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id`, `s`.`slug`, `s`.`title`, `s`.`maincate_order`, `s`.`point_title`, `s`.`variant_title`, `s`.`short_note`, `s`.`image`, `s`.`description`, `s`.`category_id`, `s`.`sub_category`, `sh`.`points`, `sh`.`id` as `pointId`, `sg`.`image_url`, `sg`.`id` as `imgId`, `v`.`id` as `varintId`, `v`.`title` as `varinttitle`, `v`.`short_note` as `variantdesc`, `v`.`image` as `varintImg`, `s`.`icon`, `sh`.`remarks`, `si`.`id` as `subimgId`, `si`.`image` `subImage`
+FROM `services` as `s`
+LEFT JOIN `service_highlights` as `sh` ON `sh`.`service_id` = `s`.`id`
+LEFT JOIN `servicegallery` as `sg` ON `s`.`id` = `sg`.`service_id`
+LEFT JOIN `variants` as `v` ON `s`.`id` = `v`.`service_id`
+LEFT JOIN `service_sub_image` as `si` ON `si`.`service_id` = `v`.`id`
+WHERE `s`.`status` = :s.status:
+AND  `pcl` LIKE :pcl: ESCAPE \'!\'
+ORDER BY `s`.`id` DESC', [...], false)
+ 5 APPPATH\Models\ServiceModel.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\ServiceController.php(392): App\Models\ServiceModel->getData('', 'pcl')
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\admin\ServiceController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ServiceController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2026-05-24 05:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-24 05:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
