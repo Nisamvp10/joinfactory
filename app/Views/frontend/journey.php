@@ -32,7 +32,7 @@
         <div class="container">
 
 
-<div class="timeline-wrapper">
+<div class="timeline-wrapper inner-section  bg-white">
 
     <!-- ROW 1 -->
     <div class="timeline-row">
