@@ -190,7 +190,7 @@
     </div>
 
     <!-- ROW 2 -->
-    <div class="timeline-row">
+    <div class="timeline-row mb-0">
 
         <div class="left-card" data-aos="zoom-in">
             <div class="card">
@@ -211,7 +211,7 @@
 
         <div class="center left-con">
             <div class="icon">
-                <svg viewBox="0 0 24 24"><path d="M2 7l10-5 10 5-10 5L2 7zm4 4.2l6 3 6-3V17l-6 5-6-5v-5.8z"></path></svg>
+               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 100 100" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M97.5 37.227a3.043 3.043 0 0 1-1.963 2.845l-5.05 1.932v22.67a7.5 7.5 0 0 1 4.472 6.861v7.379a3.043 3.043 0 0 1-3.043 3.043h-8.93a3.043 3.043 0 0 1-3.043-3.043v-7.379a7.47 7.47 0 0 1 4.457-6.846V44.332l-6.466 2.465-6.085 2.327-16.417 6.284a15.214 15.214 0 0 1-10.863 0l-16.416-6.284-6.086-2.327-17.602-6.725a3.043 3.043 0 0 1 0-5.69l40.104-15.336a15.214 15.214 0 0 1 10.863 0l40.105 15.336a3.043 3.043 0 0 1 1.963 2.845zM55.432 61.494a15.214 15.214 0 0 1-10.863 0L28.153 55.21l-6.086-2.328v12.72a3.043 3.043 0 0 0 1.522 2.647A57.997 57.997 0 0 0 50 74.76a57.997 57.997 0 0 0 26.412-6.496 3.043 3.043 0 0 0 1.521-2.647V52.882L71.85 55.21z" fill="#d41a36" opacity="1" data-original="#000000"></path></g></svg>
             </div>
         </div>
            <div class="center right-con">
