@@ -7258,14 +7258,16 @@ blockquote.wow.fadeInUp p {
 
         /* Center Line */
         .timeline-wrapper::before{
-            content:'';
-            position:absolute;
-            left:50%;
-            top:0;
-            width:4px;
-            height:89%;
-            background:#dddddd;
-            transform:translateX(-50%);
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 0;
+			width: 25px;
+			height: 89%;
+			background: #757171;
+			transform: translateX(-50%);
+			border: 1px #404040 solid;
+			border-radius: 10px;
         }
 
         .timeline-row{
@@ -7285,19 +7287,30 @@ blockquote.wow.fadeInUp p {
             border-radius:20px;
             box-shadow:0 5px 15px rgba(0,0,0,.15);
             position:relative;
+			width: 80%;
         }
 
         /* Arrow to center */
-        .left-card .card::after{
-            content:'';
-            position:absolute;
-            right:-20px;
-            top:12px;
-            transform:translateY(-50%);
-            border-left:20px solid #000;
-            border-top:12px solid transparent;
-            border-bottom:12px solid transparent;
+        .left-card .card::before{
+			content: '';
+			position: absolute;
+			right: -195px;
+			top: 30px;
+			width: 210px;
+			height: 7px;
+			background: #757171;
         }
+		 .left-card .card::after{
+			    content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background: #d1d1d1;
+			top: 20px;
+			right: -14px;
+			border-radius: 50%;
+			border:2px #7e7e7e solid;
+		 }
 
         /* RIGHT CARD */
         .right-card{
@@ -7306,23 +7319,40 @@ blockquote.wow.fadeInUp p {
         }
 
         .right-card .card{
-            background:#fff;
-            border-radius:12px;
-            box-shadow:0 5px 15px rgba(0,0,0,.15);
-            position:relative;
+			background: #fff;
+			border-radius: 12px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+			position: relative;
+			width: 80%;
+			float: right;
         }
 
         /* Arrow to center */
         .right-card .card::before{
-            content:'';
-            position:absolute;
-            left:-20px;
-            top:45%;
-            transform:translateY(-50%);
-            border-right:20px solid #000;
-            border-top:12px solid transparent;
-            border-bottom:12px solid transparent;
+           content: '';
+			position: absolute;
+			left: -195px;
+			top: 43%;
+			/* transform: translateY(-50%); */
+			/* border-right: 20px solid #000; */
+			/* border-top: 12px solid transparent; */
+			/* border-bottom: 12px solid transparent; */
+			width: 210px;
+			height: 7px;
+			background: #757171;
         }
+		.right-card .card::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background: #d1d1d1;
+			top: 41.4%;
+			left: -14px;
+			border-radius: 50%;
+			border: 2px #7e7e7e solid
+		}
+
 		.timeline-row .icon svg {
 			fill:#d41a36
 		}
@@ -7335,7 +7365,7 @@ blockquote.wow.fadeInUp p {
             font-weight:bold;
         }
 		.left-card  .card .year{
-			border-radius: 20px 0px 0 0!important;
+			border-radius: 20px 20px 0 0!important;
 		}
 		.right-card  .card .year{
 			border-radius: 12px 12px 0 0!important;
@@ -7372,7 +7402,7 @@ blockquote.wow.fadeInUp p {
 		height: 70px;
 		background: #fff;
 		border: 2px solid #b40000;
-		border-radius: 10px;
+		border-radius: 50%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -7381,16 +7411,55 @@ blockquote.wow.fadeInUp p {
 		z-index: 2;
 		padding: 15px;
 		font-weight: 500;
+		box-shadow: 0 4px 10px rgb(18 18 18 / 49%);
 	}
 
 	.timeline-row .left-con{
 		position: absolute;
-		top: -50px;
+		top: 0px;
 		left: 0;
 		right: 0;
 	}
+   @media(max-width:1300px){ 
+		.right-card .card {
+			width: 90%;
+			float: right;
+		}
+		.left-card .card {
+			width: 90%;
+		}
+		.left-card .card::before {
+			right: -85px;
+			width: 85px;
+			background: #757171;
+		}
+		.right-card .card::before {
+			left: -85px;
+			width: 88px;
+		}
+		.right-card .card.card-2009:before {
+			top: 190px!important;
+		}
+		.right-card .card.card-2009:after {
+			top: 178px!important;
+		}
+		.right-card .card.card-2017:before {
+			top: 200px!important;
+		}
+		.right-card .card.card-2017:after {
+			top: 188px!important;
+		}
+	}
         /* Responsive */
         @media(max-width:768px){
+			.left-card .card {
+				width: 100%;
+			}
+			.right-card .card {
+				width: 100%;
+				float: none;
+			}
+		
 			.timeline-wrapper {
 				max-width: 100%;
 				margin: 0 auto;
@@ -7398,7 +7467,12 @@ blockquote.wow.fadeInUp p {
 				padding: 20px 20px;
 			}
 
-
+			.left-card .card::before,
+			.right-card .card::before ,
+			.right-card .card::after,
+			.left-card .card::after{
+				display: none;
+			}
             .timeline-wrapper::before{
 				top: 50px;
                 left:30px;
