@@ -34,7 +34,7 @@
     <!-- Page Contact Us Start -->
     <div class="page-contact-us__ contact-section main-section ">
         <div class="container">
-            <div class="inner-section align-items-center p-lg-5 p-md-2 bg-white">
+            <div class="inner-section align-items-center p-lg-5 p-md-4 p-3 bg-white">
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-7 col-md-6 col-sm-12">
                         <div class="section-title">
@@ -161,7 +161,7 @@
     <section class="main-section">
         <div class="container">
             <div class="inner-section">
-                <div class="map-section">
+                <div class="map-section p-lg-5 p-md-4 p-3">
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="map-content">
@@ -180,7 +180,8 @@
                             <div class="map-content">
                                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jvectormap-next/jquery-jvectormap.css">
 
-                                <div id="world-map" style="width:100%;height:25em;"></div>
+                                <div id="world-map" style="width:100%;height:25em;  position:relative;"></div>
+                                 <!-- <div id="world-map"></div> -->
 
                             </div>
                         </div>
@@ -199,56 +200,186 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jvectormap-next/jquery-jvectormap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jvectormap-content/world-mill.js"></script>
+
+<div id="world-map" style="width:100%;height:700px;"></div>
+
 <script>
-var markers = [
-    {
-        latLng: [10.345092167082514, 76.24562584417761],
-        name: 'Join Factory',
-        phone: '+91 812 939 4980',
-        address: 'Kerala, India',
-        logo: 'assets/images/logo.png',
-        mapUrl: 'https://maps.google.com/?q=10.345092167082514,76.24562584417761'
-    }
-];
+$(function () {
 
-$('#world-map').vectorMap({
-    map: 'world_mill',
-    backgroundColor: 'transparent',
-    
+    var markers = [
 
-    markers: markers,
+        {
+            latLng: [10.345092167082514, 76.24562584417761],
+            name: 'Dr Ram Sudhan Subramaniyan',
+            description: 'Sports Injury & Joint Preservation Clinic',
+            phone: '+91 812 939 4980',
+            logo: '<?= base_url("public/assets/template/images/favicon.png") ?>',
+            mapUrl: 'https://maps.google.com/?q=10.345092167082514,76.24562584417761'
+        },
 
-    markerStyle: {
-        initial: {
-            width: '20px',
-            height: '20px',
-            fill: '#2563eb',
-            stroke: '#fff',
-            r: 10
+        {
+            latLng: [10.398373571111666, 76.11489988650658],
+            name: 'Ma Care Hospital',
+            description: 'Diagnostic Center',
+            phone: '+91 703 474 1741',
+            logo: '<?= base_url("public/assets/template/images/favicon.png") ?>',
+            mapUrl: 'https://maps.google.com/?q=10.398373571111666,76.11489988650658'
+        },
+
+        {
+            latLng: [10.528554740285465, 76.22640614382127],
+            name: 'Atreya Hospital',
+            description: 'Best Multi Speciality Hospital in Thrissur',
+            phone: '+91 812 939 4980',
+            logo: '<?= base_url("public/assets/template/images/favicon.png") ?>',
+            mapUrl: 'https://maps.google.com/?q=10.528554740285465,76.22640614382127'
         }
-    },
+    ];
 
-    onMarkerTipShow: function(event, label, index) {
+    var districtLabels = [
 
-        var marker = markers[index];
+        {latLng:[12.4996,74.9869], name:'Kasaragod'},
+        {latLng:[11.8745,75.3704], name:'Kannur'},
+        {latLng:[11.6854,76.1320], name:'Wayanad'},
+        {latLng:[11.2588,75.7804], name:'Kozhikode'},
+        {latLng:[11.0510,76.0711], name:'Malappuram'},
+        {latLng:[10.7867,76.6548], name:'Palakkad'},
+        {latLng:[10.5276,76.2144], name:'Thrissur'},
+        {latLng:[9.9816,76.2999], name:'Ernakulam'},
+        {latLng:[9.5916,76.5222], name:'Idukki'},
+        {latLng:[9.6858,76.5222], name:'Kottayam'},
+        {latLng:[9.4981,76.3388], name:'Alappuzha'},
+        {latLng:[9.2648,76.7870], name:'Pathanamthitta'},
+        {latLng:[8.8932,76.6141], name:'Kollam'},
+        {latLng:[8.5241,76.9366], name:'Thiruvananthapuram'}
 
-        label.html(
-            ' <div style="min-width:150px;padding:10px; margin:0; border-radius: 10px;background:#fff;color:#000;display:flex;justify-content: center;align-items: center;">'+
-                                    '<div style="width: 90px;">'+
-                                        '<img src="<?= base_url('public/assets/template/') ?>images/favicon.png" style="width:100%;margin-bottom:10px;">'+
-                                    '</div>'+
-                                    '<div style="">'+
-                                        '<span>Join Factory</span>'+
-                                        '<p class="mb-0" >Sports Injury & Joint Preservation Clinic</p>'+
-                                        '<p class="mb-0" >+91 812 939 4980</p>'+
-                                    '</div>'+
-                                '</div>'
-        );
-    },
+    ];
 
-    onMarkerClick: function(event, index) {
-        window.open(markers[index].mapUrl, '_blank');
+    $('#world-map').vectorMap({
+
+        map: 'world_mill',
+
+        backgroundColor: 'transparent',
+
+        zoomOnScroll: false,
+        zoomMax: 100,
+        zoomMin: 1,
+
+        markers: markers,
+
+        regionStyle: {
+            initial: {
+                fill: '#e0e0e0',
+                stroke: '#ffffff',
+                "stroke-width": 0.5
+            }
+        },
+
+        markerStyle: {
+            initial: {
+                fill: '#d41a36',
+                stroke: '#ffffff',
+                "stroke-width": 2,
+                r: 8
+            }
+        },
+
+        onMarkerTipShow: function(event, label, index) {
+
+            var marker = markers[index];
+
+            label.html(
+                '<div class="map-tooltip">'+
+                    '<div><img src="'+marker.logo+'"></div>'+
+                    '<div>'+
+                        '<h5>'+marker.name+'</h5>'+
+                        '<p>'+marker.description+'</p>'+
+                        '<p><strong>'+marker.phone+'</strong></p>'+
+                    '</div>'+
+                '</div>'
+            );
+        },
+
+        onMarkerClick: function(event, index) {
+            window.open(markers[index].mapUrl, '_blank');
+        }
+    });
+
+     var mapObject = $('#world-map').vectorMap('get', 'mapObject');
+
+    function showDistrictLabels() {
+
+        $('.district-label').remove();
+
+        districtLabels.forEach(function(item) {
+
+            var point = mapObject.latLngToPoint(
+                item.latLng[0],
+                item.latLng[1]
+            );
+
+            $('#world-map').append(
+                '<div class="district-label" style="' +
+                'position:absolute;' +
+                'left:' + point.x + 'px;' +
+                'top:' + (point.y - 20) + 'px;' +
+                'transform:translate(-50%,-100%);' +
+                'background:#fff;' +
+                'padding:2px 5px;' +
+                'border-radius:3px;' +
+                'font-size:12px;' +
+                'font-weight:bold;' +
+                'white-space:nowrap;' +
+                'pointer-events:none;' +
+                'z-index:9999;">' +
+                item.name +
+                '</div>'
+            );
+        });
     }
+
+    function hideDistrictLabels() {
+        $('.district-label').remove();
+    }
+
+    // Initial state
+    hideDistrictLabels();
+
+    // Auto zoom after 5 seconds
+    setTimeout(function () {
+
+        mapObject.setFocus({
+            lat: 10.8505,
+            lng: 76.2711,
+            scale: 60,
+            animate: true
+        });
+
+        setTimeout(function () {
+            showDistrictLabels();
+        }, 1500);
+
+    }, 5000);
+
+    // Monitor zoom level
+    setInterval(function(){
+
+        var scale = mapObject.scale || 1;
+
+        if(scale >= 40){
+
+            if($('.district-label').length === 0){
+                showDistrictLabels();
+            }
+
+        }else{
+
+            hideDistrictLabels();
+
+        }
+
+    },500);
+
 });
 </script>
 </html>

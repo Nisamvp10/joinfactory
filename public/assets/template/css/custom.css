@@ -843,8 +843,87 @@ header.main-header .header-sticky.active {
 	background-attachment: fixed;
 	border: 1px #ddd solid;
 	border-radius: 25px;
-	padding: 3em;
 }
+
+#world-map {
+	width: 100%;
+	height: 600px;
+}
+
+.jvectormap-tip {
+	background: transparent !important;
+	border: none !important;
+	padding: 0 !important;
+}
+
+.map-tooltip {
+	min-width: 250px;
+	padding: 10px;
+	border-radius: 10px;
+	background: #fff;
+	color: #000;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+	z-index: 10;
+}
+
+.district-label {
+	position: absolute;
+	transform: translate(-50%, -100%);
+	font-size: 12px;
+	font-weight: bold;
+	color: #000;
+	background: #fff;
+	padding: 2px 5px;
+	border-radius: 3px;
+	white-space: nowrap;
+	pointer-events: none;
+	z-index: 100;
+}
+
+.map-tooltip img {
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
+}
+
+.map-tooltip h5 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.map-tooltip p {
+	margin: 2px 0;
+	font-size: 13px;
+}
+
+.jvectormap-marker {
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	50% {
+		transform: scale(1.8);
+		opacity: .4;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/*  */
+
+/*  */
 
 .top-bar-header .top-welcome-text p {
 	font-size: 14px;
