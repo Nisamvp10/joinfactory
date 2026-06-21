@@ -239,7 +239,7 @@ $('#world-map').vectorMap({
                                     '</div>'+
                                     '<div style="">'+
                                         '<span>Join Factory</span>'+
-                                        '<p class="mb-0" >Kochi, Kerala, India</p>'+
+                                        '<p class="mb-0" >Sports Injury & Joint Preservation Clinic</p>'+
                                         '<p class="mb-0" >+91 812 939 4980</p>'+
                                     '</div>'+
                                 '</div>'
