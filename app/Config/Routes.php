@@ -166,6 +166,8 @@ $routes->get('research','ResearchController::index');
 $routes->get('what-not-to-do','ResearchController::whtnottodo');
 $routes->get('gallery','GalleryController::index');
 $routes->get('journey-of-excellence','AboutController::journey');
+// infographics
+$routes->get('infographics','InfographicsController::index');
 
 
 

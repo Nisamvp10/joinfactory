@@ -66,5 +66,7 @@
 
    <?= view('frontend/inc/footerLink') ?>
 </body>
-
+  <script>
+    lucide.createIcons();
+  </script>
 </html>
