@@ -9,6 +9,15 @@
       --page: #f4f5f8;
   }
 
+  .bg-none {
+      background: transparent !important;
+      ;
+  }
+
+  .left-border {
+      border-left: 1px #d1d1d1 solid;
+  }
+
   .sheet {
       width: min(1800px, calc(100vw - 30px));
       margin: 26px auto 22px;
@@ -57,7 +66,8 @@
       aspect-ratio: 1;
       border-radius: 50%;
       padding: 6px;
-      background: conic-gradient(from 320deg, var(--red) 0 28%, #ffffff 28% 100%);
+      background: conic-gradient(from 320deg, var(--red) 0 100%, #ffffff 100% 100%);
+      /* background: conic-gradient(from 320deg, var(--red) 0 28%, #ffffff 28% 100%); */
       box-shadow: 0 9px 20px rgba(15, 23, 42, 0.22);
   }
 
@@ -138,23 +148,23 @@
   .round-icon {
       display: inline-grid;
       place-items: center;
-      width: 31px;
-      height: 31px;
-      flex: 0 0 31px;
+      width: 50px;
+      height: 51px;
+      flex: 0 0 50px;
       border-radius: 50%;
       background: var(--red);
       color: white;
   }
 
   .round-icon.outline {
-      background: white;
+      background: var(--red);
       color: var(--red);
       border: 3px solid var(--red);
   }
 
   .round-icon svg {
-      width: 18px;
-      height: 18px;
+      width: 30px;
+      height: 30px;
       stroke-width: 2.6;
   }
 
@@ -177,8 +187,8 @@
   .leader-item::before {
       content: "";
       position: absolute;
-      width: 7px;
-      height: 7px;
+      width: 11px;
+      height: 11px;
       border-radius: 50%;
       background: var(--red);
   }
@@ -191,9 +201,9 @@
   .skill-grid {
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 13px 18px;
+      gap: 15px 18px;
       align-items: center;
-      font-size: 13px;
+      font-size: 15px;
   }
 
   .skill-title small {
@@ -201,6 +211,7 @@
       font-size: 11px;
       color: #333846;
       font-weight: 700;
+      margin-top: 5px;
   }
 
   .dots {
@@ -209,14 +220,25 @@
   }
 
   .dots span {
-      width: 10px;
-      height: 10px;
+      width: 13px;
+      height: 13px;
       border-radius: 50%;
       background: var(--red);
+      position: relative;
+      overflow: hidden;
   }
 
   .dots span.off {
       background: #cfd3dc;
+  }
+
+  .skill-grid .dots span.off.half::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      background-color: var(--red);
+      left: 0;
+      height: 100%;
   }
 
   .middle-grid {
@@ -228,7 +250,7 @@
 
   .mini-card {
       min-height: 137px;
-      padding: 22px 40px;
+      padding: 22px 22px;
       border-radius: 20px;
       background: var(--panel);
       box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
@@ -236,6 +258,8 @@
 
   .mini-card .panel-title {
       margin-bottom: 18px;
+      line-height: 1.2em;
+      ;
   }
 
   .chips {
@@ -253,6 +277,8 @@
       font-size: 12px;
       font-weight: 800;
       color: #343846;
+      flex: 1;
+      background-color: #f1f1f1;
   }
 
   .stats {
@@ -341,8 +367,7 @@
   .timeline {
       position: relative;
       height: 160px;
-      margin: 0 24px;
-      margin-bottom: 2em;
+      margin: 3em 2em;
   }
 
   .timeline::before {
@@ -351,8 +376,8 @@
       top: 75px;
       left: 0;
       right: 0;
-      height: 5px;
-      border-radius: 99px;
+      height: 40px;
+      border-radius: 100px;
       background: var(--red);
   }
 
@@ -366,11 +391,22 @@
       border-top: 10px solid transparent;
       border-bottom: 12px solid transparent;
       border-right: 18px solid var(--red);
+      display: none;
+  }
+
+  .none-event {
+      position: absolute;
+      top: 86px;
+      width: 55px;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.25;
   }
 
   .event {
       position: absolute;
-      top: 70px;
+      top: 65px;
       width: 118px;
       transform: translateX(-50%);
       text-align: center;
@@ -379,21 +415,40 @@
   }
 
   .event::before {
-      content: "";
+      content: '';
+      position: absolute;
       display: block;
-      width: 13px;
-      height: 13px;
+      width: 20px;
+      height: 20px;
       margin: 0 auto 8px;
       border-radius: 50%;
-      border: 3px solid var(--red);
-      background: white;
+      border: 3px solid #c9cccf;
+      background: #c9cccf;
+      top: 0px;
+      left: 49px;
   }
 
-  .event .year {
+  .event.bottom::before {
+      content: '';
+      position: absolute;
       display: block;
-      color: #10131a;
+      width: 20px;
+      height: 20px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      border: 3px solid #c9cccf;
+      background: #c9cccf;
+      top: 39px;
+      left: 49px;
+  }
+
+
+  .event .year,
+  .none-event .year {
+      display: block;
+      color: #fff;
       font-size: 15px;
-      font-weight: 900;
+      font-weight: 600;
       margin-bottom: 12px;
   }
 
@@ -406,6 +461,42 @@
       font-weight: 700;
   }
 
+  .event.bottom .time-mini-card {
+      position: absolute;
+      left: 50%;
+      width: 160px;
+      transform: translateX(-50%);
+      color: var(--red-dark);
+      font-weight: 700;
+      top: 70px;
+  }
+
+  .event.top .time-mini-card {
+      position: absolute;
+      left: 50%;
+      width: 140px;
+      transform: translateX(-50%);
+      color: var(--red-dark);
+      font-weight: 700;
+      bottom: 10px;
+  }
+
+  .ach-year {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 0;
+      color: #8a8c8f;
+  }
+
+  .ach-copy {
+      display: block;
+      font-size: 13px;
+      line-height: 1.25;
+      font-weight: 700;
+      font-weight: 600;
+  }
+
   .event.top .copy {
       bottom: 60px;
       border: 1px #f1f1f1 solid;
@@ -414,7 +505,7 @@
   }
 
   .event.bottom .copy {
-      top: 40px;
+      top: 70px;
   }
 
   .event.tick::before {
@@ -486,7 +577,7 @@
   .edu-item {
       position: relative;
       min-height: 78px;
-      padding: 4px 17px 0;
+      padding: 4px 37px 0;
       border-right: 1px solid var(--line);
       font-size: 11px;
       line-height: 1.25;
@@ -497,7 +588,14 @@
       border-right: 0;
   }
 
-  .edu-item::before {
+  .edu-item p {
+      font-size: 11px;
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--red);
+  }
+
+  /* .edu-item::before {
       content: "";
       position: absolute;
       left: 22px;
@@ -505,9 +603,9 @@
       bottom: 18px;
       height: 1px;
       background: #d9dce4;
-  }
+  } */
 
-  .edu-item::after {
+  /* .edu-item::after {
       content: "";
       position: absolute;
       left: 50%;
@@ -517,6 +615,13 @@
       border-radius: 50%;
       background: var(--red);
       transform: translateX(-50%);
+  } */
+
+  .edu-item label {
+      width: 100%;
+      height: 15px;
+      background: #dddd;
+      border-radius: 100px;
   }
 
   .edu-item strong {
@@ -532,28 +637,43 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
+      align-items: center;
   }
 
   .career-card {
       display: grid;
-      grid-template-columns: 50px 1fr;
       align-items: center;
-      min-height: 90px;
-      padding: 18px 25px;
       border-radius: 8px;
-      color: white;
-      background: linear-gradient(130deg, #97101e, #bf0018 62%, #071326);
-      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.16);
+      font-size: 19px;
+
+      /* background: linear-gradient(130deg, #97101e, #bf0018 62%, #071326); */
+
   }
 
-  .career-card:nth-child(2),
+  .career-box {
+      background: var(--red);
+      color: white;
+      /* box-shadow: 0 10px 20px rgba(15, 23, 42, 0.16); */
+      border-radius: 100px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      line-height: 1em;
+  }
+
+  /* .career-card:nth-child(2),
   .career-card:nth-child(3) {
       background: linear-gradient(130deg, #09162f, #180527 75%);
   }
 
   .career-card:nth-child(4) {
       background: linear-gradient(130deg, #082e3c, #04152a 75%);
-  }
+  } */
 
   .career-card svg {
       width: 32px;
@@ -563,7 +683,7 @@
 
   .career-card strong {
       display: block;
-      font-size: 12px;
+      font-size: 16px;
       line-height: 1.35;
       text-transform: uppercase;
   }
@@ -572,10 +692,84 @@
       display: block;
       margin-top: 8px;
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.88);
+      color: #000;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+  }
+
+  @media (max-width: 1400px) {
+      .edu-item {
+          padding: 4px 10px 0;
+
+      }
+
+      .skill-grid {
+          gap: 13px 7px;
+          font-size: 12px;
+      }
+
+      .dots span {
+          width: 12px;
+          height: 12px;
+      }
+
+      .dots {
+          display: flex;
+          gap: 5px;
+      }
+
+      .identity {
+          gap: 11px;
+      }
+
+      .identity,
+      .panel {
+          padding: 20px 20px;
+      }
+
+      .panel-title {
+          gap: 5px;
+          margin-bottom: 20px;
+          font-size: 20px;
+          font-weight: 800;
+      }
+
+
   }
 
   @media (max-width: 1000px) {
+      .career-row {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+      }
+
+      .career-card strong {
+          font-size: 12px;
+      }
+
+      .education-row {
+          grid-template-columns: repeat(2, 1fr);
+          margin-bottom: 16px;
+          gap: 14px;
+      }
+
+      .edu-item {
+          position: relative;
+          min-height: 78px;
+          padding: 4px 10px 0;
+          border-right: 1px solid var(--line);
+          font-size: 11px;
+          line-height: 1.25;
+          font-weight: 700;
+          border: 1px #dddd solid;
+          padding: 10px;
+          border-radius: 10px;
+      }
+
+      .edu-item:last-child {
+          border-right: 1px #ddd solid;
+      }
 
       .top-grid,
       .middle-grid {
@@ -598,7 +792,7 @@
       }
 
       .lower {
-          min-width: 980px;
+          min-width: 100%;
       }
   }
 
@@ -606,6 +800,11 @@
       .sheet {
           width: min(100vw - 18px, 1280px);
           margin-top: 10px;
+      }
+
+      .career-row {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
       }
 
       .identity {
@@ -630,5 +829,10 @@
 
       .chips {
           flex-wrap: wrap;
+      }
+
+      .education-row {
+          grid-template-columns: repeat(1, 1fr);
+          margin-bottom: 17px;
       }
   }
