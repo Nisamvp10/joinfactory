@@ -64,7 +64,7 @@
           <span>Key-hole surgeries</span><div class="dots"><span></span><span></span><span></span><span></span><span></span></div>
           <span>Joint Replacement</span><div class="dots"><span></span><span></span><span></span><span></span><span></span></div>
           <span>Trauma</span><div class="dots"><span></span><span></span><span></span><span></span><span></span></div>
-          <span>Lizarov</span><div class="dots"><span></span><span></span><span></span><span></span><span class="off half"></span></div>
+          <span>Ilizarov</span><div class="dots"><span></span><span></span><span></span><span></span><span class="off half"></span></div>
           <span>Patient Satisfaction</span><div class="dots"><span></span><span></span><span></span><span></span><span></span></div>
         </div>
       </article>
