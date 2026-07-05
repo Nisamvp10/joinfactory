@@ -33,7 +33,7 @@
     <section class="top-grid" aria-label="Profile overview">
       <div class="identity">
         <div class="portrait-ring">
-          <img src="<?=base_url('public/assets/template/images/about-img-2.webp');?>" alt="Ram Sudhan Subramaniyan">
+          <img src="<?=base_url('public/assets/template/images/profile_img.webp');?>" alt="Ram Sudhan Subramaniyan">
         </div>
         <div>
           <h1>RAM SUDHAN <span class="surname">SUBRAMANIYAN</span></h1>
@@ -92,42 +92,47 @@
         <div class="stats">
           <div class="stat"><span>Publications</span><strong>34</strong></div>
           <div class="stat"><span>Podium<br>Presentations</span><strong>21</strong></div>
-          <div class="stat"><span>Patents</span><strong>2</strong></div>
+          <div class="stat"><span>Patents</span><strong>1</strong></div>
+          <div class="stat"><span>Books</span><strong>3</strong></div>
         </div>
       </article>
 
       <article class="mini-card">
         <div class="panel-title"><span class="round-icon bg-none"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 50 50" style="enable-background:new 0 0 512 512;width:38px;height:46px" xml:space="preserve" class="hovered-paths"><g><path fill="#b80618" d="M42.042 21.23a24.798 24.798 0 0 0-4.542-.397c-.875 0-1.73 0-2.583.167a12.312 12.312 0 0 0-3.98-3.437 7.938 7.938 0 0 0 2.084-5.355 8.042 8.042 0 0 0-16.084 0 7.938 7.938 0 0 0 2.084 5.355 12.729 12.729 0 0 0-3.98 3.416c-.812-.146-1.666-.146-2.541-.146a24.792 24.792 0 0 0-4.542.438 2.084 2.084 0 0 0-1.708 2.083v17.188A2.084 2.084 0 0 0 7 42.146a2.083 2.083 0 0 0 1.708.458 20.319 20.319 0 0 1 3.792-.458 20.605 20.605 0 0 1 11.354 3.396l.271.104c.276.12.574.184.875.187.199-.002.396-.037.583-.104h.146l.271-.104a20.604 20.604 0 0 1 11.5-3.48c1.273.007 2.542.132 3.792.376A2.082 2.082 0 0 0 43 42.063a2.085 2.085 0 0 0 .75-1.605V23.271a2.083 2.083 0 0 0-1.708-2.042zM25 8.332a3.875 3.875 0 0 1 0 7.73 3.875 3.875 0 0 1 0-7.73zm-2.083 31.938A24.835 24.835 0 0 0 12.5 37.979c-.688 0-1.375 0-2.083.104V25a20.063 20.063 0 0 1 5.25.104h.229a20.835 20.835 0 0 1 7.02 2.667zM25 24.167a24.519 24.519 0 0 0-2.875-1.417H22c-.688-.27-1.375-.542-2.083-.75A8.333 8.333 0 0 1 25 20.188a8.334 8.334 0 0 1 5.083 1.77A25.902 25.902 0 0 0 25 24.167zm14.583 13.916c-4.277-.43-8.593.29-12.5 2.084v-12.5a20.334 20.334 0 0 1 7.021-2.542h.417A19.562 19.562 0 0 1 39.583 25z" opacity="1" data-original="#000000" class="hovered-path"></path></g></svg></span>Scholarly Leaderships</div>
         <ul class="leaders">
-          <li class="leader-item"><span><strong>Editor-In-Chief</strong>Journal of Joints and Orthopaedics (JJO)</span></li>
+          <li class="leader-item"><span><strong>Editor-In-Chief</strong>Journal of Joints and Orthopaedics (JOJO)</span></li>
+          <li class="leader-item"><span><strong>Administrative Editor</strong>Journal of Orthopaedics (JOO)</span></li>
           <li class="leader-item"><span><strong>Research Head</strong>Orthopaedic Research and Certification Academy (ORCA)</span></li>
         </ul>
+          
       </article>
     </section>
 <!--         <div class="event top" style="left: 68%; transform: translateX(90px);"><span class="year">&nbsp;</span><span class="copy">Diplomat in<br>Orthopaedics<br>2014</span></div>
  -->
     <section class="journey" aria-label="Professional journey and milestones">
       <div class="journey-head d-none"><i data-lucide="flag"></i>Professional Journey &amp; Milestones</div>
-      <div class="timeline">
-      
-        <!--  -->
-        <div class="none-event bottom" style="left: 3.8%;"><span class="year left-border">2026</span></div>
-        <div class="event bottom" style="left: 5.4%;"><div class="time-mini-card"><span class="ach-year">2025</span><span class="ach-copy">Hip Arthroscopy<br>USA</span></div></div>
-        <div class="event top" style="left: 15.4%;"><div class="time-mini-card"><span class="ach-year">2024</span><span class="ach-copy">TNOA<br>Sports fellowship</span></div></div>
-        <div class="event bottom" style="left: 22.4%;"><div class="time-mini-card"><span class="ach-year">2024</span><span class="ach-copy">Advanced Arthroscopy<br>Hip and Knee (CAIRO)</span></div></div>
-        <div class="event top" style="left: 26.8%;"><div class="time-mini-card"><span class="ach-copy">MRCPS <br>(Glasgow)</span><span class="ach-year">2023</span></div></div>
-        <div class="event top" style="left: 30.8%;"><div class="time-mini-card"><span class="ach-copy">FAAS</span><span class="ach-year">2022</span></div></div>
-        <div class="none-event bottom" style="left: 30.8%;"><span class="year left-border">2022</span></div>
-        <div class="none-event bottom" style="left: 38.8%;"><span class="year left-border">2019</span></div>
-        <div class="event top" style="left: 42.4%;"><div class="time-mini-card"><span class="ach-copy">ILIZAROV<br>Fellowship</span><span class="ach-year">2018</span></div></div>
-        <div class="event bottom" style="left: 49.4%;"><div class="time-mini-card"><span class="ach-year">2017</span><span class="ach-copy">DNB <br>Orthopaedics</span></div></div>
-        <div class="none-event bottom" style="left: 52.8%;"><span class="year left-border">2016</span></div>
-        <div class="event top" style="left: 59.4%;"><div class="time-mini-card"><span class="ach-copy">Diplomat in Orthopaedics</span><span class="ach-year">2014</span></div></div>
-        <div class="none-event bottom" style="left: 65.8%;"><span class="year left-border">2013</span></div>
-        <div class="none-event bottom" style="left: 76.8%;"><span class="year left-border">2010</span></div>
-        <div class="event bottom" style="left: 80.4%;"><div class="time-mini-card"><span class="ach-year">2009</span><span class="ach-copy">MBBS</span></div></div>
-        <div class="none-event bottom" style="left: 86.8%;"><span class="year left-border">2007</span></div>
-        <div class="none-event top" style="left: 96%;"><span class="year left-border">2004</span></div>
+      <div class="timeline-outer">
+        <div class="timeline">
+        
+          <!--  -->
+          <div class="none-event bottom" style="left: 3.8%;"><span class="year left-border">2026</span></div>
+          <div class="event bottom" style="left: 5.4%;"><div class="time-mini-card"><span class="ach-year">2025</span><span class="ach-copy">Hip Arthroscopy<br>USA</span></div></div>
+          <div class="event top ev-tnoa"><div class="time-mini-card"><span class="ach-year">2024</span><span class="ach-copy">TNOA<br>Sports fellowship</span></div></div>
+          <div class="event bottom ev-cairo"><div class="time-mini-card"><span class="ach-year">2024</span><span class="ach-copy">Advanced Arthroscopy<br>Hip and Knee (CAIRO)</span></div></div>
+          <div class="event top ev-mrcps" ><div class="time-mini-card"><span class="ach-copy">MRCPS <br>(Glasgow)</span><span class="ach-year">2023</span></div></div>
+          <div class="event top ev-fass" style="left: 30.8%;"><div class="time-mini-card"><span class="ach-copy">FAAS</span><span class="ach-year">2022</span></div></div>
+          <div class="none-event bottom" style="left: 30.8%;"><span class="year left-border">2022</span></div>
+          <div class="none-event bottom" style="left: 38.8%;"><span class="year left-border">2019</span></div>
+          <div class="event top" style="left: 42.4%;"><div class="time-mini-card"><span class="ach-copy">ILIZAROV<br>Fellowship</span><span class="ach-year">2018</span></div></div>
+          <div class="event bottom" style="left: 49.4%;"><div class="time-mini-card"><span class="ach-year">2017</span><span class="ach-copy">DNB <br>Orthopaedics</span></div></div>
+          <div class="none-event bottom" style="left: 52.8%;"><span class="year left-border">2016</span></div>
+          <div class="event top" style="left: 59.4%;"><div class="time-mini-card"><span class="ach-copy">Diplomat in Orthopaedics</span><span class="ach-year">2014</span></div></div>
+          <div class="none-event bottom" style="left: 65.8%;"><span class="year left-border">2013</span></div>
+          <div class="none-event bottom" style="left: 76.8%;"><span class="year left-border">2010</span></div>
+          <div class="event bottom" style="left: 80.4%;"><div class="time-mini-card"><span class="ach-year">2009</span><span class="ach-copy">MBBS</span></div></div>
+          <div class="none-event bottom" style="left: 86.8%;"><span class="year left-border">2007</span></div>
+          <div class="none-event top" style="left: 96%;"><span class="year left-border">2004</span></div>
+        </div>
       </div>
 
       <div class="lower">
@@ -152,19 +157,19 @@
 
           <div class="career-row">
             <div class="career-card">
-              <div class="career-box"><strong>Senior Consultant<br>Sports Surgery</strong></div>
+              <div class="career-box">Senior Consultant<br>Sports Surgery</div>
               <span>2025 - Present</span>
             </div>
             <div class="career-card">
-             <div class="career-box"><strong>Associate Professor</strong></div>
+             <div class="career-box">Associate Professor</div>
              <span>2024 - Present</span>
             </div>
             <div class="career-card">
-              <div class="career-box"><strong>Assistant Professor</strong></div>
+              <div class="career-box">Assistant Professor</div>
               <span>2020 - 2024</span>
             </div>
             <div class="career-card">
-              <div class="career-box"><strong>Senior Resident</strong></div>
+              <div class="career-box">Senior Resident</div>
               <span>2017 - 2019</span>
             </div>
           </div>

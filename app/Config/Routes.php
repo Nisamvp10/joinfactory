@@ -168,6 +168,7 @@ $routes->get('gallery','GalleryController::index');
 $routes->get('journey-of-excellence','AboutController::journey');
 // infographics
 $routes->get('infographics','InfographicsController::index');
+$routes->get('publications','PublicationsController::index');
 
 
 

@@ -33,6 +33,9 @@
     <!-- Magnific Popup Core Css File -->
 	<link rel="stylesheet" href="<?= base_url('public/assets/template/') ?>css/magnific-popup.css">
 	<!-- Mouse Cursor Css File -->
+	 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 	<!-- Main Custom Css -->
 	<link href="<?= base_url('public/assets/template/') ?>css/custom.css" rel="stylesheet" media="screen">
+
 </head>
