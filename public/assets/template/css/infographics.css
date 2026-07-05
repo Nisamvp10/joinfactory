@@ -283,7 +283,7 @@
 
   .stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       text-align: center;
   }
 
@@ -550,6 +550,9 @@
       font-weight: 900;
       text-transform: uppercase;
       text-align: center;
+      align-items: center;
+      justify-content: center;
+
   }
 
   .tab.dark {
@@ -650,6 +653,22 @@
 
   }
 
+  .ev-fass {
+      width: 30.8;
+  }
+
+  .ev-mrcps {
+      left: 26.8%;
+  }
+
+  .ev-tnoa {
+      left: 15.4%;
+  }
+
+  .ev-cairo {
+      left: 22.4%;
+  }
+
   .career-box {
       background: var(--red);
       color: white;
@@ -664,6 +683,7 @@
       text-align: center;
       justify-content: center;
       line-height: 1em;
+      font-size: 13px;
   }
 
   /* .career-card:nth-child(2),
@@ -696,6 +716,17 @@
       text-align: center;
       font-size: 15px;
       font-weight: 600;
+  }
+
+  @media (max-width: 1500px) {
+      .timeline {
+          margin: 3em 1em;
+      }
+
+      .ev-mrcps {
+          left: 25.8%;
+      }
+
   }
 
   @media (max-width: 1400px) {
@@ -738,7 +769,28 @@
 
   }
 
+  @media (max-width: 1200px) {
+      .ev-tnoa {
+          left: 11.4%;
+      }
+
+      .ev-mrcps {
+          left: 23.8%;
+      }
+
+      .ev-cairo {
+          left: 20.4%;
+      }
+
+  }
+
   @media (max-width: 1000px) {
+
+      .timeline-outer::-webkit-scrollbar {
+          height: 8px;
+          /* Change scrollbar height */
+      }
+
       .career-row {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -747,6 +799,11 @@
       .career-card strong {
           font-size: 12px;
       }
+
+      .timeline {
+          height: 240px;
+      }
+
 
       .education-row {
           grid-template-columns: repeat(2, 1fr);
@@ -787,8 +844,15 @@
           min-width: 940px;
       }
 
-      .journey {
+      /* .journey {
           overflow-x: auto;
+      } */
+      .timeline-outer {
+          width: 100%;
+          overflow-x: auto;
+          overflow-y: hidden;
+          -webkit-overflow-scrolling: touch;
+          margin-bottom: 20px;
       }
 
       .lower {
