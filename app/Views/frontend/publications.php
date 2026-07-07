@@ -25,22 +25,28 @@
 <main class="mainsection">
     <div class="container">
             <div class="inner-section bg-white">
-                <header class="section-heading">
+                <!-- <header class="section-heading">
                     <div class="section-title">
                     <span class="section-icon" aria-hidden="true">P</span>
-                    <div>
-                        <p class="section-kicker">Research Excellence</p>
-                        <h2 id="publications-title">Publications</h2>
-                    </div>
+                        <div>
+                            <p class="section-kicker">Research Excellence</p>
+                            <h2 id="publications-title">Publications</h2>
+                        </div>
                     </div>
                     <div class="publication-count">34 Publications</div>
-                </header>
+                </header> -->
+                      <div class="section-title py-3 pb-0">
+                        <p class="section-kicker d-none">Research Excellence</p>
+                            <h3 class="text-anime-style-3" data-cursor="-opaque">Publications</h3>
+                            
+                            
+                        </div>
                 <!-- publicatio list open -->
                  <article class="publications-list">
 
                     <!-- publication card open -->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500"    data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block col-md-12 col-xss-3 col-lg-3 ">
+                         <div class="imb-block ">
                             <img src="<?=base_url('public/assets/template/images/publications/surgical-technology-international.png');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -55,7 +61,7 @@
 
                     <!-- publication card open 2-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block col-md-12 col-xss-3 col-lg-3 ">
+                         <div class="imb-block ">
                             <img src="<?=base_url('public/assets/template/images/publications/tibial.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -68,7 +74,7 @@
                     <!-- publication card open 2-->
                     <!-- publication card open 3-->
                     <div class="publication-card">
-                         <div class="imb-block col-md-12 col-xss-3 col-lg-3 " data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
+                         <div class="imb-block " data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/jbjs.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -81,7 +87,7 @@
                     <!-- publication card open 3-->
                     <!-- publication card open 4-->
                     <div class="publication-card">
-                        <div class="imb-block col-md-12 col-xss-3 col-lg-3 " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
+                        <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/atlas-of-arthroscopy.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -95,7 +101,7 @@
 
                      <!-- publication card open 5-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block col-md-12 col-xss-3 col-lg-3 ">
+                         <div class="imb-block ">
                             <img src="<?=base_url('public/assets/template/images/publications/ournal-of-orthopedics.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
