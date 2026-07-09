@@ -47,7 +47,7 @@
 
                     <!-- publication card open -->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500"    data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/surgical-technology-international.png');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -62,7 +62,7 @@
 
                     <!-- publication card open 2-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/tibial.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -102,7 +102,7 @@
 
                      <!-- publication card open 5-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/ournal-of-orthopedics.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -116,7 +116,7 @@
 
                      <!-- publication card open 6-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/the_cpak.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -130,7 +130,7 @@
 
                     <!-- publication card open 7-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/ournal-of-orthopedics.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -143,7 +143,7 @@
                     <!-- publication card open 7-->
                      <!-- publication card open 8-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/tibial.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -156,7 +156,7 @@
                     <!-- publication card open 8-->
                     <!-- publication card open 9-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/confusions.webp');?>" width="100%" alt="">
                             
                         </div>
@@ -170,7 +170,7 @@
                     <!-- publication card open 9-->
                     <!-- publication card open 10-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/tibial.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -183,7 +183,7 @@
                     <!-- publication card open 10-->
                     <!-- publication card open 11-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/current_trends.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -196,7 +196,7 @@
                     <!-- publication card open 11-->
                      <!-- publication card open 12-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/the_cpak.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -209,7 +209,7 @@
                     <!-- publication card open 12-->
                      <!-- publication card open 13-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/confusions.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -222,7 +222,7 @@
                     <!-- publication card open 13--> 
                     <!-- publication card open 14-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/ournal-of-orthopedics.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -235,7 +235,7 @@
                     <!-- publication card open 14--> 
                      <!-- publication card open 15-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/ournal-of-orthopedics.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -248,7 +248,7 @@
                     <!-- publication card open 15--> 
                     <!-- publication card open 16-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/the_cpak.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -261,7 +261,7 @@
                     <!-- publication card open 16--> 
                     <!-- publication card open 17-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/jhsmr.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -274,7 +274,7 @@
                     <!-- publication card open 17--> 
                     <!-- publication card open 18-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/comparison.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -287,7 +287,7 @@
                     <!-- publication card open 18--> 
                     <!-- publication card open 19-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/ultrasonography.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -300,7 +300,7 @@
                     <!-- publication card open 19-->
                      <!-- publication card open 20-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/european-chemical.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -313,7 +313,7 @@
                     <!-- publication card open 20-->
                     <!-- publication card open 21-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/descriptive.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -326,7 +326,7 @@
                     <!-- publication card open 21-->
                     <!-- publication card open 22-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/outcome.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -339,7 +339,7 @@
                     <!-- publication card open 22-->
                     <!-- publication card open 23-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/analgesic.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
@@ -352,7 +352,7 @@
                     <!-- publication card open 23-->       
                     <!-- publication card open 24-->
                     <div class="publication-card" data-aos="fade-up"  data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
-                         <div class="imb-block ">
+                         <div class="imb-block " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="center-bottom">
                             <img src="<?=base_url('public/assets/template/images/publications/surgical-update.webp');?>" width="100%" alt="">
                         </div>
                         <div class="content-block">
