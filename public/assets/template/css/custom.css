@@ -124,6 +124,11 @@ body {
 	padding-left: 15px;
 }
 
+.cust-container {
+	width: 80%;
+	margin: auto;
+}
+
 .image-anime {
 	position: relative;
 	overflow: hidden;
@@ -7883,10 +7888,11 @@ blockquote.wow.fadeInUp p {
 	border-radius: 20px;
 	background: var(--panel);
 	box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
-	display: flex;
+	display: grid;
 	align-items: center;
 	gap: 20px;
 	border: 1px var(--accent-color) solid;
+	grid-template-columns: 175px 1fr;
 
 }
 
