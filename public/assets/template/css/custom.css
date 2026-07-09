@@ -8089,6 +8089,11 @@ footer ul {
 		margin-top: 20px;
 	}
 
+	.cust-container {
+		width: 100%;
+		margin: auto;
+	}
+
 }
 
 @media (max-width: 550px) {
