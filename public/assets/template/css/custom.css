@@ -124,9 +124,9 @@ body {
 	padding-left: 15px;
 }
 
-.cust-container {
-	width: 80%;
+.cust-sec {
 	margin: auto;
+	margin-left: 10%;
 }
 
 .image-anime {
@@ -8094,6 +8094,12 @@ footer ul {
 		width: 100%;
 		margin: auto;
 	}
+
+	.cust-sec {
+		margin: auto;
+		margin-left: 0%;
+	}
+
 
 }
 

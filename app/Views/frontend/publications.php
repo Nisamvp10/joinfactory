@@ -25,7 +25,7 @@
 <main class="mainsection">
     <div class="container">
             <div class="inner-section bg-white">
-                <div class="cust-container">
+                <div class="cust-sec">
                 <!-- <header class="section-heading">
                     <div class="section-title">
                     <span class="section-icon" aria-hidden="true">P</span>
