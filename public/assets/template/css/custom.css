@@ -7551,7 +7551,7 @@ blockquote.wow.fadeInUp p {
 
 .left-card .card {
 	background: #fff;
-	border-radius: 20px;
+	border-radius: 27px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
 	position: relative;
 	width: 80%;
@@ -7559,13 +7559,14 @@ blockquote.wow.fadeInUp p {
 
 /* Arrow to center */
 .left-card .card::before {
-	content: '';
-	position: absolute;
-	right: -195px;
-	top: 30px;
-	width: 210px;
-	height: 7px;
-	background: #757171;
+content: '';
+    position: absolute;
+    right: -190px;
+    top: 30px;
+    width: 197px;
+    height: 7px;
+    background: #757171;
+    z-index: 99;
 }
 
 /* .left-card .card::after{
@@ -7584,20 +7585,19 @@ blockquote.wow.fadeInUp p {
 }
 
 .left-card .card::after {
-	content: '';
-	position: absolute;
-	width: 60px;
-	height: 60px;
-	top: 0px;
-	right: -14px;
-	background-color: #fff;
-	border: 2px #7e7e7e solid;
-
-
-	background-size: 40px 40px;
-	border-radius: 50%;
-	background-repeat: no-repeat;
-	background-position: center;
+content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 5px;
+    right: 5px;
+    background-color: #fff;
+    border: 2px #7e7e7e solid;
+    background-size: 40px 40px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 9;
 }
 
 .left-card .card.kasr-icon::after {
@@ -7649,36 +7649,37 @@ blockquote.wow.fadeInUp p {
 
 /* Arrow to center */
 .right-card .card::before {
-	content: '';
-	position: absolute;
-	left: -195px;
-	top: 43%;
-	/* transform: translateY(-50%); */
-	/* border-right: 20px solid #000; */
-	/* border-top: 12px solid transparent; */
-	/* border-bottom: 12px solid transparent; */
-	width: 210px;
-	height: 7px;
-	background: #757171;
+    content: '';
+    position: absolute;
+    left: -242px;
+    top: 32px;
+    /* transform: translateY(-50%); */
+    /* border-right: 20px solid #000; */
+    /* border-top: 12px solid transparent; */
+    /* border-bottom: 12px solid transparent; */
+    width: 249px;
+    height: 7px;
+    background: #757171;
+    z-index: 9;
 }
-
 .right-card .card::after {
-	content: '';
-	position: absolute;
-	width: 60px;
-	height: 60px;
-	background: #fff;
-	top: 39.5%;
-	left: -14px;
-	border-radius: 50%;
-	border: 2px #7e7e7e solid;
-	background-size: 40px 40px;
-	background-repeat: no-repeat;
-	background-position: center;
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    border: 2px #7e7e7e solid;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .right-card .card.board-cert-icon::after {
 	background-image: url("../images/award-star.png");
+	top:5px;
 }
 
 .timeline-row .icon svg {
@@ -7752,7 +7753,27 @@ blockquote.wow.fadeInUp p {
 	left: 0;
 	right: 0;
 }
+.right-con .icon{
+	position: absolute;
+	top: 100px;
+}
 
+@media(max-width: 1650px) {
+	.right-card .card::before {
+		content: '';
+		position: absolute;
+		left: -179px;
+		top: 32px;
+		/* transform: translateY(-50%); */
+		/* border-right: 20px solid #000; */
+		/* border-top: 12px solid transparent; */
+		/* border-bottom: 12px solid transparent; */
+		width: 186px;
+		height: 7px;
+		background: #757171;
+		z-index: 9;
+	}
+}
 @media(max-width:1300px) {
 	.right-card .card {
 		width: 90%;
@@ -7764,17 +7785,17 @@ blockquote.wow.fadeInUp p {
 	}
 
 	.left-card .card::before {
-		right: -85px;
-		width: 85px;
-		background: #757171;
-	}
+        right: -85px;
+        width: 91px;
+        background: #757171;
+    }
 
 	.right-card .card::before {
-		left: -85px;
-		width: 88px;
+        left: -85px;
+        width: 92px;
 	}
 
-	.right-card .card.card-2009:before {
+	/* .right-card .card.card-2009:before {
 		top: 190px !important;
 	}
 
@@ -7788,7 +7809,7 @@ blockquote.wow.fadeInUp p {
 
 	.right-card .card.card-2017:after {
 		top: 188px !important;
-	}
+	} */
 }
 
 /* Responsive */
