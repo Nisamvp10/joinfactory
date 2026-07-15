@@ -1071,6 +1071,10 @@ header.main-header .header-sticky.active {
 	transition: all 0.3s ease-in-out;
 }
 
+li.nav-item.submenu ul a {
+	font-size: 12px;
+}
+
 .main-menu ul li.submenu>a:after {
 	content: '\f107';
 	font-family: 'FontAwesome';
