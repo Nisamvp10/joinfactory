@@ -128,7 +128,7 @@
                                             <li class="nav-item" ><a class="nav-link" href="<?= base_url('profile#purpose-values') ?>">Purpose and Values</a></li>
                                             <li class="nav-item" ><a class="nav-link" href="<?= base_url('profile#journey-of-excellence') ?>">The Journey of Excellence</a></li>
                                             <li class="nav-item" ><a class="nav-link" href="<?= base_url('profile#infographics') ?>">Infographics</a></li>
-                                            <li class="nav-item" ><a class="nav-link" href="<?= base_url('profile#publications') ?>">Publication & Presentation</a></li>
+                                            <li class="nav-item" ><a class="nav-link" href="<?= base_url('profile#publications') ?>">Publication & Research</a></li>
 
                                         </ul>
                                     
