@@ -8153,3 +8153,11 @@ footer ul {
 		padding-left: 0;
 	}
 }
+
+#purpose-values,
+#surgeon-profile,
+#journey-of-excellence,
+#infographics,
+#publications {
+	scroll-margin-top: 80px;
+}

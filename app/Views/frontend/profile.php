@@ -99,7 +99,7 @@
     </div>
 
       <!-- open purpose and values -->
-     	<div class="page-header bg-section dark-section">
+     	<div class="page-header bg-section dark-section" id="purpose-values">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -188,7 +188,7 @@
     <!-- close Purpose and values  -->
 
     <!-- open journey -->
-    <div class="page-header bg-section dark-section">
+    <div class="page-header bg-section dark-section" id="journey-of-excellence">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -434,7 +434,7 @@
 <!-- open infographics -->
  <link rel="stylesheet" href="<?= base_url('public/assets/template/') ?>css/infographics.css">
 <link rel="stylesheet" href="<?= base_url('public/assets/template/') ?>css/magnific-popup.css">
-   <div class="page-header bg-section dark-section mt-3">
+   <div class="page-header bg-section dark-section mt-3" id="infographics">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -625,7 +625,7 @@
   </main>
 <!-- close info graphics -->
 <!-- open Publications -->
- <div class="page-header bg-section dark-section ">
+ <div class="page-header bg-section dark-section " id="publications">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
