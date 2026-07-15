@@ -125,10 +125,10 @@
                                     <li class="nav-item submenu"><a class="nav-link" href="#">About</a>
                                         <ul>                                        
                                             <li class="nav-item submenu"><a class="nav-link" href="<?=base_url('profile') ?>">Surgeon Profile</a></li>
-                                            <li class="nav-item "><a class="nav-link" href="<?=base_url('purpose-and-values')?>">Purpose and Values</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="<?= base_url('journey-of-excellence')?>">The journey of excellence</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="<?=base_url('infographics');?>">Infographics</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="<?=base_url('publications');?>">Publication & presentation</a></li>
+                                            <li class="nav-item" ><a class="nav-link" href="<?= base_url('profile#purpose-values') ?>">Purpose and Values</a></li>
+                                            <li class="nav-item" ><a class="nav-link" href="<?= base_url('profile#journey-of-excellence') ?>">The Journey of Excellence</a></li>
+                                            <li class="nav-item" ><a class="nav-link" href="<?= base_url('profile#infographics') ?>">Infographics</a></li>
+                                            <li class="nav-item" ><a class="nav-link" href="<?= base_url('profile#publications') ?>">Publication & Presentation</a></li>
 
                                         </ul>
                                     
