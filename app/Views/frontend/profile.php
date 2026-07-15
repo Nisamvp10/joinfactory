@@ -636,7 +636,7 @@
 					<!-- Page Header Box Start -->
 					<div class="page-header-box">
 						<h1 class="text-anime-style-3" data-cursor="-opaque">
-                         Publications
+                         Publications & Research
 
                          </h1>
 						
