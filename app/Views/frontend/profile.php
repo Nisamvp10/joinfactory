@@ -661,7 +661,7 @@
                     </div>
                     <div class="publication-count">34 Publications</div>
                 </header> -->
-                      <div class="section-title py-3 pb-0">
+                      <div class="section-title py-3 pb-0 d-none">
                         <p class="section-kicker d-none">Research Excellence</p>
                             <h3 class="text-anime-style-3" data-cursor="-opaque">Publications & Research</h3>
                             
