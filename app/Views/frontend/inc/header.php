@@ -122,7 +122,17 @@
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li class="nav-item"><a class="nav-link" href="<?=base_url() ?>">Home </a>
-                                    <li class="nav-item "><a class="nav-link" href="<?=base_url('profile') ?>">About</a></li>
+                                    <li class="nav-item submenu"><a class="nav-link" href="#">About</a>
+                                        <ul>                                        
+                                            <li class="nav-item submenu"><a class="nav-link" href="<?=base_url('profile') ?>">Surgeon Profile</a></li>
+                                            <li class="nav-item "><a class="nav-link" href="<?=base_url('purpose-and-values')?>">Purpose and Values</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="<?= base_url('journey-of-excellence')?>">The journey of excellence</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="<?=base_url('infographics');?>">Infographics</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="<?=base_url('publications');?>">Publication & presentation</a></li>
+
+                                        </ul>
+                                    
+                                    </li>
 
                                     <li class="nav-item submenu"><a class="nav-link" href="#">Our Clinics</a>
                                         <ul>                                        
