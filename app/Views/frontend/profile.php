@@ -547,7 +547,11 @@
         <div class="panel-title"><span class="round-icon bg-none"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 50 50" style="enable-background:new 0 0 512 512;width:38px;height:46px" xml:space="preserve" class="hovered-paths"><g><path fill="#b80618" d="M42.042 21.23a24.798 24.798 0 0 0-4.542-.397c-.875 0-1.73 0-2.583.167a12.312 12.312 0 0 0-3.98-3.437 7.938 7.938 0 0 0 2.084-5.355 8.042 8.042 0 0 0-16.084 0 7.938 7.938 0 0 0 2.084 5.355 12.729 12.729 0 0 0-3.98 3.416c-.812-.146-1.666-.146-2.541-.146a24.792 24.792 0 0 0-4.542.438 2.084 2.084 0 0 0-1.708 2.083v17.188A2.084 2.084 0 0 0 7 42.146a2.083 2.083 0 0 0 1.708.458 20.319 20.319 0 0 1 3.792-.458 20.605 20.605 0 0 1 11.354 3.396l.271.104c.276.12.574.184.875.187.199-.002.396-.037.583-.104h.146l.271-.104a20.604 20.604 0 0 1 11.5-3.48c1.273.007 2.542.132 3.792.376A2.082 2.082 0 0 0 43 42.063a2.085 2.085 0 0 0 .75-1.605V23.271a2.083 2.083 0 0 0-1.708-2.042zM25 8.332a3.875 3.875 0 0 1 0 7.73 3.875 3.875 0 0 1 0-7.73zm-2.083 31.938A24.835 24.835 0 0 0 12.5 37.979c-.688 0-1.375 0-2.083.104V25a20.063 20.063 0 0 1 5.25.104h.229a20.835 20.835 0 0 1 7.02 2.667zM25 24.167a24.519 24.519 0 0 0-2.875-1.417H22c-.688-.27-1.375-.542-2.083-.75A8.333 8.333 0 0 1 25 20.188a8.334 8.334 0 0 1 5.083 1.77A25.902 25.902 0 0 0 25 24.167zm14.583 13.916c-4.277-.43-8.593.29-12.5 2.084v-12.5a20.334 20.334 0 0 1 7.021-2.542h.417A19.562 19.562 0 0 1 39.583 25z" opacity="1" data-original="#000000" class="hovered-path"></path></g></svg></span>Scholarly Leaderships</div>
         <ul class="leaders">
           <li class="leader-item"><span><strong>Editor-In-Chief</strong>Journal of Joints and Orthopaedics (JOJO)</span></li>
-          <li class="leader-item"><span><strong>Administrative Editor</strong>Journal of Orthopaedics (JOO)</span></li>
+          <li class="leader-item"><span><strong>Administrative Editor</strong>
+          <p class="m-0">Journal of Orthopaedics (JOO)</p>
+          <p class="m-0">Journal of orthopaedic reports ( JOREP) </p>
+
+          </span></li>
           <li class="leader-item"><span><strong>Research Head</strong>Orthopaedic Research and Certification Academy (ORCA)</span></li>
         </ul>
           
