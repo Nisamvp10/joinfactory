@@ -525,7 +525,7 @@
   <polygon points="12,10.2 13.1,12.5 15.6,12.5 13.6,14 14.3,16.5 12,15 9.7,16.5 10.4,14 8.4,12.5 10.9,12.5" fill="#b80618" />
 </svg>
 </span>Core Specializations</div>
-        <p class="mb-0" style="text-align:center; font-size: 15px;">Advanced Arthroscopy In</p>
+        <p class="mb-0" style="text-align:center; font-size: 15px;">Advanced Arthroscopy <span class="d-block">In</span></p>
         <div class="chips">
           <span class="chip">HIP</span>
           <span class="chip">KNEE</span>
