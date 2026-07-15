@@ -57,7 +57,7 @@
 
   .identity h1 {
       font-size: 36px;
-      font-weight: 700;
+      font-weight: 500;
   }
 
   .portrait-ring {
@@ -93,7 +93,7 @@
       margin-top: 4px;
       font-size: clamp(25px, 2.6vw, 39px);
       font-weight: 500;
-      letter-spacing: 1px;
+      letter-spacing: 3.7px;
       font-size: 25px;
   }
 
@@ -723,6 +723,10 @@
       font-weight: 600;
   }
 
+  .year-2024 {
+      left: 22.5%;
+  }
+
   @media (max-width: 1500px) {
       .timeline {
           margin: 3em 1em;
@@ -775,6 +779,10 @@
   }
 
   @media (max-width: 1200px) {
+      .year-2024 {
+          left: 20.5%;
+      }
+
       .ev-tnoa {
           left: 11.4%;
       }

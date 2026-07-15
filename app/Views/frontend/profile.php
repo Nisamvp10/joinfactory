@@ -567,6 +567,7 @@
           <!--  -->
           <div class="none-event bottom" style="left: 3.8%;"><span class="year left-border">2026</span></div>
           <div class="event bottom" style="left: 5.4%;"><div class="time-mini-card"><span class="ach-year">2025</span><span class="ach-copy">Hip Arthroscopy<br>USA</span></div></div>
+          <div class="none-event bottom year-2024"><span class="year left-border">2024</span></div>
           <div class="event top ev-tnoa"><div class="time-mini-card"><span class="ach-year">2024</span><span class="ach-copy">TNOA<br>Sports fellowship</span></div></div>
           <div class="event bottom ev-cairo"><div class="time-mini-card"><span class="ach-year">2024</span><span class="ach-copy">Advanced Arthroscopy<br>Hip and Knee (CAIRO)</span></div></div>
           <div class="event top ev-mrcps" ><div class="time-mini-card"><span class="ach-copy">MRCPS <br>(Glasgow)</span><span class="ach-year">2023</span></div></div>
