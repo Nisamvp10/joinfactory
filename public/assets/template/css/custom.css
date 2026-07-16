@@ -5139,13 +5139,13 @@ blockquote.wow.fadeInUp p {
 
 .cta-card {
 	position: fixed;
-	right: 20px;
+	right: 25px;
 	bottom: 50px;
 	background: white;
 	padding: 18px 20px;
 	border-radius: 12px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-	max-width: 280px;
+	max-width: 255px;
 	display: flex;
 	align-items: center;
 	gap: 20px;
@@ -5154,7 +5154,7 @@ blockquote.wow.fadeInUp p {
 
 .cta-cont {
 	width: 330px;
-	margin-left: 100px;
+	margin-left: 72px;
 }
 
 .cta-sideimg {
@@ -5169,7 +5169,7 @@ blockquote.wow.fadeInUp p {
 }
 
 .cta-cont h6 {
-	font-size: 14px;
+	font-size: 11px;
 	line-height: 18px;
 	font-family: "Cinzel", serif !important;
 	font-optical-sizing: auto;
@@ -5181,17 +5181,15 @@ blockquote.wow.fadeInUp p {
 }
 
 .book-btn {
-	/* background: #FF8000;
-	border: 1px solid #FF8000; */
 	border: 1px solid #7a0821;
 	color: #7a0821;
-	padding: 6px 14px;
+	padding: 4px 10px;
 	border-radius: 20px;
 	cursor: pointer;
-	font-size: 12px;
+	font-size: 11px;
 	font-family: "Gothic A1", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: 700;
+	font-weight: 500;
 	transition: ease-in-out 0.4s;
 }
 
