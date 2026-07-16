@@ -12,18 +12,14 @@ if (!function_exists('updateImage')) {
 }
 
 if (!function_exists('validImg')) {
-   function validImg($img)
+    function validImg($img)
     {
         if (empty($img)) {
             return base_url('uploads/default.png');
         }
 
         if (filter_var($img, FILTER_VALIDATE_URL)) {
-            $path = parse_url($img, PHP_URL_PATH);
-
-            // Remove the base URL path
-            $basePath = parse_url(base_url(), PHP_URL_PATH);
-            $relativePath = ltrim(str_replace($basePath, '', $path), '/');
+            $relativePath = ltrim(parse_url($img, PHP_URL_PATH), '/');
         } else {
             $relativePath = ltrim($img, '/');
         }
