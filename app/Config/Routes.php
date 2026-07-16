@@ -160,6 +160,7 @@ $routes->get('case-study/(:segment)','CasestudiesController::details/$1');
 $routes->get('services/(:segment)','ServiceController::details/$1');
 $routes->get('service-details/(:segment)','ServiceController::singleDetails/$1');
 $routes->get('profile','ProfileController::index');
+
 $routes->get('purpose-and-values','ProfileController::purposeAndValues');
 $routes->get('our-clinics','AboutController::clinics');
 $routes->get('research','ResearchController::index');

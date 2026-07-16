@@ -12,8 +12,8 @@
                     foreach($banner as $banKey) {
                     ?>
                 <!-- Hero Slide Start -->
-                <div class="swiper-slide">
-                    <div class="hero-slide">
+                <div class="swiper-slide" >
+                    <div class="hero-slide" data-img="<?= validImg($banKey->image) ?>">
                         <!-- Slider Image Start -->
                         <div class="hero-slider-image">
                             <img src="<?= validImg($banKey->image) ?>" alt="">

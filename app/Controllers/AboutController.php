@@ -17,7 +17,7 @@ class AboutController extends BaseController
         $this->industyModel = new IndustriesModel();
     }
 
-    public function index()
+    public function index($slug = '')
     {
         $page = "About-us";
         $teams = $this->userModel->getUsers('','','','','u.id ASC');
