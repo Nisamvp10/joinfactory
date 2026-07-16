@@ -732,7 +732,7 @@
   }
 
   .year-2025 span {
-      color: transparent !important;
+      /* color: transparent !important; */
   }
 
   @media (max-width: 1500px) {
