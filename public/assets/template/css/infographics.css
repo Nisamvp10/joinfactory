@@ -727,6 +727,14 @@
       left: 22.5%;
   }
 
+  .year-2025 {
+      left: 15%;
+  }
+
+  .year-2025 span {
+      color: transparent !important;
+  }
+
   @media (max-width: 1500px) {
       .timeline {
           margin: 3em 1em;
@@ -781,6 +789,10 @@
   @media (max-width: 1200px) {
       .year-2024 {
           left: 20.5%;
+      }
+
+      .year-2025 {
+          left: 12%;
       }
 
       .ev-tnoa {

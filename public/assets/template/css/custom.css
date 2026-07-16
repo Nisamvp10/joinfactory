@@ -1071,10 +1071,6 @@ header.main-header .header-sticky.active {
 	transition: all 0.3s ease-in-out;
 }
 
-li.nav-item.submenu ul a {
-	font-size: 12px;
-}
-
 .main-menu ul li.submenu>a:after {
 	content: '\f107';
 	font-family: 'FontAwesome';
@@ -5145,20 +5141,20 @@ blockquote.wow.fadeInUp p {
 	position: fixed;
 	right: 20px;
 	bottom: 50px;
-	background: #fff;
-	padding: 14px 20px;
-	border-radius: 59px 12px 12px 63px;
+	background: white;
+	padding: 18px 20px;
+	border-radius: 12px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-	max-width: 262px;
+	max-width: 280px;
 	display: flex;
 	align-items: center;
-	gap: 0;
+	gap: 20px;
 	z-index: 999;
 }
 
 .cta-cont {
 	width: 330px;
-	margin-left: 75px;
+	margin-left: 100px;
 }
 
 .cta-sideimg {
@@ -5173,14 +5169,14 @@ blockquote.wow.fadeInUp p {
 }
 
 .cta-cont h6 {
-	font-size: 11px;
+	font-size: 14px;
 	line-height: 18px;
 	font-family: "Cinzel", serif !important;
 	font-optical-sizing: auto;
 	font-weight: 600;
 	font-style: normal;
 	margin-bottom: 8px;
-	width: 100%;
+	width: 150px;
 	color: #000;
 }
 
@@ -7534,7 +7530,7 @@ blockquote.wow.fadeInUp p {
 	left: 50%;
 	top: 65px;
 	width: 7px;
-	height: 87%;
+	height: 83.5%;
 	background: #757171;
 	transform: translateX(-50%);
 	border: 1px #404040 solid;
@@ -7638,7 +7634,7 @@ blockquote.wow.fadeInUp p {
 
 /* RIGHT CARD */
 .right-card {
-	margin-top: 100px;
+	margin-top: 200px;
 	position: relative;
 }
 
@@ -7656,7 +7652,7 @@ blockquote.wow.fadeInUp p {
 	content: '';
 	position: absolute;
 	left: -242px;
-	top: 232px;
+	top: 32px;
 	/* transform: translateY(-50%); */
 	/* border-right: 20px solid #000; */
 	/* border-top: 12px solid transparent; */
@@ -7673,7 +7669,7 @@ blockquote.wow.fadeInUp p {
 	width: 60px;
 	height: 60px;
 	background: #fff;
-	top: 205px;
+	top: 5px;
 	left: 5px;
 	border-radius: 50%;
 	border: 2px #7e7e7e solid;
@@ -7684,7 +7680,7 @@ blockquote.wow.fadeInUp p {
 
 .right-card .card.board-cert-icon::after {
 	background-image: url("../images/award-star.png");
-	top: 205px;
+	top: 5px;
 }
 
 .timeline-row .icon svg {
@@ -7761,7 +7757,7 @@ blockquote.wow.fadeInUp p {
 
 .right-con .icon {
 	position: absolute;
-	top: 300px;
+	top: 200px;
 }
 
 @media(max-width: 1650px) {
@@ -7769,7 +7765,7 @@ blockquote.wow.fadeInUp p {
 		content: '';
 		position: absolute;
 		left: -179px;
-		top: 142px;
+		top: 32px;
 		/* transform: translateY(-50%); */
 		/* border-right: 20px solid #000; */
 		/* border-top: 12px solid transparent; */
@@ -7781,33 +7777,14 @@ blockquote.wow.fadeInUp p {
 	}
 
 	.timeline-wrapper::before {
-		height: 85%;
+		height: 84%;
 	}
-
-	.right-con .icon {
-		position: absolute;
-		top: 210px;
-	}
-
-	.right-card .card::after {
-		content: '';
-		position: absolute;
-		width: 60px;
-		height: 60px;
-		background: #fff;
-		top: 115px;
-	}
-
 }
 
 @media(max-width:1300px) {
 	.right-card .card {
 		width: 90%;
 		float: right;
-	}
-
-	.timeline-wrapper::before {
-		height: 86%;
 	}
 
 	.left-card .card {
@@ -7840,17 +7817,6 @@ blockquote.wow.fadeInUp p {
 	.right-card .card.card-2017:after {
 		top: 188px !important;
 	} */
-}
-
-@media(max-width: 992px) {
-	.left-card .card {
-		width: 100%;
-	}
-
-	.right-card .card {
-		width: 100%;
-		float: right;
-	}
 }
 
 /* Responsive */
