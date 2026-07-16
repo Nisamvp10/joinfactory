@@ -12,15 +12,27 @@ if (!function_exists('updateImage')) {
 }
 
 if (!function_exists('validImg')) {
-    function validImg( $img)
+   function validImg($img)
     {
-        $relativePath = str_replace(base_url(), '', $img);
-        $filePath = FCPATH . $relativePath;
-        if (file_exists($filePath) && !empty($img)) {
-            return base_url($relativePath);
-        } else {
+        if (empty($img)) {
             return base_url('uploads/default.png');
         }
+
+        if (filter_var($img, FILTER_VALIDATE_URL)) {
+            $path = parse_url($img, PHP_URL_PATH);
+
+            // Remove the base URL path
+            $basePath = parse_url(base_url(), PHP_URL_PATH);
+            $relativePath = ltrim(str_replace($basePath, '', $path), '/');
+        } else {
+            $relativePath = ltrim($img, '/');
+        }
+
+        if (is_file(FCPATH . $relativePath)) {
+            return base_url($relativePath);
+        }
+
+        return base_url('uploads/default.png');
     }
 }
 if(!function_exists('slugify')) {
