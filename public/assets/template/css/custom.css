@@ -2294,9 +2294,10 @@ blockquote.wow.fadeInUp p {
 
 .our-testimonial-image img {
 	width: 100%;
-	aspect-ratio: 0 / 0.852;
+	aspect-ratio: 1 / 0.852;
 	object-fit: cover;
 	border-radius: 30px;
+	object-position: top;
 }
 
 .testimonial-author-details {
