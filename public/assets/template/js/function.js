@@ -159,33 +159,33 @@
 	// 
 
 	/* testimonial Slider JS */
-	// if ($('.sk-slider').length) {
-	// 	const testimonial_slider = new Swiper('.testimonial-slider .swiper', {
-	// 		slidesPerView: 1,
-	// 		speed: 1000,
-	// 		spaceBetween: 30,
-	// 		loop: true,
-	// 		autoplay: {
-	// 			delay: 5000,
-	// 		},
-	// 		pagination: {
-	// 			el: '.testimonial-pagination',
-	// 			clickable: true,
-	// 		},
-	// 		navigation: {
-	// 			nextEl: '.testimonial-button-next',
-	// 			prevEl: '.testimonial-button-prev',
-	// 		},
-	// 		// breakpoints: {
-	// 		// 	768:{
-	// 		// 		slidesPerView: 2,
-	// 		// 	},
-	// 		// 	991:{
-	// 		// 		slidesPerView: 3,
-	// 		// 	}
-	// 		// }
-	// 	});
-	// }
+	if ($('.gallery-slider').length) {
+		const testimonial_slider = new Swiper('.gallery-slider .swiper', {
+			slidesPerView: 1,
+			speed: 1000,
+			spaceBetween: 30,
+			loop: true,
+			autoplay: {
+				delay: 5000,
+			},
+			pagination: {
+				el: '.testimonial-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.testimonial-button-next',
+				prevEl: '.testimonial-button-prev',
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+				},
+				991: {
+					slidesPerView: 3,
+				}
+			}
+		});
+	}
 
 
 	/* Skill Bar */

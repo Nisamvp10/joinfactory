@@ -574,7 +574,7 @@ if (!empty(services())) {
                     <!-- Section Title End -->
                 </div>
             </div>
-            <div class="testimonial-slider gallery-items page-gallery-box">
+            <div class="gallery-slider gallery-items page-gallery-box">
                 <div class="swiper">
                     <div class="swiper-wrapper" data-cursor-text="Drag">
                         <!-- Testimonial Slide Start -->
