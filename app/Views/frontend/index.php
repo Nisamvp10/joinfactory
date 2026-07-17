@@ -734,7 +734,7 @@ if (!empty(services())) {
         <div class="modal-header">
           <h5 class="modal-title" id="pageLoadModalLabel">Disclaimer
         </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         
         </div>
         <div class="modal-body  " style="padding-left:30px;padding-right:30px">
 <p>
