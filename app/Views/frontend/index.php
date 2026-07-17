@@ -483,7 +483,7 @@ if (!empty(services())) {
                 <div class="col-lg-6">
                     <div class="our-testimonial-image">
                         <figure class="image-anime reveal">
-                            <img src="<?= base_url('public/assets/template/') ?>images/testimonial-image.jpg" alt="">
+                            <img id="profile" src="<?= base_url('public/assets/template/') ?>images/testimonial-image.jpg" alt="">
                         </figure>
                     </div>
                 </div>
@@ -495,22 +495,16 @@ if (!empty(services())) {
                         <div class="section-title">
                             <h3 class="wow fadeInUp"> testimonials  </h3>
                             <h2 class="text-anime-style-3" data-cursor="-opaque"> Life-Changing results from our clients</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">"The expertise and care I received here were outstanding. I couldn't be happier with my results Thanks to the team, I feel more confident than ever before. Highly recommend From consultation to aftercare, everything was perfect. My transformation exceeded my expectations.!"</p>
+                            <!-- <p class="wow fadeInUp" data-wow-delay="0.2s">"The expertise and care I received here were outstanding. I couldn't be happier with my results Thanks to the team, I feel more confident than ever before. Highly recommend From consultation to aftercare, everything was perfect. My transformation exceeded my expectations.!"</p> -->
                         </div>
                         <!-- Section Title End -->
 
                         <!-- Testimonial Content Button Start -->
-                        <div class="testimonial-author-details wow fadeInUp" data-wow-delay="0.4s">
+                        <!-- <div class="testimonial-author-details wow fadeInUp" data-wow-delay="0.4s">
                             <h3>Kristin Watson</h3>
                             <p>Co. founder</p>
-                        </div>
-                        <!-- Testimonial Content Button End -->
-                    </div>
-                    <!-- Our Testimonial Content End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Testimonial Slider Start -->
+                        </div> -->
+                         <!-- Testimonial Slider Start -->
                     <div class="testimonial-slider">
                         <div class="swiper">
                             <div class="swiper-wrapper" data-cursor-text="Drag">
@@ -527,7 +521,7 @@ if (!empty(services())) {
                                             <div class="testimonial-author">
                                                 <div class="author-image">
                                                     <figure class="image-anime">
-                                                        <img src="<?=validImg($testimonial->profile)?>" alt="">
+                                                        <img src="<?=validImg($testimonial->profile)?>" data-image="<?=validImg($testimonial->profile)?>" alt="">
                                                     </figure>
                                                 </div>            
                                                 <div class="author-content">
@@ -550,6 +544,14 @@ if (!empty(services())) {
                         </div>
                     </div>
                     <!-- Testimonial Slider End -->
+
+                        <!-- Testimonial Content Button End -->
+                    </div>
+                    <!-- Our Testimonial Content End -->
+                </div>
+
+                <div class="col-lg-12">
+                   
                 </div>
             </div>
         </div>
