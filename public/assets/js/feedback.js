@@ -1,4 +1,4 @@
-function openModal(id=false) {
+function openModal(id = false) {
     toggleModal('feedbackModal', true);
     let modal = $('#feedbackModal');
     modal.find('.head').text('Add New Feedback');
@@ -11,42 +11,50 @@ function openModal(id=false) {
     webForm.querySelector('#previewImg').src = '';
     $('.is-invalid').removeClass('is-invalid');
     $('.invalid-feedback').empty();
-    if(id) {
+    if (id) {
         $('#edit_id').val(id)
-       fetch(App.getSiteurl() +'admin/edit-feedback/'+`${id}`)
-       .then(res => res.json())
-       .then(result =>{
-        if(result) {
-            $('#feedbackModal').find('.head').text('Edit Feedback');
-            webForm.querySelector('#name').value = result.username;
-            webForm.querySelector('#designation').value = result.designation;
-            webForm.querySelector('#note').value = result.note;
-             if(result.image) {
-                $('#selectedPreview').removeClass('hidden');
-                webForm.querySelector('#previewImg').src = result.image 
-                ? result.image 
-                : App.getSiteurl() + 'uploads/feedback/default.jpg';
-            }
-        }
-       })    
+        fetch(App.getSiteurl() + 'admin/edit-feedback/' + `${id}`)
+            .then(res => res.json())
+            .then(result => {
+                if (result) {
+                    $('#feedbackModal').find('.head').text('Edit Feedback');
+                    webForm.querySelector('#name').value = result.username;
+                    webForm.querySelector('#designation').value = result.designation;
+                    webForm.querySelector('#note').value = result.note;
+                    tinymce.get('note').setContent(result.note);
+                    if (result.image) {
+                        $('#selectedPreview').removeClass('hidden');
+                        webForm.querySelector('#previewImg').src = result.image
+                            ? result.image
+                            : App.getSiteurl() + 'uploads/feedback/default.jpg';
+                    }
+                }
+            })
     }
 }
-
+tinymce.init({
+    selector: '#note',
+    plugins: 'lists link image table code',
+    toolbar: 'undo redo | bold italic underline | bullist numlist | link image | code',
+    height: 300,
+    menubar: false,
+    branding: false
+});
 function loadFeedback(search = '') {
-    
+
     $.ajax({
-        url: App.getSiteurl() +'admin/feedback/data',
-        method : 'POST',
-        data:{search:search},
+        url: App.getSiteurl() + 'admin/feedback/data',
+        method: 'POST',
+        data: { search: search },
         dataType: 'json',
-        success:function(response){
-            if(response.success) {
+        success: function (response) {
+            if (response.success) {
                 renderTable(response);
-            }else{
-                 html = `<div class="text-center py-8">
+            } else {
+                html = `<div class="text-center py-8">
                     <h3 class="text-lg font-medium text-gray-700">No Data found</h3>
                 </div>`;
-                 $('#partnershipTable').html(html);
+                $('#partnershipTable').html(html);
             }
         }
 
@@ -58,16 +66,16 @@ let rowsPerPage = 10;
 let allData = [];
 
 function renderTable(response) {
-    
+
     let html = '';
     allData = response;
-    if(response.result.length ===0){
+    if (response.result.length === 0) {
         html += `<div class="text-center py-8">
                     <h3 class="text-lg font-medium text-gray-700">No Data found</h3>
-                    <p class="text-gray-500 mt-1">${(results.message ? results.message :'Try adjusting your search')}</p>
+                    <p class="text-gray-500 mt-1">${(results.message ? results.message : 'Try adjusting your search')}</p>
                 </div>`
-    }else{
-        let start = (currentPage -1) * rowsPerPage;
+    } else {
+        let start = (currentPage - 1) * rowsPerPage;
         let end = start + rowsPerPage;
         let paginatedData = allData.result.slice(start, end);
         html += `
@@ -84,13 +92,13 @@ function renderTable(response) {
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">`
-        paginatedData.forEach(function(item, idx) {
+        paginatedData.forEach(function (item, idx) {
             html += `<tr>
                 <td class="px-2 py-2 whitespace-nowrap border border-gray-300">${start + idx + 1}</td>
                 <td class="px-2 py-2 whitespace-nowrap border border-gray-300">
                     <div class="flex items-center">
                         <div class="text-sm font-medium text-gray-900">
-                        <img src="${item.profile ? item.profile : App.getSiteurl() +'uploads/default.png'}" class="w-20" />
+                        <img src="${item.profile ? item.profile : App.getSiteurl() + 'uploads/default.png'}" class="w-20" />
                         </div>
                     </div>
                 </td>
@@ -103,10 +111,10 @@ function renderTable(response) {
                 </td>
             </tr>`;
         });
-        html +=`</tbody>
+        html += `</tbody>
         </table></div>`;
 
-        let totalPages = Math.ceil( response.result.length / rowsPerPage);
+        let totalPages = Math.ceil(response.result.length / rowsPerPage);
         html += `
             <div class="flex justify-between items-center mt-4">
                 <div>
@@ -129,7 +137,7 @@ function renderTable(response) {
     }
     $('#feedbackTable').html(html);
 }
-$('#searchProductInput').on('input',function(){
+$('#searchProductInput').on('input', function () {
     search = $(this).val();
     loadFeedback(search);
 
@@ -156,8 +164,9 @@ function nextPage(totalPages) {
     }
 }
 
-$('#feedbackForm').on('submit', function(e) {
-    let modal =  $('#feedbackModal');
+$('#feedbackForm').on('submit', function (e) {
+    let modal = $('#feedbackModal');
+    tinymce.triggerSave();
     const previewImg = $('#previewImg');
     let webForm = $('#feedbackForm');
     e.preventDefault();
@@ -169,68 +178,65 @@ $('#feedbackForm').on('submit', function(e) {
         '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Saving...'
     );
     $.ajax({
-        url : App.getSiteurl() +'admin/feedback/save',
-        method:'POST',
+        url: App.getSiteurl() + 'admin/feedback/save',
+        method: 'POST',
         data: formData,
         contentType: false,
         processData: false,
-        dataType : 'json',
+        dataType: 'json',
 
-        success:function(response)
-        { 
-           
-            if(response.success){
+        success: function (response) {
+
+            if (response.success) {
                 toastr.success(response.message);
                 webForm[0].reset();
                 modal.addClass('hidden');
                 previewImg.attr('src', '');
                 $('#edit_id').val('');
                 loadFeedback();
-            }else{
-                if(response.errors){
-                    $.each(response.errors,function(field,message)
-                    {
-                        $('#'+ field).addClass('is-invalid');
-                        $('#' + field + '_error').text(message.replaceAll('_',' '));
+            } else {
+                if (response.errors) {
+                    $.each(response.errors, function (field, message) {
+                        $('#' + field).addClass('is-invalid');
+                        $('#' + field + '_error').text(message.replaceAll('_', ' '));
                     })
-                }else{
-                     toastr.error(response.message);
+                } else {
+                    toastr.error(response.message);
                 }
             }
-        },error: function() {
+        }, error: function () {
             toastr.error('An error occurred while saving ');
         },
-        complete: function() {
+        complete: function () {
             // Re-enable submit button
             $('#submitBtn').prop('disabled', false).text('Save ');
         }
     })
 })
 
-function deleteItem(e){
+function deleteItem(e) {
     let id = $(e).data('id');
-    if(confirm('are you sure You want to Delete This')) {
-        if(id) {
+    if (confirm('are you sure You want to Delete This')) {
+        if (id) {
             $.ajax({
-                 url : App.getSiteurl()+'admin/feedback/delete/'+ id,
+                url: App.getSiteurl() + 'admin/feedback/delete/' + id,
                 type: "DELETE",
                 dataType: 'json',
-                success:function(response)
-                { 
-                   if(response.success){
-                     Swal.fire({  title: "Done!",  text:response.message,  icon: "success"});
-                     loadFeedback();
-                   }else{
-                     Swal.fire({  title: "Oops!",  text:response.message,  icon: "error"});
-                   }
+                success: function (response) {
+                    if (response.success) {
+                        Swal.fire({ title: "Done!", text: response.message, icon: "success" });
+                        loadFeedback();
+                    } else {
+                        Swal.fire({ title: "Oops!", text: response.message, icon: "error" });
+                    }
                 }
             })
-        }else{
-             toastr.error('OOps Item Not Found !Pls try later', 'Error', { 
-                allProductstimeOut: 10000,        
-                extendedTimeOut: 5000, 
-                closeButton: true,     
-                progressBar: true      
+        } else {
+            toastr.error('OOps Item Not Found !Pls try later', 'Error', {
+                allProductstimeOut: 10000,
+                extendedTimeOut: 5000,
+                closeButton: true,
+                progressBar: true
             });
         }
     }

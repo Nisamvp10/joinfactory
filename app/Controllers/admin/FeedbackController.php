@@ -29,7 +29,7 @@ class FeedbackController extends Controller {
         $rules = [
             'name' => 'required|min_length[2]',
             'designation' => 'required|min_length[2]|max_length[100]',
-            'note'        => 'required|min_length[5]|max_length[2500]'
+           // 'note'        => 'required|min_length[5]|max_length[2500]'
         ];
         if(!$this->validate($rules)) {
             return $this->response->setJSON(['success' => false , 'errors' => $this->validator->getErrors()]);
