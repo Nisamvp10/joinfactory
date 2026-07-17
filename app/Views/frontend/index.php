@@ -728,7 +728,8 @@ if (!empty(services())) {
     <!-- Footer Main End -->
 
     <!-- Modal -->
-<div class="modal fade" id="pageLoadModal" tabindex="-1" aria-labelledby="pageLoadModalLabel" aria-hidden="true">
+<div class="modal fade" id="pageLoadModal" tabindex="-1" aria-labelledby="pageLoadModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    
     <div class="modal-dialog modal-lg  modal-dialog-centered" >
       <div class="modal-content">
         <div class="modal-header">
@@ -781,4 +782,8 @@ if (!empty(services())) {
   </div>
   
 <?= view('frontend/inc/footerLink') ?>
- 
+ <script>
+    var myModal = new bootstrap.Modal(document.getElementById('pageLoadModal'), {
+  backdrop: 'static'
+})
+</script>
