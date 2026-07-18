@@ -41,7 +41,7 @@
                      <div class="col-lg-4 col-6">
                     <!-- Image Gallery start -->
                     <div class="photo-gallery wow fadeInUp">
-                        <a href="<?=validImg($img['image'])?> ?>" data-cursor-text="View">
+                        <a href="<?=validImg($img['image'])?>" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="<?= validImg($img['image']) ?>" alt="">
                             </figure>
