@@ -9,6 +9,7 @@ use App\Models\IndustriesModel;
 use App\Models\FeedbackModel;
 use App\Models\NewsModel;
 use App\Models\ServiceModel;
+use App\Models\PartnershipModel;
 
 class HomeController extends BaseController {
     protected $sliderModel;
@@ -35,8 +36,10 @@ class HomeController extends BaseController {
         $news  = $this->newsModel->where(['status' => 1])->orderBy('id','DESC')->limit(3)->get()->getResult();
         $srevices  = $this->serviceModel->getUniqueCategories();
        // echo $this->serviceModel->getLastQuery();exit();
+         $partnershipModel = new PartnershipModel();
+        $gallery = $partnershipModel->where(['status' => 1])->orderBy('id','DESC')->limit(10)->get()->getResult();
         $industries  = $this->industyModel->where(['status' => 1])->orderBy('id','ASC')->limit(3)->get()->getResult();    
-        return view('frontend/index',compact('page','banner','expertise','industries','feedback','news','srevices'));
+        return view('frontend/index',compact('page','banner','expertise','industries','feedback','news','srevices','gallery'));
 
     }
 }

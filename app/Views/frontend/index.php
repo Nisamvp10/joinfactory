@@ -578,78 +578,26 @@ if (!empty(services())) {
                 <div class="swiper">
                     <div class="swiper-wrapper" data-cursor-text="Drag">
                         <!-- Testimonial Slide Start -->
-                        <div class="swiper-slide">
-                            <div class="photo-gallery wow fadeInUp">
-                                <a href="https://jointfactory.org/2026/public/assets/template/images/case-study-image-2.jpg" data-cursor-text="View">
-                            <figure class="image-anime">
-                                <img src="https://jointfactory.org/2026/public/assets/template/images/case-study-image-2.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div> 
-            </div>
-                                <!-- Testimonial Slide End -->
+                         <?php 
+                         if(!empty($gallery)){
+                            foreach($gallery as $g){ ?>
+                                        <div class="swiper-slide">
+                                            <div class="photo-gallery wow fadeInUp">
+                                                <a href="<?= validImg($g->image) ?>" data-cursor-text="View">
+                                            <figure class="image-anime">
+                                                <img src="<?= validImg($g->image) ?>" alt="">
+                                            </figure>
+                                        </a>
+                                    </div> 
+                            </div>
+                            <?php 
+                            }
+                        }?>
 
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                     <div class="photo-gallery wow fadeInUp">
-                        <a href="https://jointfactory.org/2026/public/assets/template/images/case-study-image-1.jpg" data-cursor-text="View">
-                            <figure class="image-anime">
-                                <img src="https://jointfactory.org/2026/public/assets/template/images/case-study-image-1.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                 <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                     <div class="photo-gallery wow fadeInUp">
-                        <a href="https://jointfactory.org/2026/public/assets/template/images/case-study-image-3.jpg" data-cursor-text="View">
-                            <figure class="image-anime">
-                                <img src="https://jointfactory.org/2026/public/assets/template/images/case-study-image-3.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-                                  <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                     <div class="photo-gallery wow fadeInUp">
-                        <a href="https://jointfactory.org/2026/public/assets/template/images/case-study-image-1.jpg" data-cursor-text="View">
-                            <figure class="image-anime">
-                                <img src="https://jointfactory.org/2026/public/assets/template/images/case-study-image-1.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                 <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                     <div class="photo-gallery wow fadeInUp">
-                        <a href="https://jointfactory.org/2026/public/assets/template/images/case-study-image-1.jpg" data-cursor-text="View">
-                            <figure class="image-anime">
-                                <img src="https://jointfactory.org/2026/public/assets/template/images/case-study-image-1.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                 <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                     <div class="photo-gallery wow fadeInUp">
-                        <a href="https://jointfactory.org/2026/public/assets/template/images/case-study-image-1.jpg" data-cursor-text="View">
-                            <figure class="image-anime">
-                                <img src="https://jointfactory.org/2026/public/assets/template/images/case-study-image-1.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div>
-                                </div>
                                 <!-- Testimonial Slide End -->
 
                                
-                           
+                    
                             </div>
                         </div>
                     </div>
