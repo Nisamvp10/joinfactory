@@ -39,13 +39,10 @@ class ServiceController extends Controller {
         $titleBar = [];
 
         $category = $this->categoryModel->select('id')->where('slug', $slug)->get()->getRow();
-        echo  $this->categoryModel->getLastQuery(); 
 
         if ($category) {
             $services = $this->serviceModel->where('category_id', $category->id)->get()->getResult();
-            echo  $this->serviceModel->getLastQuery(); 
             if (!empty($services) && !empty($services[0]->sub_category)) {
-                echo "HERE";
                 $items = $this->serviceModel->getMysubcategoryItems($category->id);
                 $servicesData = [];
 
