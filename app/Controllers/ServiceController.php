@@ -43,8 +43,9 @@ class ServiceController extends Controller {
 
         if ($category) {
             $services = $this->serviceModel->where('category_id', $category->id)->get()->getResult();
-
+            cho  $this->serviceModel->getLastQuery(); 
             if (!empty($services) && !empty($services[0]->sub_category)) {
+                echo "HERE";
                 $items = $this->serviceModel->getMysubcategoryItems($category->id);
                 $servicesData = [];
 
@@ -118,8 +119,6 @@ class ServiceController extends Controller {
         }
         $services = array_values($servicesData);
         $titleBar = array_values($titleBar);
-        echo '<pre>';
-        print_r($services);
         return view($routeView,compact('services','page','titleBar'));
 
     }
