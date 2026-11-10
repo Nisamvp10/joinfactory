@@ -38,7 +38,7 @@ class ServiceController extends Controller {
         $servicesData = [];
         $titleBar = [];
 
-        $category = $this->categoryModel->select('id')->where('slug', $slug)->get()->getRow();
+        $category = $this->categoryModel->select('id')->where(['slug'=> $slug,'is_active'=>1])->get()->getRow();
 
         if ($category) {
             $services = $this->serviceModel->where('category_id', $category->id)->get()->getResult();
