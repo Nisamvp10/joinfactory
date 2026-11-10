@@ -16,7 +16,7 @@ class ServiceController extends Controller {
     public function index() {
         $page = "Services";
         $categories = $this->categoryModel->where('is_active' ,1)->get()->getResultArray();
-        $services = $this->serviceModel->where('status' ,1)->get()->getResult();;
+        $services = $this->serviceModel->where('status' ,1)->get()->getResult();
         return view('frontend/service',compact('services','page','categories'));
     }
 
@@ -60,6 +60,7 @@ class ServiceController extends Controller {
                     }
                     // Push services under subcategory
                     $servicesData[$subCateId]['items'][] = [
+                        'id' => $service->id,
                         'slug'  => $service->slug,
                         'title' => $service->title,
                         'note'  => $service->short_note,

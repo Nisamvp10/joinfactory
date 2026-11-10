@@ -49,7 +49,7 @@
 
                         if (!empty($items)) {
                             foreach ($items as $item) {
-
+                                    print_r($item);
                                 // OPEN ROW
                                 if ($it % 3 == 0) {
                                     echo '<div class="row">';
@@ -61,7 +61,7 @@
                                         <div class="service-content">
                                             <div class="service-content-title">
                                                 <h2>
-                                                    <a href="<?= base_url('service-details/'.$item['slug']); ?>">
+                                                    <a data-id="" href="<?= base_url('service-details/'.$item['slug']); ?>">
                                                         <?= esc($item['title']); ?>
                                                     </a>
                                                 </h2>
