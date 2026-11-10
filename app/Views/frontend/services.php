@@ -122,6 +122,7 @@
                          
                             <?php
                             foreach($services as $index => $service) {
+                                if(!empty($service['items'])) {
                                 ?>
                                 <!-- <li class="list-group-item list-group-item<?= $index ?> ">
                                     <a href="<?= base_url('service-details/'.$item['slug']); ?>" 
@@ -130,17 +131,14 @@
                                     <?= esc($service['sub_category_title']); ?>
                                 </a>
                             </li> -->
-
                             <li class="list-group-item">
-                                    <a href="<?= base_url('service-details/'.$service['category_slug']); ?>" 
-                                   class="service-link_ "
-                                  >
+                                    <a href="<?= base_url('service-details/'.$service['category_slug']); ?>" class="service-link_ ">
                                     <?= esc($service['sub_category_title']); ?>
                                 </a>
                             </li>
 
-                            
-                        <?php };
+                        <?php }
+                         };
                         } ?>
                     </ul>
 
