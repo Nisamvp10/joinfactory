@@ -122,7 +122,7 @@
                          
                             <?php
                             foreach($services as $index => $service) {
-                                if(!empty($service['items'])) {
+                                if(!empty($service['sub_category_title'])) {
                                 ?>
                                 <!-- <li class="list-group-item list-group-item<?= $index ?> ">
                                     <a href="<?= base_url('service-details/'.$item['slug']); ?>" 
@@ -168,14 +168,14 @@
                     if (!empty($service)) {
                         foreach ($services as  $index => $service) {
                             $items = $service['items'] ?? [];
-                           $img = $service['category_image'];
+                            $img = $service['category_image'];
                              if($index % 2 == 0) {
                                 echo '<div class="row pe-0 '.($index == count($services) - 1 ? 'mb-0' : 'mb-3').'" >';
                             }
                     ?>
                     <!-- loop last row mb-0 -->
                      <!-- column even set pe-lg-0 -->
-                        <div class="col-lg-6 col-md-6 mb-lg-0 mb-md-4 d-flex <?php if($index % 2 == 1) { echo 'pe-lg-0 px-md-0'; } ?>  pb-0 <?php if($index == count($services) - 1) { echo 'mb-sm-0 ps-lg-0'; } else { echo 'mb-sm-3 ps-lg-1'; } ?>">
+                        <div class="col-lg-6 col-md-6 mb-lg-0 mb-md-4 d-flex <?php if($index % 2 == 1) { echo 'pe-lg-0 px-md-0'; } ?>  pb-0 <?php if($index == count($services) - 1) { echo 'mb-sm-0 ps-lg-0'; } else { echo 'mb-sm-3 ps-lg-1'; } ?>" data-id="<?=$service['id'];?>">
                                 <div class="service-item wow fadeInUp mb-0">
                                         <div class="service-content">
                                             <div class="service-content-title ">
