@@ -164,10 +164,18 @@
                                 </div>
                             </div>
 
-                            <!--  -->
-                            <div class="form-check form-switch">
-                                    <input class="form-check-input" <?=(getappdata('site_mode') == 'on' ? 'checked' :'');?> name="site_mode" type="checkbox" id="flexSwitchCheckChecked" >
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Site Mode</label>
+                           <div class="flex align-items-center justify-content-between">
+                                    <!--  -->
+                                    <div class="form-check form-switch">
+                                            <input class="form-check-input" <?=(getappdata('site_mode') == 'on' ? 'checked' :'');?> name="site_mode" type="checkbox" id="flexSwitchCheckChecked" >
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Site Mode</label>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="form-check form-switch">
+                                            <input class="form-check-input" <?=(getappdata('bug') == 'on' ? 'checked' :'');?> name="bug" type="checkbox" id="flexSwitchCheckChecked" >
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Bug</label>
+                                    </div>
                             </div>
                                     
                             <div class="flex justify-end"><button id="submitBtn" class="bg-primary-600 rounded hover:bg-primary-700 text-white px-4 py-2 rounded-md flex items-center transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save mr-1"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>Save Changes</button></div>

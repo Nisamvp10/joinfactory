@@ -53,6 +53,11 @@ class SettingsController extends Controller{
         } else {
             $postData['site_mode'] = 'off';
         }
+         if (isset($postData['bug'])) {
+            $postData['bug'] = 'on';
+        } else {
+            $postData['bug'] = 'off';
+        }
         foreach($postData as $key => $value){
 
             saveSettings($key,$value);

@@ -173,8 +173,11 @@
                                 echo '<div class="row pe-0 '.($index == count($services) - 1 ? 'mb-0' : 'mb-3').'" >';
                             }
 
-                            echo '<pre>';
-                            var_dump($service);echo '</pre>';
+                            if(getappdata('bug') == 'on'){
+
+                                echo '<pre>';
+                                var_dump($service);echo '</pre>'; 
+                            }
 
                     ?>
                     <!-- loop last row mb-0 -->
