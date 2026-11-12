@@ -172,6 +172,7 @@
                              if($index % 2 == 0) {
                                 echo '<div class="row pe-0 '.($index == count($services) - 1 ? 'mb-0' : 'mb-3').'" >';
                             }
+                            if(!empty($service['sub_category_title'])) { 
                     ?>
                     <!-- loop last row mb-0 -->
                      <!-- column even set pe-lg-0 -->
@@ -204,6 +205,7 @@
                         if($index % 2 == 1 || $index == count($services) - 1) {
                                 echo '</div>';
                             }
+                        }
 
                         }
                     } else {
