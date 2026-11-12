@@ -167,12 +167,13 @@
 
                     if (!empty($service)) {
                         foreach ($services as  $index => $service) {
+                            if(!empty($service['sub_category_title'])) { 
                             $items = $service['items'] ?? [];
                             $img = $service['category_image'];
                              if($index % 2 == 0) {
                                 echo '<div class="row pe-0 '.($index == count($services) - 1 ? 'mb-0' : 'mb-3').'" >';
                             }
-                            if(!empty($service['sub_category_title'])) { 
+                           
                     ?>
                     <!-- loop last row mb-0 -->
                      <!-- column even set pe-lg-0 -->
