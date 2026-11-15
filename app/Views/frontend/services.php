@@ -182,7 +182,7 @@
                     ?>
                     <!-- loop last row mb-0 -->
                      <!-- column even set pe-lg-0 -->
-                        <div class="col-lg-6 col-md-6 mb-lg-0 mb-md-4 d-flex <?php if($index % 2 == 1) { echo 'pe-lg-0 px-md-0'; } ?>  pb-0 <?php if($index == count($services) - 1) { echo 'mb-sm-0 ps-lg-0'; } else { echo 'mb-sm-3 ps-lg-1'; } ?>" data-id="<?=$service['id'];?>">
+                        <div class="col-lg-6 col-md-6 mb-lg-0 mb-md-4 <?php if($index % 2 == 1) { echo 'pe-lg-0 px-md-0'; } ?>  pb-0 <?php if($index == count($services) - 1) { echo 'mb-sm-0 ps-lg-0'; } else { echo 'mb-sm-3 ps-lg-1'; } ?>" data-id="<?=$service['id'];?>">
                                 <div class="service-item wow fadeInUp mb-0">
                                         <div class="service-content">
                                             <div class="service-content-title ">
