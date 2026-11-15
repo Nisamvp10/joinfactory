@@ -64,13 +64,21 @@ class CategoryController extends Controller{
             $parent = $this->categoryModel->find($parentId);
             $level = $parent['level'] + 1;
         }
+        $slug = slugify( $category);
+        $originalSlug = $slug;
+        $count = 1;
+
+        while($this->categoryModel->where('slug',$slug)->first()){
+            $slug = $originalSlug.'-'.$count;
+            $count++;
+        }
 
         $data = [
             'category' => $category,
             'parent_id' => $parentId ?: null,
            // 'image' => str_replace(base_url(), '', $imagePath),
             'description' => $category_description,
-            'slug' => slugify( $category),
+            'slug' => $slug,
             'level' => $level
         ];
 
