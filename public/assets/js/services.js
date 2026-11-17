@@ -243,18 +243,19 @@ function openModal(id = false) {
 
 
 function initWdescEditors() {
+    alert('hi')
     // Initialize TinyMCE
     tinymce.init({
         selector: '.wdesc',
-        plugins: 'lists link image table code textcolor',
-        toolbar: 'undo redo | styles | bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist | link image | code',
+        plugins: 'lists link image table code', // Note: 'textcolor' is built-in for TinyMCE 5+
+        // Use 'blocks' for headings (works in TinyMCE 5, 6, and 7)
+        toolbar: 'undo redo | blocks | bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist | link image | code',
+        block_formats: 'Paragraph=p; Heading 1=h1; Heading 2=h2; Heading 3=h3; Heading 4=h4; Heading 5=h5; Heading 6=h6',
         height: 250,
-        height: 150,
         menubar: false,
         branding: false
     });
 }
-
 function nextStep(step) {
     document.querySelectorAll('.step').forEach(el => el.classList.add('hidden'));
     document.getElementById(`step${step}`).classList.remove('hidden');
@@ -559,7 +560,7 @@ $('#serviceForm').on('submit', function (e) {
 loadServices();
 serviceData = [];
 function loadServices(search = '') {
-     search = $('#searchProductInput').val();
+    search = $('#searchProductInput').val();
     $.ajax({
         url: App.cust() + 'data',
         method: 'POST',
@@ -673,7 +674,7 @@ function nextPage(totalPages) {
         renderfun(serviceData);
     }
 }
- $(document).on('keyup change','#searchProductInput',loadServices);
+$(document).on('keyup change', '#searchProductInput', loadServices);
 
 function deleteItem(e) {
     let id = $(e).data('id');

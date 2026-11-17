@@ -1,5 +1,9 @@
 <?= $this->extend('template/layout/main') ?>
 <?= $this->section('content') ?>
+<style>.tox-tinymce-aux {
+    z-index: 99999 !important;
+}
+</style>
     <!-- titilebar -->
     <div class="flex items-center justify-between">
         <div class="col-lg-12">
