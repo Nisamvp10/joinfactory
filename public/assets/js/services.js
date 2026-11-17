@@ -243,7 +243,6 @@ function openModal(id = false) {
 
 
 function initWdescEditors() {
-    alert('hi')
     // Initialize TinyMCE
     tinymce.init({
         selector: '.wdesc',
